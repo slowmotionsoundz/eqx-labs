@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EQX CRM | Admin Pipeline & Customer Logistics Hub</title>
+  <meta name="description" content="Manage leads, pipeline revenues, tasks, and system integrations for EQX Europe." />
+  
+  <!-- Preconnect to Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  
+  <style>
+    /* Dashboard specific container adjustments */
+    body {
+      background: var(--eqx-dark-bg);
+      overflow-x: hidden;
+    }
+
+    .crm-add-lead-btn {
+      background: var(--eqx-accent);
+      color: var(--eqx-dark-bg);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .crm-add-lead-btn:hover {
+      background: var(--eqx-text-light);
+      box-shadow: 0 4px 15px rgba(195, 181, 159, 0.4);
+    }
+
+    /* Modal Form Styling */
+    .lead-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lead-modal-overlay.active {
+      display: flex;
+    }
+
+    .lead-modal {
+      background: var(--eqx-dark-panel);
+      border: 1px solid var(--eqx-border-light);
+      border-radius: 20px;
+      padding: 32px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    .lead-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: var(--eqx-text-muted);
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    .lead-modal h3 {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 24px;
+      color: var(--eqx-text-light);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--eqx-text-muted);
+    }
+
+    .form-input {
+      background: var(--eqx-dark-card);
+      border: 1px solid var(--eqx-border-light);
+      color: var(--eqx-text-light);
+      padding: 10px 14px;
+      border-radius: 8px;
+      outline: none;
+      font-size: 0.9rem;
+    }
+
+    .form-input:focus {
+      border-color: var(--eqx-accent);
+    }
+
+    .tour-trigger-float {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: var(--eqx-dark-panel);
+      border: 1px solid var(--eqx-accent);
+      color: var(--eqx-accent);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      z-index: 100;
+      transition: var(--transition-smooth);
+    }
+
+    .tour-trigger-float:hover {
+      background: var(--eqx-accent);
+      color: var(--eqx-dark-bg);
+      box-shadow: 0 4px 15px rgba(195, 181, 159, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="crm-layout">
+    
+    <!-- Left Navigation Bar -->
+    <aside class="crm-sidebar">
+      <div class="crm-sidebar-logo">EQX</div>
+      
+      <a href="index.html" class="crm-nav-item" aria-label="Go Home">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      </a>
+      
+      <a href="studio.html" class="crm-nav-item" aria-label="Acoustic Studios">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+        </svg>
+      </a>
+      
+      <a href="crm.html" class="crm-nav-item active" aria-label="Pipeline Dashboard">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      </a>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="crm-workspace">
+      
+      <!-- Top Title and Database integrations controls -->
+      <section class="crm-header-row">
+        <div class="crm-title-group">
+          <h1>Customer Relationship Hub</h1>
+          <p>Real-time customer metrics, logistics funnels, and pipeline development.</p>
+        </div>
+        
+        <div class="crm-controls">
+          <div class="crm-toggle-container" id="tutorial-step-1">
+            <span class="crm-toggle-label">Firebase Ingest</span>
+            <label class="crm-switch">
+              <input type="checkbox" id="crm-db-toggle">
+              <span class="crm-slider"></span>
+            </label>
+          </div>
+          <button class="crm-add-lead-btn" id="open-lead-modal-btn">+ Add Lead</button>
+        </div>
+      </section>
+
+      <!-- KPI Statistics row -->
+      <section class="crm-metrics-grid" id="tutorial-step-2">
+        
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M12 16V5" />
+            </svg>
+          </div>
+          <div>
+            <div class="metric-label">Pipeline Value</div>
+            <div class="metric-value" id="kpi-total-revenue">$0</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <div>
+            <div class="metric-label">Uncontacted Leads</div>
+            <div class="metric-value" id="kpi-new-leads">0</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+          </div>
+          <div>
+            <div class="metric-label">Pending Operations</div>
+            <div class="metric-value" id="kpi-pending-tasks">0</div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Grid Panel Layout: Pipeline vs Details -->
+      <section class="crm-workspace-grid">
+        
+        <!-- Left Side Kanban View -->
+        <div class="pipeline-view">
+          
+          <!-- Filter Controls -->
+          <div class="pipeline-filter-bar" id="tutorial-step-3">
+            <div style="display:flex; gap:8px;" id="filter-location-group">
+              <button class="pipeline-filter-btn active" data-loc="all">All Locations</button>
+              <button class="pipeline-filter-btn" data-loc="Landskrona, SE">Landskrona</button>
+              <button class="pipeline-filter-btn" data-loc="Huntsville, AL">Huntsville</button>
+              <button class="pipeline-filter-btn" data-loc="Europe Hub">Europe Hub</button>
+            </div>
+            
+            <div style="display:flex; gap:8px;" id="filter-source-group">
+              <button class="pipeline-filter-btn active" data-source="all">All Sources</button>
+              <button class="pipeline-filter-btn" data-source="website">Website Form</button>
+              <button class="pipeline-filter-btn" data-source="referral">Referrals</button>
+              <button class="pipeline-filter-btn" data-source="manual">Manual Entry</button>
+            </div>
+          </div>
+
+          <!-- Kanban Board -->
+          <div class="pipeline-grid" id="tutorial-step-4">
+            
+            <!-- Stage 1: New -->
+            <div class="pipeline-column" data-status="new">
+              <div class="pipeline-column-header">
+                <span class="pipeline-column-title">New Ingest</span>
+                <span class="pipeline-column-count">0</span>
+              </div>
+              <div class="leads-list" id="pipeline-new-list"></div>
+            </div>
+
+            <!-- Stage 2: Contacted -->
+            <div class="pipeline-column" data-status="contacted">
+              <div class="pipeline-column-header">
+                <span class="pipeline-column-title">Contacted</span>
+                <span class="pipeline-column-count">0</span>
+              </div>
+              <div class="leads-list" id="pipeline-contacted-list"></div>
+            </div>
+
+            <!-- Stage 3: Qualified -->
+            <div class="pipeline-column" data-status="qualified">
+              <div class="pipeline-column-header">
+                <span class="pipeline-column-title">Qualified</span>
+                <span class="pipeline-column-count">0</span>
+              </div>
+              <div class="leads-list" id="pipeline-qualified-list"></div>
+            </div>
+
+            <!-- Stage 4: Disqualified -->
+            <div class="pipeline-column" data-status="disqualified">
+              <div class="pipeline-column-header">
+                <span class="pipeline-column-title">Archived</span>
+                <span class="pipeline-column-count">0</span>
+              </div>
+              <div class="leads-list" id="pipeline-disqualified-list"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Side details Drawer -->
+        <aside class="crm-details-panel" id="tutorial-step-5"></aside>
+
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Manual Add Lead Modal Overlay -->
+  <div class="lead-modal-overlay" id="add-lead-modal">
+    <div class="lead-modal">
+      <button class="lead-modal-close" id="close-lead-modal-btn">&times;</button>
+      <h3>Create New Customer Record</h3>
+      <form id="add-lead-form" onsubmit="event.preventDefault(); submitManualLead();">
+        <div style="display:flex; gap:16px;">
+          <div class="form-group" style="flex:1;">
+            <label for="lead-first-name">First Name</label>
+            <input type="text" id="lead-first-name" class="form-input" required />
+          </div>
+          <div class="form-group" style="flex:1;">
+            <label for="lead-last-name">Last Name</label>
+            <input type="text" id="lead-last-name" class="form-input" required />
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="lead-email">Email Address</label>
+          <input type="email" id="lead-email" class="form-input" required />
+        </div>
+
+        <div class="form-group">
+          <label for="lead-phone">Phone Number</label>
+          <input type="tel" id="lead-phone" class="form-input" required />
+        </div>
+
+        <div class="form-group">
+          <label for="lead-company">Company Name</label>
+          <input type="text" id="lead-company" class="form-input" placeholder="e.g. Acme Corp" />
+        </div>
+
+        <div style="display:flex; gap:16px;">
+          <div class="form-group" style="flex:1;">
+            <label for="lead-value">Deal Value ($)</label>
+            <input type="number" id="lead-value" class="form-input" placeholder="5000" />
+          </div>
+          <div class="form-group" style="flex:1;">
+            <label for="lead-location">Branch Location</label>
+            <select id="lead-location" class="form-input" style="background:var(--eqx-dark-card);">
+              <option value="Landskrona, SE">Landskrona</option>
+              <option value="Huntsville, AL">Huntsville</option>
+              <option value="Europe Hub" selected>Europe Hub</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="crm-add-lead-btn" style="width:100%; margin-top:10px; border-radius:8px;">Add Lead</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Onboarding Elements Anchor Root -->
+  <div id="tour-anchor-root"></div>
+
+  <!-- Tour Activation Trigger -->
+  <button class="tour-trigger-float" onclick="window.startCrmTour()">Quick Tutorial</button>
+
+  <!-- Script Modules -->
+  <script type="module">
+    import { initCRM, initTutorialTour } from './js/crm.js';
+
+    // Assemble DOM binding references
+    const crmElements = {
+      metricsTotalRev: document.getElementById("kpi-total-revenue"),
+      metricsNewLeads: document.getElementById("kpi-new-leads"),
+      metricsTasks: document.getElementById("kpi-pending-tasks"),
+      pipelineNewList: document.getElementById("pipeline-new-list"),
+      pipelineContactedList: document.getElementById("pipeline-contacted-list"),
+      pipelineQualifiedList: document.getElementById("pipeline-qualified-list"),
+      pipelineDisqualifiedList: document.getElementById("pipeline-disqualified-list"),
+      detailsPanel: document.getElementById("tutorial-step-5"),
+      filterLocationBtnGroup: document.querySelectorAll("#filter-location-group .pipeline-filter-btn"),
+      filterSourceBtnGroup: document.querySelectorAll("#filter-source-group .pipeline-filter-btn"),
+      toggleDbModeBtn: document.getElementById("crm-db-toggle")
+    };
+
+    // Connect database helpers (mocked for development, switchable to live collections)
+    const dbHelpers = {
+      fetchLeads: async () => {
+        // Live Firestore fetching simulation
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            // Simulating live database call returning updated lead array
+            resolve(JSON.parse(localStorage.getItem("eqx_crm_leads")) || []);
+          }, 800);
+        });
+      }
+    };
+
+    // Initialize Main CRM Modules
+    initCRM(crmElements, dbHelpers);
+
+    // Initialize Tutorial tour anchor system
+    initTutorialTour(document.getElementById("tour-anchor-root"));
+
+    // Trigger tour automatically for first-time visitors
+    if (!localStorage.getItem("eqx_crm_tour_completed")) {
+      setTimeout(() => {
+        if (typeof window.startCrmTour === 'function') {
+          window.startCrmTour();
+          localStorage.setItem("eqx_crm_tour_completed", "true");
+        }
+      }, 1500);
+    }
+
+    // Handle Manual Lead Submission Modals
+    const modal = document.getElementById("add-lead-modal");
+    const openBtn = document.getElementById("open-lead-modal-btn");
+    const closeBtn = document.getElementById("close-lead-modal-btn");
+
+    openBtn.addEventListener("click", () => modal.classList.add("active"));
+    closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.classList.remove("active");
+    });
+
+    // Submit form mapping
+    window.submitManualLead = () => {
+      const firstName = document.getElementById("lead-first-name").value;
+      const lastName = document.getElementById("lead-last-name").value;
+      const email = document.getElementById("lead-email").value;
+      const phone = document.getElementById("lead-phone").value;
+      const company = document.getElementById("lead-company").value;
+      const value = document.getElementById("lead-value").value;
+      const loc = document.getElementById("lead-location").value;
+
+      const success = window.createNewLead(firstName, lastName, email, phone, company, value, loc, "manual");
+      if (success) {
+        modal.classList.remove("active");
+        document.getElementById("add-lead-form").reset();
+      }
+    };
+  </script>
+</body>
+</html>

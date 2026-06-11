@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EQX Studio | Music Showcase & Sound Engineering</title>
+  <meta name="description" content="Explore the sound and music engineering projects by EQX, featuring Leighton Hicks (Mali Boy). Listen to our latest releases and view upcoming studio works." />
+  
+  <!-- Preconnect to Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  
+  <style>
+    /* Studio-specific refinements maintaining Scandinavian aesthetic */
+    .studio-hero {
+      position: relative;
+      padding: 180px 40px 100px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(27, 29, 28, 0) 0%, rgba(38, 41, 40, 0.4) 100%);
+      border-bottom: 1px solid var(--eqx-border-dark);
+      overflow: hidden;
+    }
+
+    .studio-hero-glow {
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(195, 181, 159, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .studio-hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .studio-badge {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--eqx-accent);
+      margin-bottom: 20px;
+    }
+
+    .studio-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 100;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+      color: var(--eqx-text-light);
+    }
+
+    .studio-title span {
+      font-weight: 400;
+      color: var(--eqx-accent);
+    }
+
+    .studio-desc {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--eqx-text-muted);
+      line-height: 1.6;
+      max-width: 650px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* Showcase Section */
+    .showcase-section {
+      padding: 100px 40px;
+      background: var(--eqx-dark-bg);
+    }
+
+    .showcase-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+
+    .player-card {
+      background: var(--eqx-dark-card);
+      border: 1px solid var(--eqx-border-light);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .showcase-info {
+      text-align: left;
+    }
+
+    .release-label {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--eqx-accent);
+      margin-bottom: 12px;
+    }
+
+    .release-title {
+      font-family: var(--font-head);
+      font-size: 2.2rem;
+      font-weight: 200;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    .release-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--eqx-text-muted);
+      margin-bottom: 30px;
+    }
+
+    /* Grid Section */
+    .releases-grid-section {
+      padding: 80px 40px 120px;
+      background: var(--eqx-dark-panel);
+      border-top: 1px solid var(--eqx-border-dark);
+    }
+
+    .grid-title {
+      font-family: var(--font-head);
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .releases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .release-card {
+      background: var(--eqx-dark-card);
+      border: 1px solid var(--eqx-border-light);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .release-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .release-artwork {
+      width: 100%;
+      aspect-ratio: 1;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .release-artwork::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(32,34,33,1) 0%, rgba(32,34,33,0) 60%);
+    }
+
+    .release-content {
+      padding: 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-release-title {
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .card-release-subtitle {
+      font-size: 0.8rem;
+      color: var(--eqx-accent);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .card-release-desc {
+      font-size: 0.85rem;
+      color: var(--eqx-text-muted);
+      line-height: 1.5;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    /* Coming Soon placeholder styling */
+    .release-card.coming-soon {
+      opacity: 0.75;
+    }
+    
+    .release-card.coming-soon:hover {
+      opacity: 0.95;
+    }
+
+    .coming-soon-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(195, 181, 159, 0.15);
+      border: 1px solid var(--eqx-accent);
+      color: var(--eqx-accent);
+      padding: 4px 10px;
+      font-size: 0.65rem;
+      font-family: var(--font-head);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    @media (max-width: 992px) {
+      .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .showcase-info {
+        text-align: center;
+      }
+    }
+
+    /* Facilities Section */
+    .facilities-section {
+      padding: 100px 40px;
+      background: var(--eqx-dark-panel);
+      border-top: 1px solid var(--eqx-border-dark);
+    }
+
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .facility-card {
+      background: var(--eqx-dark-card);
+      border: 1px solid var(--eqx-border-light);
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+
+    .facility-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--eqx-accent);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .facility-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(195, 181, 159, 0.08);
+      border: 1px solid rgba(195, 181, 159, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      color: var(--eqx-accent);
+    }
+
+    .facility-title {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      color: var(--eqx-text-light);
+    }
+
+    .facility-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--eqx-text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== GLOBAL HEADER ===== -->
+  <header class="eqx-header" style="position: absolute;">
+    <div class="logo-container">
+      <a href="index.html" class="logo-eqx">EQX<span class="logo-dot"></span></a>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="index.html#hex-services" class="nav-link">Capabilities</a></li>
+      <li><a href="studio.html" class="nav-link active">Studio</a></li>
+      <li><a href="crm.html" class="nav-link">Portal</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="index.html#mission" class="clay-button">Let's Connect</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="studio-hero">
+    <div class="studio-hero-glow"></div>
+    <div class="studio-hero-container">
+      <div class="studio-badge">Sound & Acoustics</div>
+      <h1 class="studio-title">EQX <span>Studio</span></h1>
+      <p class="studio-desc">
+        This is our creative sound space led by Leighton Hicks, aka Mali Boy. We produce, mix, and master music, working closely with artists to get their sound exactly right—from the first track to the final master.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== LATEST RELEASE SHOWCASE ===== -->
+  <section class="showcase-section">
+    <div class="showcase-container">
+      
+      <div class="showcase-grid">
+        
+        <div class="player-card">
+          <iframe style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/62waSLmGueKOnfHSxUlEcs?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="showcase-info">
+          <div class="release-label">Latest Release Showcase</div>
+          <h2 class="release-title">New Album Release</h2>
+          <p class="release-desc">
+            Fresh out of the studio. Our latest project is live—preview the track list directly in the player or listen to the full album on Spotify.
+          </p>
+          <a href="https://open.spotify.com/album/62waSLmGueKOnfHSxUlEcs" target="_blank" rel="noopener noreferrer" class="clay-button">
+            Listen On Spotify
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FACILITIES SECTION ===== -->
+  <section class="facilities-section">
+    <div class="showcase-container">
+      <h2 class="grid-title">Our Facilities</h2>
+      <div class="facilities-grid">
+        
+        <!-- Facility 1: Studio Spaces -->
+        <div class="facility-card">
+          <div class="facility-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+            </svg>
+          </div>
+          <h3 class="facility-title">Studio Spaces</h3>
+          <p class="facility-desc">
+            Professional recording, podcasting, and gaming suites designed with premium acoustics and engineering standards.
+          </p>
+        </div>
+
+        <!-- Facility 2: Live Venue -->
+        <div class="facility-card">
+          <div class="facility-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+            </svg>
+          </div>
+          <h3 class="facility-title">Live Venue</h3>
+          <p class="facility-desc">
+            Versatile rehearsal spaces and an intimate venue built to capture live performances and stage rehearsals.
+          </p>
+        </div>
+
+        <!-- Facility 3: Visuals -->
+        <div class="facility-card">
+          <div class="facility-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="facility-title">Visuals</h3>
+          <p class="facility-desc">
+            Professional filming and high-quality livestreaming services to broadcast and record your creative sessions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RELEASE ARCHIVE & FUTURE UPLOADS ===== -->
+  <section class="releases-grid-section">
+    <div class="showcase-container">
+      <h2 class="grid-title">Releases & Catalog</h2>
+      
+      <div class="releases-grid">
+        
+        <!-- Album 1: Active -->
+        <div class="release-card">
+          <div class="release-artwork" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=400');"></div>
+          <div class="release-content">
+            <h3 class="card-release-title">Current Studio Album</h3>
+            <div class="card-release-subtitle">Mali Boy Production</div>
+            <p class="card-release-desc">
+              Refined instrumentation, multi-channel soundscapes, and crisp mastering highlighting the EQX signature sound engineering.
+            </p>
+            <a href="https://open.spotify.com/album/62waSLmGueKOnfHSxUlEcs" target="_blank" rel="noopener noreferrer" class="clay-button" style="text-align: center;">View Album</a>
+          </div>
+        </div>
+
+        <!-- Placeholder 1: Coming Soon -->
+        <div class="release-card coming-soon">
+          <div class="coming-soon-badge">In Production</div>
+          <div class="release-artwork" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=400');"></div>
+          <div class="release-content">
+            <h3 class="card-release-title">Studio Session Vol. II</h3>
+            <div class="card-release-subtitle">Coming Soon</div>
+            <p class="card-release-desc">
+              Currently in multi-track recording and mixing. Follow our space for launch notifications and pre-save links.
+            </p>
+            <button class="clay-button" style="cursor: not-allowed;" disabled>Stay Tuned</button>
+          </div>
+        </div>
+
+        <!-- Placeholder 2: Coming Soon -->
+        <div class="release-card coming-soon">
+          <div class="coming-soon-badge">Planned</div>
+          <div class="release-artwork" style="background-image: url('https://images.unsplash.com/photo-1516280440614-37939bbacd6a?auto=format&fit=crop&q=80&w=400');"></div>
+          <div class="release-content">
+            <h3 class="card-release-title">Acoustic Sessions</h3>
+            <div class="card-release-subtitle">Future Launch</div>
+            <p class="card-release-desc">
+              Unplugged sessions and acoustic captures showcasing micro-detail spatial engineering and room sound design.
+            </p>
+            <button class="clay-button" style="cursor: not-allowed;" disabled>Stay Tuned</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GLOBAL FOOTER ===== -->
+  <footer class="eqx-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-eqx">EQX<span class="logo-dot"></span></a>
+        <p class="footer-desc">
+          Crafting bespoke digital engineering, content, sound, and projects. Led by CPz, Rz, and Mali Boy.
+        </p>
+      </div>
+      
+      <div class="footer-column">
+        <h4 class="footer-col-title">Capabilities</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#hex-services" class="footer-link">Digital Engineering</a></li>
+          <li><a href="index.html#hex-services" class="footer-link">Music & Sound</a></li>
+          <li><a href="index.html#hex-services" class="footer-link">Content Production</a></li>
+          <li><a href="index.html#hex-services" class="footer-link">Project Logistics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-col-title">Locations</h4>
+        <ul class="footer-links">
+          <li><span class="footer-link" style="cursor: default;">Landskrona, SE</span></li>
+          <li><span class="footer-link" style="cursor: default;">Huntsville, AL</span></li>
+          <li><span class="footer-link" style="cursor: default;">Europe Hub</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-col-title">Connect</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@eqx.com" class="footer-link">Email Us</a></li>
+          <li><a href="#" class="footer-link">Twitter / X</a></li>
+          <li><a href="crm.html" class="footer-link">Admin Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>&copy; 2026 EQX. All Rights Reserved.</div>
+      <div>Designed in Sweden</div>
+    </div>
+  </footer>
+
+</body>
+</html>
