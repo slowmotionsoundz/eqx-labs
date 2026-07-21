@@ -17,7 +17,7 @@ export function initLocations(container) {
           <div class="locations-badge">Dual Core Hubs</div>
           <h2 class="locations-title">Consolidating <span>EQ Labs</span></h2>
           <p class="locations-desc">
-            Bringing together the physical and digital hubs of EQ Labs Europe and Huntsville under the unified banner of EQX Landskrona. Two hemispheres, one vision.
+            Bringing together the physical and digital hubs of EQ Labs Europe and eq.labs HSV under the unified banner of EQX Landskrona. Two hemispheres, one vision.
           </p>
 
           <div class="hubs-list">

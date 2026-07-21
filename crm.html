@@ -3,46 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EQX CRM | Admin Pipeline & Customer Logistics Hub</title>
-  <meta name="description" content="Manage leads, pipeline revenues, tasks, and system integrations for EQX Europe." />
+  <title>EQX Hub | Project Operations Suite</title>
+  <meta name="description" content="Manage leads, projects, contacts, invoices, workspaces, and review creative files for EQX Europe." />
   
   <!-- Preconnect to Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=10" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
   
   <style>
-    /* Dashboard specific container adjustments */
     body {
       background: var(--eqx-dark-bg);
       overflow-x: hidden;
     }
 
     .crm-add-lead-btn {
-      background: var(--eqx-accent);
-      color: var(--eqx-dark-bg);
+      /* Legacy alias — routes through btn-primary */
+      background: linear-gradient(160deg, #FF6B4A 0%, #FF5733 55%, #E84820 100%);
+      color: #FFFFFF;
       border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
+      border-bottom: 3px solid rgba(0, 0, 0, 0.32);
+      padding: 10px 24px;
+      border-radius: 100px;
       font-size: 0.85rem;
       font-weight: 600;
-      transition: var(--transition-smooth);
+      letter-spacing: 0.025em;
       cursor: pointer;
+      position: relative;
+      top: 0;
+      transition: all 0.18s cubic-bezier(0.25, 1, 0.5, 1);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.20) inset,
+        0 6px 18px rgba(255, 87, 51, 0.42),
+        0 2px 4px rgba(0, 0, 0, 0.28);
+      white-space: nowrap;
     }
 
     .crm-add-lead-btn:hover {
-      background: var(--eqx-text-light);
-      box-shadow: 0 4px 15px rgba(195, 181, 159, 0.4);
+      background: linear-gradient(160deg, #FF7D5E 0%, #FF6B4A 55%, #FF5733 100%);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.25) inset,
+        0 10px 24px rgba(255, 87, 51, 0.48),
+        0 4px 10px rgba(0, 0, 0, 0.22);
+      transform: translateY(-2px);
+      top: -2px;
+    }
+
+    .crm-add-lead-btn:active {
+      background: linear-gradient(160deg, #E84820 0%, #D43A10 55%, #C02E08 100%);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.10) inset,
+        0 2px 6px rgba(255, 87, 51, 0.30),
+        0 1px 2px rgba(0, 0, 0, 0.38);
+      transform: translateY(2px);
+      top: 2px;
     }
 
     /* Modal Form Styling */
     .lead-modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(4px);
-      z-index: 1000;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px) saturate(1.5);
+      z-index: 1100;
       display: none;
       align-items: center;
       justify-content: center;
@@ -55,11 +80,13 @@
     .lead-modal {
       background: var(--eqx-dark-panel);
       border: 1px solid var(--eqx-border-light);
-      border-radius: 20px;
-      padding: 32px;
+      border-radius: 22px;
+      padding: 36px;
       width: 100%;
-      max-width: 480px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+      max-width: 490px;
+      box-shadow:
+        0 20px 50px var(--eqx-neu-shadow-dark),
+        0 1px 0 var(--eqx-neu-shadow-light) inset;
       position: relative;
     }
 
@@ -101,13 +128,16 @@
       border: 1px solid var(--eqx-border-light);
       color: var(--eqx-text-light);
       padding: 10px 14px;
-      border-radius: 8px;
+      border-radius: 10px;
       outline: none;
       font-size: 0.9rem;
+      font-family: var(--font-body);
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
 
     .form-input:focus {
-      border-color: var(--eqx-accent);
+      border-color: var(--eqx-primary);
+      box-shadow: 0 0 0 3px var(--eqx-primary-glow);
     }
 
     .tour-trigger-float {
@@ -115,10 +145,10 @@
       bottom: 24px;
       left: 24px;
       background: var(--eqx-dark-panel);
-      border: 1px solid var(--eqx-accent);
-      color: var(--eqx-accent);
+      border: 1px solid var(--eqx-border-light);
+      color: var(--eqx-text-muted);
       padding: 8px 16px;
-      border-radius: 20px;
+      border-radius: 100px;
       font-size: 0.8rem;
       font-weight: 500;
       cursor: pointer;
@@ -127,37 +157,245 @@
     }
 
     .tour-trigger-float:hover {
-      background: var(--eqx-accent);
-      color: var(--eqx-dark-bg);
-      box-shadow: 0 4px 15px rgba(195, 181, 159, 0.3);
+      background: var(--eqx-primary);
+      color: #FFFFFF;
+      border-color: var(--eqx-primary);
+      box-shadow: 0 4px 15px var(--eqx-primary-shadow);
+    }
+
+    /* ===== AUTH GATE ===== */
+    #auth-gate-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--eqx-dark-bg);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #auth-gate-overlay.active { display: flex; }
+    .auth-gate-card {
+      background: var(--eqx-dark-panel);
+      border: 1px solid var(--eqx-glass-border);
+      border-radius: 24px;
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.7), 0 1px 0 rgba(255,255,255,0.06) inset;
+      position: relative;
+    }
+    .auth-gate-logo {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--eqx-text-light);
+      margin-bottom: 6px;
+    }
+    .auth-gate-logo .auth-logo-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--eqx-primary);
+      border-radius: 50%;
+      margin-left: 2px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      box-shadow: 0 0 8px var(--eqx-primary-shadow);
+    }
+    .auth-gate-sub {
+      font-size: 0.85rem;
+      color: var(--eqx-text-muted);
+      margin-bottom: 32px;
+    }
+    .auth-google-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      color: #1f1f1f;
+      border: none;
+      border-radius: 100px;
+      padding: 12px 28px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .auth-google-btn:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.4); transform: translateY(-1px); }
+    .auth-google-btn:active { transform: translateY(1px); }
+    .auth-google-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    #auth-error-msg {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: #FF6B6B;
+      min-height: 1.2em;
+    }
+    #auth-user-display {
+      font-size: 0.82rem;
+      color: var(--eqx-text-muted);
+    }
+    #auth-sign-out-btn {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--eqx-text-muted);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    #auth-sign-out-btn:hover { border-color: #FF6B4A; color: #FF6B4A; }
+
+    /* ===== MOBILE RESPONSIVENESS ===== */
+    @media (max-width: 576px) {
+      .lead-modal {
+        padding: 20px 16px !important;
+        max-width: 94% !important;
+        margin: 0 auto;
+      }
+      .lead-modal-overlay {
+        padding: 10px;
+      }
+      /* Specifically optimize the email preview modal for mobile */
+      #email-preview-modal .lead-modal {
+        padding: 16px 12px 16px !important;
+        border-radius: 16px;
+      }
+      #email-preview-modal div[style*="display: flex"][style*="align-items: flex-start"],
+      #email-preview-modal div[style*="display: flex"][style*="align-items:flex-start"] {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+      }
+      #email-preview-modal div[style*="flex-shrink: 0"],
+      #email-preview-modal div[style*="flex-shrink:0"] {
+        order: -1; /* Put image/badge on top of text when vertical */
+      }
+      #email-preview-modal div[style*="display: flex"][style*="gap: 0"] {
+        flex-direction: row !important; /* Keep detail strip columns horizontal */
+        padding: 12px 6px !important;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="crm-layout">
+  <div class="crm-layout" style="display: none;">
     
     <!-- Left Navigation Bar -->
     <aside class="crm-sidebar">
-      <div class="crm-sidebar-logo">EQX</div>
+      <div class="crm-sidebar-header">
+        <div class="crm-sidebar-logo">EQX</div>
+        <button class="crm-sidebar-toggle" id="sidebar-toggle-btn" aria-label="Collapse Sidebar" title="Collapse Sidebar">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+          </svg>
+        </button>
+      </div>
       
-      <a href="index.html" class="crm-nav-item" aria-label="Go Home">
+      <a href="index.html" class="crm-nav-item" aria-label="Go Home" data-tooltip="Go Home">
         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
+        <span class="crm-nav-label">Go Home</span>
       </a>
       
-      <a href="studio.html" class="crm-nav-item" aria-label="Acoustic Studios">
+      <a href="studio.html" class="crm-nav-item" aria-label="Acoustic Studios" data-tooltip="Acoustic Studios">
         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
         </svg>
+        <span class="crm-nav-label">Acoustic Studios</span>
       </a>
       
-      <a href="crm.html" class="crm-nav-item active" aria-label="Pipeline Dashboard">
+      <hr style="width: 40px; border: none; border-top: 1px solid rgba(255,255,255,0.05); margin: 4px 0;" class="sidebar-hr" />
+
+      <!-- Dashboard Overview -->
+      <button class="crm-nav-item active" id="sidebar-tab-dashboard" aria-label="Dashboard Overview" data-tooltip="Dashboard Overview">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z" />
+        </svg>
+        <span class="crm-nav-label">Dashboard Overview</span>
+      </button>
+
+      <!-- Leads Directory -->
+      <button class="crm-nav-item" id="sidebar-tab-contacts" aria-label="Leads Directory" data-tooltip="Leads Directory">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <span class="crm-nav-label">Leads Directory</span>
+      </button>
+
+      <!-- Leads Kanban -->
+      <button class="crm-nav-item" id="sidebar-tab-pipeline" aria-label="Leads Kanban" data-tooltip="Leads Kanban">
         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
-      </a>
+        <span class="crm-nav-label">Leads Kanban</span>
+      </button>
+
+      <!-- Multi-Room Calendar -->
+      <button class="crm-nav-item" id="sidebar-tab-calendar" aria-label="Room Schedule" data-tooltip="Room Schedule">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <span class="crm-nav-label">Room Schedule</span>
+      </button>
+
+      <!-- Projects Tracker -->
+      <button class="crm-nav-item" id="sidebar-tab-projects" aria-label="Projects Tracker" data-tooltip="Projects Tracker">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+        </svg>
+        <span class="crm-nav-label">Projects Tracker</span>
+      </button>
+
+      <!-- To-Dos Checklist -->
+      <button class="crm-nav-item" id="sidebar-tab-todos" aria-label="To-Dos Checklist" data-tooltip="To-Dos Checklist">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+        </svg>
+        <span class="crm-nav-label">To-Dos Checklist</span>
+      </button>
+
+      <!-- Collaborative File Review -->
+      <button class="crm-nav-item" id="sidebar-tab-review" aria-label="File Review Portal" data-tooltip="File Review Portal">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+        </svg>
+        <span class="crm-nav-label">File Review Portal</span>
+      </button>
+
+      <!-- Invoicing & Financials -->
+      <button class="crm-nav-item" id="sidebar-tab-financials" aria-label="Quotes & Financials" data-tooltip="Quotes & Financials">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M12 16V5" />
+        </svg>
+        <span class="crm-nav-label">Quotes & Financials</span>
+      </button>      <!-- Settings -->
+      <button class="crm-nav-item" id="sidebar-tab-settings" aria-label="Settings" style="margin-top: auto;" data-tooltip="Settings">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span class="crm-nav-label">Settings</span>
+      </button>
+ 
+      <!-- Theme Toggle (Dark/Light) -->
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark/Light Theme" title="Toggle Theme" data-tooltip="Toggle Theme">
+        <!-- Sun icon (shown in dark mode) -->
+        <svg id="theme-icon-sun" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg id="theme-icon-moon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display:none;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+        <span class="crm-nav-label">Toggle Theme</span>
+      </button>
     </aside>
 
     <!-- Main Workspace -->
@@ -166,26 +404,21 @@
       <!-- Top Title and Database integrations controls -->
       <section class="crm-header-row">
         <div class="crm-title-group">
-          <h1>Customer Relationship Hub</h1>
-          <p>Real-time customer metrics, logistics funnels, and pipeline development.</p>
+          <h1>EQX Hub &amp; Project Operations Suite</h1>
         </div>
         
         <div class="crm-controls">
-          <div class="crm-toggle-container" id="tutorial-step-1">
-            <span class="crm-toggle-label">Firebase Ingest</span>
-            <label class="crm-switch">
-              <input type="checkbox" id="crm-db-toggle">
-              <span class="crm-slider"></span>
-            </label>
-          </div>
+          <div id="auth-user-display" style="font-size:0.82rem;color:var(--eqx-text-muted);"></div>
+          <button id="auth-sign-out-btn" style="display:none;">Sign Out</button>
+          <button class="crm-add-lead-btn" id="start-tour-btn" style="background: transparent; border: 1px solid var(--neon-cyan); box-shadow: 0 0 10px rgba(0,255,255,0.2); margin-right: 8px;">▶ Tutorial</button>
           <button class="crm-add-lead-btn" id="open-lead-modal-btn">+ Add Lead</button>
         </div>
       </section>
 
       <!-- KPI Statistics row -->
-      <section class="crm-metrics-grid" id="tutorial-step-2">
+      <section class="crm-metrics-grid" id="tutorial-step-2" style="margin-bottom: 24px;">
         
-        <div class="metric-card">
+        <div class="metric-card" id="kpi-card-pipeline">
           <div class="metric-icon">
             <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M12 16V5" />
@@ -193,11 +426,11 @@
           </div>
           <div>
             <div class="metric-label">Pipeline Value</div>
-            <div class="metric-value" id="kpi-total-revenue">$0</div>
+            <div class="metric-value" id="kpi-total-revenue">0 SEK</div>
           </div>
         </div>
 
-        <div class="metric-card">
+        <div class="metric-card" id="kpi-card-uncontacted">
           <div class="metric-icon">
             <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -209,10 +442,10 @@
           </div>
         </div>
 
-        <div class="metric-card">
+        <div class="metric-card" id="kpi-card-pending">
           <div class="metric-icon">
             <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5H7" />
             </svg>
           </div>
           <div>
@@ -223,75 +456,17 @@
 
       </section>
 
-      <!-- Grid Panel Layout: Pipeline vs Details -->
-      <section class="crm-workspace-grid">
-        
-        <!-- Left Side Kanban View -->
-        <div class="pipeline-view">
-          
-          <!-- Filter Controls -->
-          <div class="pipeline-filter-bar" id="tutorial-step-3">
-            <div style="display:flex; gap:8px;" id="filter-location-group">
-              <button class="pipeline-filter-btn active" data-loc="all">All Locations</button>
-              <button class="pipeline-filter-btn" data-loc="Landskrona, SE">Landskrona</button>
-              <button class="pipeline-filter-btn" data-loc="Huntsville, AL">Huntsville</button>
-              <button class="pipeline-filter-btn" data-loc="Europe Hub">Europe Hub</button>
-            </div>
-            
-            <div style="display:flex; gap:8px;" id="filter-source-group">
-              <button class="pipeline-filter-btn active" data-source="all">All Sources</button>
-              <button class="pipeline-filter-btn" data-source="website">Website Form</button>
-              <button class="pipeline-filter-btn" data-source="referral">Referrals</button>
-              <button class="pipeline-filter-btn" data-source="manual">Manual Entry</button>
-            </div>
-          </div>
+      <!-- Active tab content panel workspace containers -->
+      <div id="crm-tab-dashboard" class="crm-tab-content active"></div>
+      <div id="crm-tab-pipeline" class="crm-tab-content"></div>
+      <div id="crm-tab-contacts" class="crm-tab-content"></div>
+      <div id="crm-tab-calendar" class="crm-tab-content"></div>
+      <div id="crm-tab-projects" class="crm-tab-content"></div>
+      <div id="crm-tab-review" class="crm-tab-content"></div>
+      <div id="crm-tab-financials" class="crm-tab-content"></div>
+      <div id="crm-tab-todos" class="crm-tab-content"></div>
+      <div id="crm-tab-settings" class="crm-tab-content"></div>
 
-          <!-- Kanban Board -->
-          <div class="pipeline-grid" id="tutorial-step-4">
-            
-            <!-- Stage 1: New -->
-            <div class="pipeline-column" data-status="new">
-              <div class="pipeline-column-header">
-                <span class="pipeline-column-title">New Ingest</span>
-                <span class="pipeline-column-count">0</span>
-              </div>
-              <div class="leads-list" id="pipeline-new-list"></div>
-            </div>
-
-            <!-- Stage 2: Contacted -->
-            <div class="pipeline-column" data-status="contacted">
-              <div class="pipeline-column-header">
-                <span class="pipeline-column-title">Contacted</span>
-                <span class="pipeline-column-count">0</span>
-              </div>
-              <div class="leads-list" id="pipeline-contacted-list"></div>
-            </div>
-
-            <!-- Stage 3: Qualified -->
-            <div class="pipeline-column" data-status="qualified">
-              <div class="pipeline-column-header">
-                <span class="pipeline-column-title">Qualified</span>
-                <span class="pipeline-column-count">0</span>
-              </div>
-              <div class="leads-list" id="pipeline-qualified-list"></div>
-            </div>
-
-            <!-- Stage 4: Disqualified -->
-            <div class="pipeline-column" data-status="disqualified">
-              <div class="pipeline-column-header">
-                <span class="pipeline-column-title">Archived</span>
-                <span class="pipeline-column-count">0</span>
-              </div>
-              <div class="leads-list" id="pipeline-disqualified-list"></div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Right Side details Drawer -->
-        <aside class="crm-details-panel" id="tutorial-step-5"></aside>
-
-      </section>
     </main>
 
   </div>
@@ -300,27 +475,27 @@
   <div class="lead-modal-overlay" id="add-lead-modal">
     <div class="lead-modal">
       <button class="lead-modal-close" id="close-lead-modal-btn">&times;</button>
-      <h3>Create New Customer Record</h3>
+      <h3>Create New Lead</h3>
       <form id="add-lead-form" onsubmit="event.preventDefault(); submitManualLead();">
         <div style="display:flex; gap:16px;">
           <div class="form-group" style="flex:1;">
             <label for="lead-first-name">First Name</label>
-            <input type="text" id="lead-first-name" class="form-input" required />
+            <input type="text" id="lead-first-name" class="form-input" />
           </div>
           <div class="form-group" style="flex:1;">
             <label for="lead-last-name">Last Name</label>
-            <input type="text" id="lead-last-name" class="form-input" required />
+            <input type="text" id="lead-last-name" class="form-input" />
           </div>
         </div>
         
         <div class="form-group">
           <label for="lead-email">Email Address</label>
-          <input type="email" id="lead-email" class="form-input" required />
+          <input type="email" id="lead-email" class="form-input" />
         </div>
 
         <div class="form-group">
           <label for="lead-phone">Phone Number</label>
-          <input type="tel" id="lead-phone" class="form-input" required />
+          <input type="tel" id="lead-phone" class="form-input" />
         </div>
 
         <div class="form-group">
@@ -330,8 +505,8 @@
 
         <div style="display:flex; gap:16px;">
           <div class="form-group" style="flex:1;">
-            <label for="lead-value">Deal Value ($)</label>
-            <input type="number" id="lead-value" class="form-input" placeholder="5000" />
+            <label for="lead-value">Deal Value (SEK)</label>
+            <input type="number" id="lead-value" class="form-input" placeholder="e.g. 25000" />
           </div>
           <div class="form-group" style="flex:1;">
             <label for="lead-location">Branch Location</label>
@@ -343,75 +518,114 @@
           </div>
         </div>
 
-        <button type="submit" class="crm-add-lead-btn" style="width:100%; margin-top:10px; border-radius:8px;">Add Lead</button>
+        <button type="submit" class="crm-add-lead-btn" style="width:100%; margin-top:10px;">Add Lead</button>
       </form>
+    </div>
+  </div>
+
+  <!-- Project Creation Modal Overlay -->
+  <div class="lead-modal-overlay" id="add-project-modal">
+    <div class="lead-modal">
+      <button class="lead-modal-close" id="close-project-modal-btn">&times;</button>
+      <h3>Initialize New Project</h3>
+      <form id="add-project-form" onsubmit="event.preventDefault(); submitManualProject();">
+        <div class="form-group">
+          <label for="project-form-title">Project Name</label>
+          <input type="text" id="project-form-title" class="form-input" placeholder="e.g. Website Overhaul" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="project-form-client">Client / Organization</label>
+          <select id="project-form-client" class="form-input" style="background:var(--eqx-dark-card);" required>
+            <option value="" disabled selected>Select a client...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="project-form-category">Project Category</label>
+          <select id="project-form-category" class="form-input" style="background:var(--eqx-dark-card);">
+            <option value="web-app">Web & App Platform</option>
+            <option value="audio-media">Audio & Podcast Production</option>
+            <option value="digital-design">Creative Brand & Design</option>
+            <option value="general-ops">General Project Operations</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="project-form-notes">Project Log / Specs</label>
+          <textarea id="project-form-notes" class="form-input" style="height:80px; resize:none;" placeholder="Initial specs or notes..."></textarea>
+        </div>
+
+        <button type="submit" class="crm-add-lead-btn" style="width:100%; margin-top:10px;">Initialize Project</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Auth Gate Overlay -->
+  <div id="auth-gate-overlay" class="active">
+    <div class="auth-gate-card">
+      <div class="auth-gate-logo">EQX</div>
+      <p class="auth-gate-sub">Hub &amp; Project Operations Suite<br><small style="opacity:0.5;">Admin Access Required</small></p>
+      <button class="auth-google-btn" id="auth-sign-in-btn">
+        <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.35-8.16 2.35-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/><path fill="none" d="M0 0h48v48H0z"/></svg>
+        Sign in with Google
+      </button>
+      <div id="auth-error-msg"></div>
     </div>
   </div>
 
   <!-- Onboarding Elements Anchor Root -->
   <div id="tour-anchor-root"></div>
 
-  <!-- Tour Activation Trigger -->
-  <button class="tour-trigger-float" onclick="window.startCrmTour()">Quick Tutorial</button>
-
   <!-- Script Modules -->
   <script type="module">
-    import { initCRM, initTutorialTour } from './js/crm.js';
+    import { initCRM } from './js/crm.js?v=28';
+    import { initTour } from './js/tour.js';
+    import { initAuthGate } from './js/auth.js';
 
-    // Assemble DOM binding references
-    const crmElements = {
-      metricsTotalRev: document.getElementById("kpi-total-revenue"),
-      metricsNewLeads: document.getElementById("kpi-new-leads"),
-      metricsTasks: document.getElementById("kpi-pending-tasks"),
-      pipelineNewList: document.getElementById("pipeline-new-list"),
-      pipelineContactedList: document.getElementById("pipeline-contacted-list"),
-      pipelineQualifiedList: document.getElementById("pipeline-qualified-list"),
-      pipelineDisqualifiedList: document.getElementById("pipeline-disqualified-list"),
-      detailsPanel: document.getElementById("tutorial-step-5"),
-      filterLocationBtnGroup: document.querySelectorAll("#filter-location-group .pipeline-filter-btn"),
-      filterSourceBtnGroup: document.querySelectorAll("#filter-source-group .pipeline-filter-btn"),
-      toggleDbModeBtn: document.getElementById("crm-db-toggle")
-    };
-
-    // Connect database helpers (mocked for development, switchable to live collections)
-    const dbHelpers = {
-      fetchLeads: async () => {
-        // Live Firestore fetching simulation
-        return new Promise((resolve) => {
-          setTimeout(() => {
-            // Simulating live database call returning updated lead array
-            resolve(JSON.parse(localStorage.getItem("eqx_crm_leads")) || []);
-          }, 800);
-        });
-      }
-    };
-
-    // Initialize Main CRM Modules
-    initCRM(crmElements, dbHelpers);
-
-    // Initialize Tutorial tour anchor system
-    initTutorialTour(document.getElementById("tour-anchor-root"));
-
-    // Trigger tour automatically for first-time visitors
-    if (!localStorage.getItem("eqx_crm_tour_completed")) {
-      setTimeout(() => {
-        if (typeof window.startCrmTour === 'function') {
-          window.startCrmTour();
-          localStorage.setItem("eqx_crm_tour_completed", "true");
-        }
-      }, 1500);
+    // Handle Tutorial
+    const tourBtn = document.getElementById("start-tour-btn");
+    if (tourBtn) {
+      tourBtn.addEventListener("click", () => {
+        initTour();
+      });
     }
 
-    // Handle Manual Lead Submission Modals
-    const modal = document.getElementById("add-lead-modal");
-    const openBtn = document.getElementById("open-lead-modal-btn");
-    const closeBtn = document.getElementById("close-lead-modal-btn");
+    // Initialize Auth Gate — CRM boots only after a valid admin signs in
+    initAuthGate((user, role) => {
+      // Show sign-out button once authenticated
+      const signOutBtn = document.getElementById("auth-sign-out-btn");
+      if (signOutBtn) signOutBtn.style.display = "";
 
-    openBtn.addEventListener("click", () => modal.classList.add("active"));
-    closeBtn.addEventListener("click", () => modal.classList.remove("active"));
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) modal.classList.remove("active");
+      // Initialize Main CRM Modules
+      initCRM({});
     });
+
+    // Handle Manual Lead Submission Modals
+    const leadModal = document.getElementById("add-lead-modal");
+    const openLeadBtn = document.getElementById("open-lead-modal-btn");
+    const closeLeadBtn = document.getElementById("close-lead-modal-btn");
+
+    openLeadBtn.addEventListener("click", () => leadModal.classList.add("active"));
+    closeLeadBtn.addEventListener("click", () => leadModal.classList.remove("active"));
+    leadModal.addEventListener("click", (e) => {
+      if (e.target === leadModal) leadModal.classList.remove("active");
+    });
+
+    // Handle Project Creation Modals
+    window.openProjectModal = () => {
+      const projModal = document.getElementById("add-project-modal");
+      if (projModal) projModal.classList.add("active");
+    };
+
+    const projModal = document.getElementById("add-project-modal");
+    const closeProjBtn = document.getElementById("close-project-modal-btn");
+    if (closeProjBtn) closeProjBtn.addEventListener("click", () => projModal.classList.remove("active"));
+    if (projModal) {
+      projModal.addEventListener("click", (e) => {
+        if (e.target === projModal) projModal.classList.remove("active");
+      });
+    }
 
     // Submit form mapping
     window.submitManualLead = () => {
@@ -425,10 +639,165 @@
 
       const success = window.createNewLead(firstName, lastName, email, phone, company, value, loc, "manual");
       if (success) {
-        modal.classList.remove("active");
+        leadModal.classList.remove("active");
         document.getElementById("add-lead-form").reset();
       }
     };
+
+    // Submit Project Form
+    window.submitManualProject = () => {
+      const title = document.getElementById("project-form-title").value;
+      const client = document.getElementById("project-form-client").value;
+      const category = document.getElementById("project-form-category").value;
+      const notes = document.getElementById("project-form-notes").value;
+
+      const success = window.createNewProject(title, client, category, notes);
+      if (success) {
+        projModal.classList.remove("active");
+        document.getElementById("add-project-form").reset();
+      }
+    };
   </script>
+
+  <!-- Client Booking Email Preview Modal -->
+  <div class="lead-modal-overlay" id="email-preview-modal">
+    <div class="lead-modal" style="max-width: 560px; padding: 24px 24px 20px; overflow-y: auto; max-height: 92vh; position: relative;">
+      <button class="lead-modal-close" id="close-email-modal-btn">&times;</button>
+      
+      <!-- Modal meta header -->
+      <h3 style="margin-bottom: 3px; font-family: var(--font-head); font-weight: 300; font-size: 1rem;">Email Notification Preview</h3>
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--eqx-border-light); border-radius: 8px; padding: 8px 12px; font-size: 0.78rem; margin-bottom: 14px; display: flex; flex-direction: column; gap: 3px;">
+        <div style="color: var(--eqx-text-muted);"><strong style="color:var(--eqx-text-light);">To:</strong> <span id="email-preview-to">client@example.com</span></div>
+        <div style="color: var(--eqx-text-muted);"><strong style="color:var(--eqx-text-light);">Subject:</strong> Your EQX Studio Session is Confirmed ✓</div>
+      </div>
+
+      <!-- ── EMAIL TEMPLATE (light, styled like reference) ── -->
+      <div style="background: #f4f4f8; border-radius: 12px; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size: 14px; color: #1a1a2e; margin-bottom: 16px;">
+
+        <!-- Top logo bar -->
+        <div style="background: #ffffff; text-align: center; padding: 18px 24px 14px; border-bottom: 1px solid #e8e8f0;">
+          <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.04em; color: #1a1a2e;">
+            EQX<span style="display:inline-block; width:7px; height:7px; background:#FF5733; border-radius:50%; box-shadow:0 0 6px rgba(255,87,51,0.5); position:relative; top:-1px;"></span>
+          </div>
+        </div>
+
+        <!-- Hero section -->
+        <div style="background: #ffffff; text-align: center; padding: 28px 32px 22px;">
+          <p style="margin: 0 0 6px 0; font-size: 0.78rem; font-weight: 700; color: #FF5733; text-transform: uppercase; letter-spacing: 0.06em;">Session Confirmed</p>
+          <h1 style="margin: 0; font-size: 2rem; font-weight: 800; color: #1a1a2e; line-height: 1.15;" id="email-hero-headline">Your Studio Session<br/>is Locked In ✓</h1>
+        </div>
+
+        <!-- Content card: title + text + studio image placeholder -->
+        <div style="background: #ffffff; margin: 0 16px 16px; border-radius: 12px; padding: 20px; display: flex; gap: 16px; align-items: flex-start; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
+          <div style="flex: 1;">
+            <h2 style="margin: 0 0 8px 0; font-size: 1rem; font-weight: 700; color: #1a1a2e;" id="email-card-title">EQX Studio Session</h2>
+            <p style="margin: 0; font-size: 0.82rem; color: #555570; line-height: 1.55;">
+              Hi <strong id="email-client-name" style="color: #1a1a2e;">Client</strong>, your upcoming studio session has been confirmed. Our engineering team will be ready for your arrival. We look forward to working with you!
+            </p>
+          </div>
+          <!-- Studio image placeholder / icon badge -->
+          <div style="flex-shrink:0; width:72px; height:72px; border-radius: 12px; background: linear-gradient(135deg, #FF5733 0%, #FF8D75 100%); display:flex; align-items:center; justify-content:center; box-shadow: 0 4px 14px rgba(255,87,51,0.3);">
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Three-column detail strip -->
+        <div style="background: #ffffff; margin: 0 16px 16px; border-radius: 12px; padding: 16px 12px; display: flex; gap: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
+          <div style="flex: 1; width: 33.33%; text-align: center; border-right: 1px solid #e8e8f0; padding: 0 6px; box-sizing: border-box;">
+            <div style="font-size: 0.7rem; color: #888899; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em;">📅 Date</div>
+            <div style="font-size: 0.88rem; font-weight: 700; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="email-session-date">June 15, 2026</div>
+          </div>
+          <div style="flex: 1; width: 33.33%; text-align: center; border-right: 1px solid #e8e8f0; padding: 0 6px; box-sizing: border-box;">
+            <div style="font-size: 0.7rem; color: #888899; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em;">⏱ Duration</div>
+            <div style="font-size: 0.88rem; font-weight: 700; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="email-session-duration">3 Hours</div>
+          </div>
+          <div style="flex: 1; width: 33.33%; text-align: center; padding: 0 6px; box-sizing: border-box;">
+            <div style="font-size: 0.7rem; color: #888899; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em;">🎙 Studio</div>
+            <div style="font-size: 0.88rem; font-weight: 700; color: #FF5733; word-wrap: break-word; line-height: 1.25;" id="email-session-room">Control Room</div>
+          </div>
+        </div>
+
+        <!-- Body text + directions -->
+        <div style="padding: 4px 32px 16px;">
+          <p style="margin: 0 0 4px 0; font-size: 0.9rem; color: #1a1a2e; font-weight: 600;">Hi there,</p>
+          <p style="margin: 0; font-size: 0.82rem; color: #555570; line-height: 1.6;">We can't wait to have you in the studio. Everything is being set up for your arrival. Here's what you need to know before you come in:</p>
+        </div>
+
+        <!-- Getting here box (highlighted, like reference CTA box) -->
+        <div style="margin: 0 16px 16px; background: #f0f0fa; border-radius: 12px; padding: 18px 20px;">
+          <h3 style="margin: 0 0 6px 0; font-size: 0.88rem; font-weight: 700; color: #1a1a2e;">📍 Getting to the Studio</h3>
+          <p style="margin: 0 0 12px 0; font-size: 0.8rem; color: #555570;">Use the address below and arrive 10–15 minutes early so our engineers can set up your session properly.</p>
+          <div id="email-session-directions" style="font-size: 0.8rem; color: #333350; line-height: 1.55; background: #ffffff; border: 1px solid #ddddef; border-radius: 8px; padding: 10px 12px;">
+            Address will load here...
+          </div>
+
+          <!-- Editable custom notes field -->
+          <div style="margin-top: 10px;">
+            <label for="email-custom-notes" style="font-size: 0.72rem; color: #888899; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em;">Custom Arrival Notes (editable)</label>
+            <textarea id="email-custom-notes" style="width: 100%; height: 52px; font-size: 0.78rem; border: 1px solid #ddddef; border-radius: 8px; padding: 8px 10px; resize: none; box-sizing: border-box; color: #333350; background: #ffffff; font-family: inherit;" placeholder="e.g. Park in the visitors bay. Ring the security buzzer on arrival."></textarea>
+          </div>
+        </div>
+
+        <!-- Prep checklist -->
+        <div style="padding: 0 32px 16px;">
+          <p style="margin: 0 0 8px 0; font-size: 0.82rem; color: #555570; line-height: 1.6;">Please also keep the following in mind when preparing for your session:</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 0.8rem; color: #555570; line-height: 1.7;">
+            <li>Bring your raw tracks / project files on a fast USB-C SSD.</li>
+            <li>Review any digital asset agreements ahead of time.</li>
+            <li>Arrive 10–15 minutes early to align with the engineering staff.</li>
+          </ul>
+        </div>
+
+        <!-- Sign off -->
+        <div style="padding: 8px 32px 20px;">
+          <p style="margin: 0 0 2px 0; font-size: 0.82rem; color: #555570;">If you need to reschedule or have any questions, simply reply to this email and we'll get back to you as soon as possible.</p>
+          <p style="margin: 10px 0 0 0; font-size: 0.82rem; color: #555570;">Regards,<br/><strong style="color: #1a1a2e;">Team EQX</strong> <span style="color: #FF5733;">⚡</span></p>
+        </div>
+
+        <!-- Footer -->
+        <div style="background: #f0f0fa; border-top: 1px solid #e0e0ee; padding: 20px 24px; text-align: center;">
+          <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 1rem; font-weight: 800; letter-spacing: -0.03em; color: #1a1a2e; margin-bottom: 12px;">
+            EQX<span style="display:inline-block; width:5px; height:5px; background:#FF5733; border-radius:50%; position:relative; top:-1px;"></span>
+          </div>
+          <!-- Social icons -->
+          <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 12px;">
+            <div style="width:32px; height:32px; background:#1a1a2e; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;">f</div>
+            <div style="width:32px; height:32px; background:#1a1a2e; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;">ig</div>
+            <div style="width:32px; height:32px; background:#1a1a2e; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;">𝕏</div>
+            <div style="width:32px; height:32px; background:#1a1a2e; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;">▶</div>
+          </div>
+          <p style="margin: 0 0 6px 0; font-size: 0.72rem; color: #888899;">EQX operations © 2026</p>
+          <p style="margin: 0; font-size: 0.68rem; color: #aaaacc;">
+            <a href="#" style="color:#888899; text-decoration:none;">Terms & Conditions</a>
+            &nbsp;|&nbsp;
+            <a href="#" style="color:#888899; text-decoration:none;">Privacy Policy</a>
+            &nbsp;|&nbsp;
+            <a href="#" style="color:#888899; text-decoration:none;">Support</a>
+          </p>
+        </div>
+
+      </div>
+      <!-- ── END EMAIL TEMPLATE ── -->
+
+      <!-- Simulation Actions -->
+      <div style="display: flex; gap: 12px; justify-content: flex-end;">
+        <button class="crm-add-lead-btn" id="cancel-email-btn" style="background: transparent; border: 1px solid var(--eqx-border-light); color: var(--eqx-text-muted); box-shadow: none;">Cancel</button>
+        <button class="crm-add-lead-btn" id="send-simulated-email-btn" style="padding: 10px 24px;">Send Notification</button>
+      </div>
+
+      <!-- Simulated Send Status overlay -->
+      <div id="email-send-status-overlay" style="display: none; position: absolute; inset: 0; background: rgba(18, 18, 20, 0.95); border-radius: 22px; z-index: 100; align-items: center; justify-content: center; flex-direction: column; padding: 40px; box-sizing: border-box;">
+        <div style="font-size: 2.5rem; margin-bottom: 16px;" id="email-status-icon">✉️</div>
+        <h4 style="margin: 0 0 8px 0; font-family: var(--font-head); font-weight: 300; font-size: 1.3rem; color: #FFF;" id="email-status-title">Sending Notification...</h4>
+        <p style="color: var(--eqx-text-muted); font-size: 0.85rem; text-align: center; margin: 0 0 24px 0;" id="email-status-desc">Connecting to transmission host...</p>
+        <div style="width: 100%; max-width: 260px; height: 5px; background: rgba(255,255,255,0.06); border-radius: 100px; overflow: hidden; position: relative;">
+          <div id="email-status-progress" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--eqx-primary) 0%, #FF8D75 100%); border-radius: 100px; transition: width 0.1s ease;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

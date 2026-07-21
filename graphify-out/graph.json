@@ -1,0 +1,5930 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "optimize.py",
+      "file_type": "code",
+      "source_file": "optimize.py",
+      "source_location": "L1",
+      "id": "optimize_py",
+      "community": 35,
+      "norm_label": "optimize.py"
+    },
+    {
+      "label": "test.js",
+      "file_type": "code",
+      "source_file": "test.js",
+      "source_location": "L1",
+      "id": "test_js",
+      "community": 18,
+      "norm_label": "test.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "test.js",
+      "source_location": "L1",
+      "id": "eqxxx_test_fs",
+      "community": 18,
+      "norm_label": "fs"
+    },
+    {
+      "label": "jsdom",
+      "file_type": "code",
+      "source_file": "test.js",
+      "source_location": "L2",
+      "id": "eqxxx_test_jsdom",
+      "community": 18,
+      "norm_label": "jsdom"
+    },
+    {
+      "label": "html",
+      "file_type": "code",
+      "source_file": "test.js",
+      "source_location": "L5",
+      "id": "eqxxx_test_html",
+      "community": 18,
+      "norm_label": "html"
+    },
+    {
+      "label": "dom",
+      "file_type": "code",
+      "source_file": "test.js",
+      "source_location": "L6",
+      "id": "eqxxx_test_dom",
+      "community": 18,
+      "norm_label": "dom"
+    },
+    {
+      "label": "test-html.js",
+      "file_type": "code",
+      "source_file": "test-html.js",
+      "source_location": "L1",
+      "id": "test_html_js",
+      "community": 22,
+      "norm_label": "test-html.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "test-html.js",
+      "source_location": "L1",
+      "id": "eqxxx_test_html_fs",
+      "community": 22,
+      "norm_label": "fs"
+    },
+    {
+      "label": "html",
+      "file_type": "code",
+      "source_file": "test-html.js",
+      "source_location": "L2",
+      "id": "eqxxx_test_html_html",
+      "community": 22,
+      "norm_label": "html"
+    },
+    {
+      "label": "scriptMatch",
+      "file_type": "code",
+      "source_file": "test-html.js",
+      "source_location": "L3",
+      "id": "eqxxx_test_html_scriptmatch",
+      "community": 22,
+      "norm_label": "scriptmatch"
+    },
+    {
+      "label": "test-pup2.js",
+      "file_type": "code",
+      "source_file": "test-pup2.js",
+      "source_location": "L1",
+      "id": "test_pup2_js",
+      "community": 30,
+      "norm_label": "test-pup2.js"
+    },
+    {
+      "label": "puppeteer",
+      "file_type": "code",
+      "source_file": "test-pup2.js",
+      "source_location": "L1",
+      "id": "eqxxx_test_pup2_puppeteer",
+      "community": 30,
+      "norm_label": "puppeteer"
+    },
+    {
+      "label": "test-replace3.js",
+      "file_type": "code",
+      "source_file": "test-replace3.js",
+      "source_location": "L1",
+      "id": "test_replace3_js",
+      "community": 26,
+      "norm_label": "test-replace3.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "test-replace3.js",
+      "source_location": "L1",
+      "id": "eqxxx_test_replace3_fs",
+      "community": 26,
+      "norm_label": "fs"
+    },
+    {
+      "label": "code",
+      "file_type": "code",
+      "source_file": "test-replace3.js",
+      "source_location": "L2",
+      "id": "eqxxx_test_replace3_code",
+      "community": 26,
+      "norm_label": "code"
+    },
+    {
+      "label": "test-replace2.js",
+      "file_type": "code",
+      "source_file": "test-replace2.js",
+      "source_location": "L1",
+      "id": "test_replace2_js",
+      "community": 27,
+      "norm_label": "test-replace2.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "test-replace2.js",
+      "source_location": "L1",
+      "id": "eqxxx_test_replace2_fs",
+      "community": 27,
+      "norm_label": "fs"
+    },
+    {
+      "label": "code",
+      "file_type": "code",
+      "source_file": "test-replace2.js",
+      "source_location": "L2",
+      "id": "eqxxx_test_replace2_code",
+      "community": 27,
+      "norm_label": "code"
+    },
+    {
+      "label": "test-replace.js",
+      "file_type": "code",
+      "source_file": "test-replace.js",
+      "source_location": "L1",
+      "id": "test_replace_js",
+      "community": 28,
+      "norm_label": "test-replace.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "test-replace.js",
+      "source_location": "L1",
+      "id": "eqxxx_test_replace_fs",
+      "community": 28,
+      "norm_label": "fs"
+    },
+    {
+      "label": "code",
+      "file_type": "code",
+      "source_file": "test-replace.js",
+      "source_location": "L2",
+      "id": "eqxxx_test_replace_code",
+      "community": 28,
+      "norm_label": "code"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "main.js",
+      "source_location": "L1",
+      "id": "main_js",
+      "community": 4,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "heroContainer",
+      "file_type": "code",
+      "source_file": "main.js",
+      "source_location": "L14",
+      "id": "eqxxx_main_herocontainer",
+      "community": 4,
+      "norm_label": "herocontainer"
+    },
+    {
+      "label": "hexGridContainer",
+      "file_type": "code",
+      "source_file": "main.js",
+      "source_location": "L15",
+      "id": "eqxxx_main_hexgridcontainer",
+      "community": 4,
+      "norm_label": "hexgridcontainer"
+    },
+    {
+      "label": "roomSliderContainer",
+      "file_type": "code",
+      "source_file": "main.js",
+      "source_location": "L16",
+      "id": "eqxxx_main_roomslidercontainer",
+      "community": 4,
+      "norm_label": "roomslidercontainer"
+    },
+    {
+      "label": "locationsContainer",
+      "file_type": "code",
+      "source_file": "main.js",
+      "source_location": "L17",
+      "id": "eqxxx_main_locationscontainer",
+      "community": 4,
+      "norm_label": "locationscontainer"
+    },
+    {
+      "label": "missionContainer",
+      "file_type": "code",
+      "source_file": "main.js",
+      "source_location": "L18",
+      "id": "eqxxx_main_missioncontainer",
+      "community": 4,
+      "norm_label": "missioncontainer"
+    },
+    {
+      "label": "header",
+      "file_type": "code",
+      "source_file": "main.js",
+      "source_location": "L47",
+      "id": "eqxxx_main_header",
+      "community": 4,
+      "norm_label": "header"
+    },
+    {
+      "label": "extracted-script.js",
+      "file_type": "code",
+      "source_file": "extracted-script.js",
+      "source_location": "L1",
+      "id": "extracted_script_js",
+      "community": 6,
+      "norm_label": "extracted-script.js"
+    },
+    {
+      "label": "leadModal",
+      "file_type": "code",
+      "source_file": "extracted-script.js",
+      "source_location": "L10",
+      "id": "eqxxx_extracted_script_leadmodal",
+      "community": 6,
+      "norm_label": "leadmodal"
+    },
+    {
+      "label": "openLeadBtn",
+      "file_type": "code",
+      "source_file": "extracted-script.js",
+      "source_location": "L11",
+      "id": "eqxxx_extracted_script_openleadbtn",
+      "community": 6,
+      "norm_label": "openleadbtn"
+    },
+    {
+      "label": "closeLeadBtn",
+      "file_type": "code",
+      "source_file": "extracted-script.js",
+      "source_location": "L12",
+      "id": "eqxxx_extracted_script_closeleadbtn",
+      "community": 6,
+      "norm_label": "closeleadbtn"
+    },
+    {
+      "label": "projModal",
+      "file_type": "code",
+      "source_file": "extracted-script.js",
+      "source_location": "L22",
+      "id": "eqxxx_extracted_script_projmodal",
+      "community": 6,
+      "norm_label": "projmodal"
+    },
+    {
+      "label": "closeProjBtn",
+      "file_type": "code",
+      "source_file": "extracted-script.js",
+      "source_location": "L27",
+      "id": "eqxxx_extracted_script_closeprojbtn",
+      "community": 6,
+      "norm_label": "closeprojbtn"
+    },
+    {
+      "label": "success",
+      "file_type": "code",
+      "source_file": "extracted-script.js",
+      "source_location": "L45",
+      "id": "eqxxx_extracted_script_success",
+      "community": 6,
+      "norm_label": "success"
+    },
+    {
+      "label": "test-pup.js",
+      "file_type": "code",
+      "source_file": "test-pup.js",
+      "source_location": "L1",
+      "id": "test_pup_js",
+      "community": 31,
+      "norm_label": "test-pup.js"
+    },
+    {
+      "label": "puppeteer",
+      "file_type": "code",
+      "source_file": "test-pup.js",
+      "source_location": "L1",
+      "id": "eqxxx_test_pup_puppeteer",
+      "community": 31,
+      "norm_label": "puppeteer"
+    },
+    {
+      "label": "test-tour.js",
+      "file_type": "code",
+      "source_file": "test-tour.js",
+      "source_location": "L1",
+      "id": "test_tour_js",
+      "community": 32,
+      "norm_label": "test-tour.js"
+    },
+    {
+      "label": "puppeteer",
+      "file_type": "code",
+      "source_file": "test-tour.js",
+      "source_location": "L1",
+      "id": "eqxxx_test_tour_puppeteer",
+      "community": 32,
+      "norm_label": "puppeteer"
+    },
+    {
+      "label": "crm.js",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1",
+      "id": "js_crm_js",
+      "community": 0,
+      "norm_label": "crm.js"
+    },
+    {
+      "label": "mockLeads",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L7",
+      "id": "js_crm_mockleads",
+      "community": 0,
+      "norm_label": "mockleads"
+    },
+    {
+      "label": "mockTasks",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L71",
+      "id": "js_crm_mocktasks",
+      "community": 0,
+      "norm_label": "mocktasks"
+    },
+    {
+      "label": "projectCategories",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L77",
+      "id": "js_crm_projectcategories",
+      "community": 0,
+      "norm_label": "projectcategories"
+    },
+    {
+      "label": "defaultContacts",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L132",
+      "id": "js_crm_defaultcontacts",
+      "community": 0,
+      "norm_label": "defaultcontacts"
+    },
+    {
+      "label": "defaultProjects",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L138",
+      "id": "js_crm_defaultprojects",
+      "community": 0,
+      "norm_label": "defaultprojects"
+    },
+    {
+      "label": "defaultFinancials",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L170",
+      "id": "js_crm_defaultfinancials",
+      "community": 0,
+      "norm_label": "defaultfinancials"
+    },
+    {
+      "label": "defaultAlerts",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L171",
+      "id": "js_crm_defaultalerts",
+      "community": 0,
+      "norm_label": "defaultalerts"
+    },
+    {
+      "label": "defaultFileReviews",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L173",
+      "id": "js_crm_defaultfilereviews",
+      "community": 0,
+      "norm_label": "defaultfilereviews"
+    },
+    {
+      "label": "unsubscribes",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L239",
+      "id": "js_crm_unsubscribes",
+      "community": 0,
+      "norm_label": "unsubscribes"
+    },
+    {
+      "label": "setupFirebaseListeners()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L241",
+      "id": "js_crm_setupfirebaselisteners",
+      "community": 6,
+      "norm_label": "setupfirebaselisteners()"
+    },
+    {
+      "label": "saveLocalState()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L297",
+      "id": "js_crm_savelocalstate",
+      "community": 9,
+      "norm_label": "savelocalstate()"
+    },
+    {
+      "label": "validateLeadData()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L309",
+      "id": "js_crm_validateleaddata",
+      "community": 6,
+      "norm_label": "validateleaddata()"
+    },
+    {
+      "label": "createBookingRecord()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L318",
+      "id": "js_crm_createbookingrecord",
+      "community": 9,
+      "norm_label": "createbookingrecord()"
+    },
+    {
+      "label": "checkedBoxes",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L377",
+      "id": "js_crm_checkedboxes",
+      "community": 0,
+      "norm_label": "checkedboxes"
+    },
+    {
+      "label": "selectedRooms",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L378",
+      "id": "js_crm_selectedrooms",
+      "community": 0,
+      "norm_label": "selectedrooms"
+    },
+    {
+      "label": "room",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L383",
+      "id": "js_crm_room",
+      "community": 0,
+      "norm_label": "room"
+    },
+    {
+      "label": "lead",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L390",
+      "id": "js_crm_lead",
+      "community": 0,
+      "norm_label": "lead"
+    },
+    {
+      "label": "newLead",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L421",
+      "id": "js_crm_newlead",
+      "community": 0,
+      "norm_label": "newlead"
+    },
+    {
+      "label": "newProj",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L456",
+      "id": "js_crm_newproj",
+      "community": 0,
+      "norm_label": "newproj"
+    },
+    {
+      "label": "populateClientDropdown()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L479",
+      "id": "js_crm_populateclientdropdown",
+      "community": 3,
+      "norm_label": "populateclientdropdown()"
+    },
+    {
+      "label": "autoSelectClientByCategory()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L542",
+      "id": "js_crm_autoselectclientbycategory",
+      "community": 0,
+      "norm_label": "autoselectclientbycategory()"
+    },
+    {
+      "label": "initCRM()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L634",
+      "id": "js_crm_initcrm",
+      "community": 6,
+      "norm_label": "initcrm()"
+    },
+    {
+      "label": "showNotification()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L736",
+      "id": "js_crm_shownotification",
+      "community": 9,
+      "norm_label": "shownotification()"
+    },
+    {
+      "label": "refreshData()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L773",
+      "id": "js_crm_refreshdata",
+      "community": 3,
+      "norm_label": "refreshdata()"
+    },
+    {
+      "label": "renderMetricsHeader()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L802",
+      "id": "js_crm_rendermetricsheader",
+      "community": 3,
+      "norm_label": "rendermetricsheader()"
+    },
+    {
+      "label": "renderDashboardTab()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L821",
+      "id": "js_crm_renderdashboardtab",
+      "community": 19,
+      "norm_label": "renderdashboardtab()"
+    },
+    {
+      "label": "renderAlertItems()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L933",
+      "id": "js_crm_renderalertitems",
+      "community": 19,
+      "norm_label": "renderalertitems()"
+    },
+    {
+      "label": "renderCircularGauge()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L961",
+      "id": "js_crm_rendercirculargauge",
+      "community": 19,
+      "norm_label": "rendercirculargauge()"
+    },
+    {
+      "label": "renderBarReport()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L982",
+      "id": "js_crm_renderbarreport",
+      "community": 19,
+      "norm_label": "renderbarreport()"
+    },
+    {
+      "label": "renderPastDueInvoices()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L996",
+      "id": "js_crm_renderpastdueinvoices",
+      "community": 19,
+      "norm_label": "renderpastdueinvoices()"
+    },
+    {
+      "label": "renderPipelineTab()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1015",
+      "id": "js_crm_renderpipelinetab",
+      "community": 33,
+      "norm_label": "renderpipelinetab()"
+    },
+    {
+      "label": "renderLeadDetailsDrawer()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1192",
+      "id": "js_crm_renderleaddetailsdrawer",
+      "community": 33,
+      "norm_label": "renderleaddetailsdrawer()"
+    },
+    {
+      "label": "renderContactsTab()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1455",
+      "id": "js_crm_rendercontactstab",
+      "community": 3,
+      "norm_label": "rendercontactstab()"
+    },
+    {
+      "label": "renderContactsList()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1520",
+      "id": "js_crm_rendercontactslist",
+      "community": 3,
+      "norm_label": "rendercontactslist()"
+    },
+    {
+      "label": "renderContactDetailsPane()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1578",
+      "id": "js_crm_rendercontactdetailspane",
+      "community": 3,
+      "norm_label": "rendercontactdetailspane()"
+    },
+    {
+      "label": "renderCalendarTab()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1635",
+      "id": "js_crm_rendercalendartab",
+      "community": 3,
+      "norm_label": "rendercalendartab()"
+    },
+    {
+      "label": "renderSchedulerGridWidget()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1881",
+      "id": "js_crm_renderschedulergridwidget",
+      "community": 3,
+      "norm_label": "renderschedulergridwidget()"
+    },
+    {
+      "label": "renderProjectsTab()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1912",
+      "id": "js_crm_renderprojectstab",
+      "community": 3,
+      "norm_label": "renderprojectstab()"
+    },
+    {
+      "label": "renderProjectsList()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L1947",
+      "id": "js_crm_renderprojectslist",
+      "community": 3,
+      "norm_label": "renderprojectslist()"
+    },
+    {
+      "label": "renderProjectDetailsPane()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2008",
+      "id": "js_crm_renderprojectdetailspane",
+      "community": 3,
+      "norm_label": "renderprojectdetailspane()"
+    },
+    {
+      "label": "renderFileReviewTab()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2244",
+      "id": "js_crm_renderfilereviewtab",
+      "community": 23,
+      "norm_label": "renderfilereviewtab()"
+    },
+    {
+      "label": "renderTimelineMarkerFlags()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2474",
+      "id": "js_crm_rendertimelinemarkerflags",
+      "community": 23,
+      "norm_label": "rendertimelinemarkerflags()"
+    },
+    {
+      "label": "renderPrototypeMarkers()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2484",
+      "id": "js_crm_renderprototypemarkers",
+      "community": 23,
+      "norm_label": "renderprototypemarkers()"
+    },
+    {
+      "label": "renderCommentsTimeline()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2496",
+      "id": "js_crm_rendercommentstimeline",
+      "community": 23,
+      "norm_label": "rendercommentstimeline()"
+    },
+    {
+      "label": "formatTimeLabel()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2525",
+      "id": "js_crm_formattimelabel",
+      "community": 0,
+      "norm_label": "formattimelabel()"
+    },
+    {
+      "label": "updatePlaybackState()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2531",
+      "id": "js_crm_updateplaybackstate",
+      "community": 0,
+      "norm_label": "updateplaybackstate()"
+    },
+    {
+      "label": "initWaveformSimulator()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2562",
+      "id": "js_crm_initwaveformsimulator",
+      "community": 0,
+      "norm_label": "initwaveformsimulator()"
+    },
+    {
+      "label": "renderFinancialsTab()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2692",
+      "id": "js_crm_renderfinancialstab",
+      "community": 3,
+      "norm_label": "renderfinancialstab()"
+    },
+    {
+      "label": "renderFinancialListItems()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2812",
+      "id": "js_crm_renderfinanciallistitems",
+      "community": 3,
+      "norm_label": "renderfinanciallistitems()"
+    },
+    {
+      "label": "index",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2850",
+      "id": "js_crm_index",
+      "community": 0,
+      "norm_label": "index"
+    },
+    {
+      "label": "renderTodosTab()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2887",
+      "id": "js_crm_rendertodostab",
+      "community": 3,
+      "norm_label": "rendertodostab()"
+    },
+    {
+      "label": "renderTodosListItems()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L2975",
+      "id": "js_crm_rendertodoslistitems",
+      "community": 3,
+      "norm_label": "rendertodoslistitems()"
+    },
+    {
+      "label": "renderSettingsTab()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3052",
+      "id": "js_crm_rendersettingstab",
+      "community": 3,
+      "norm_label": "rendersettingstab()"
+    },
+    {
+      "label": "booking",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3222",
+      "id": "js_crm_booking",
+      "community": 0,
+      "norm_label": "booking"
+    },
+    {
+      "label": "contact",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3230",
+      "id": "js_crm_contact",
+      "community": 0,
+      "norm_label": "contact"
+    },
+    {
+      "label": "modal",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3235",
+      "id": "js_crm_modal",
+      "community": 0,
+      "norm_label": "modal"
+    },
+    {
+      "label": "toEl",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3236",
+      "id": "js_crm_toel",
+      "community": 0,
+      "norm_label": "toel"
+    },
+    {
+      "label": "clientNameEl",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3237",
+      "id": "js_crm_clientnameel",
+      "community": 0,
+      "norm_label": "clientnameel"
+    },
+    {
+      "label": "dateEl",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3238",
+      "id": "js_crm_dateel",
+      "community": 0,
+      "norm_label": "dateel"
+    },
+    {
+      "label": "durationEl",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3239",
+      "id": "js_crm_durationel",
+      "community": 0,
+      "norm_label": "durationel"
+    },
+    {
+      "label": "roomEl",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3240",
+      "id": "js_crm_roomel",
+      "community": 0,
+      "norm_label": "roomel"
+    },
+    {
+      "label": "directionsEl",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3241",
+      "id": "js_crm_directionsel",
+      "community": 0,
+      "norm_label": "directionsel"
+    },
+    {
+      "label": "customNotesEl",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3242",
+      "id": "js_crm_customnotesel",
+      "community": 0,
+      "norm_label": "customnotesel"
+    },
+    {
+      "label": "cleanRoomName()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3244",
+      "id": "js_crm_cleanroomname",
+      "community": 0,
+      "norm_label": "cleanroomname()"
+    },
+    {
+      "label": "cleanedRoom",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3258",
+      "id": "js_crm_cleanedroom",
+      "community": 0,
+      "norm_label": "cleanedroom"
+    },
+    {
+      "label": "closeBtn",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3281",
+      "id": "js_crm_closebtn",
+      "community": 0,
+      "norm_label": "closebtn"
+    },
+    {
+      "label": "cancelBtn",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3282",
+      "id": "js_crm_cancelbtn",
+      "community": 0,
+      "norm_label": "cancelbtn"
+    },
+    {
+      "label": "sendBtn",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3283",
+      "id": "js_crm_sendbtn",
+      "community": 0,
+      "norm_label": "sendbtn"
+    },
+    {
+      "label": "closeModal()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3285",
+      "id": "js_crm_closemodal",
+      "community": 0,
+      "norm_label": "closemodal()"
+    },
+    {
+      "label": "overlay",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3300",
+      "id": "js_crm_overlay",
+      "community": 0,
+      "norm_label": "overlay"
+    },
+    {
+      "label": "progress",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3301",
+      "id": "js_crm_progress",
+      "community": 0,
+      "norm_label": "progress"
+    },
+    {
+      "label": "title",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3302",
+      "id": "js_crm_title",
+      "community": 0,
+      "norm_label": "title"
+    },
+    {
+      "label": "desc",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3303",
+      "id": "js_crm_desc",
+      "community": 0,
+      "norm_label": "desc"
+    },
+    {
+      "label": "icon",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3304",
+      "id": "js_crm_icon",
+      "community": 0,
+      "norm_label": "icon"
+    },
+    {
+      "label": "payload",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L3320",
+      "id": "js_crm_payload",
+      "community": 0,
+      "norm_label": "payload"
+    },
+    {
+      "label": "ui.js",
+      "file_type": "code",
+      "source_file": "js/ui.js",
+      "source_location": "L1",
+      "id": "js_ui_js",
+      "community": 2,
+      "norm_label": "ui.js"
+    },
+    {
+      "label": "loadComponent()",
+      "file_type": "code",
+      "source_file": "js/ui.js",
+      "source_location": "L13",
+      "id": "js_ui_loadcomponent",
+      "community": 2,
+      "norm_label": "loadcomponent()"
+    },
+    {
+      "label": "initGlobalUI()",
+      "file_type": "code",
+      "source_file": "js/ui.js",
+      "source_location": "L28",
+      "id": "js_ui_initglobalui",
+      "community": 2,
+      "norm_label": "initglobalui()"
+    },
+    {
+      "label": "media.js",
+      "file_type": "code",
+      "source_file": "js/media.js",
+      "source_location": "L1",
+      "id": "js_media_js",
+      "community": 29,
+      "norm_label": "media.js"
+    },
+    {
+      "label": "fetchYouTubeVideos()",
+      "file_type": "code",
+      "source_file": "js/media.js",
+      "source_location": "L14",
+      "id": "js_media_fetchyoutubevideos",
+      "community": 29,
+      "norm_label": "fetchyoutubevideos()"
+    },
+    {
+      "label": "renderVideos()",
+      "file_type": "code",
+      "source_file": "js/media.js",
+      "source_location": "L71",
+      "id": "js_media_rendervideos",
+      "community": 29,
+      "norm_label": "rendervideos()"
+    },
+    {
+      "label": "auth.js",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L1",
+      "id": "js_auth_js",
+      "community": 2,
+      "norm_label": "auth.js"
+    },
+    {
+      "label": "firebaseConfig",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L31",
+      "id": "js_auth_firebaseconfig",
+      "community": 2,
+      "norm_label": "firebaseconfig"
+    },
+    {
+      "label": "auth",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L41",
+      "id": "js_auth_auth",
+      "community": 2,
+      "norm_label": "auth"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L42",
+      "id": "js_auth_db",
+      "community": 2,
+      "norm_label": "db"
+    },
+    {
+      "label": "SEED_ADMINS",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L50",
+      "id": "js_auth_seed_admins",
+      "community": 2,
+      "norm_label": "seed_admins"
+    },
+    {
+      "label": "seedAdmins()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L59",
+      "id": "js_auth_seedadmins",
+      "community": 2,
+      "norm_label": "seedadmins()"
+    },
+    {
+      "label": "fetchAdmins()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L70",
+      "id": "js_auth_fetchadmins",
+      "community": 2,
+      "norm_label": "fetchadmins()"
+    },
+    {
+      "label": "subscribeToAdmins()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L76",
+      "id": "js_auth_subscribetoadmins",
+      "community": 3,
+      "norm_label": "subscribetoadmins()"
+    },
+    {
+      "label": "addAdminUser()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L86",
+      "id": "js_auth_addadminuser",
+      "community": 2,
+      "norm_label": "addadminuser()"
+    },
+    {
+      "label": "removeAdminUser()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L90",
+      "id": "js_auth_removeadminuser",
+      "community": 2,
+      "norm_label": "removeadminuser()"
+    },
+    {
+      "label": "signInWithGoogle()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L97",
+      "id": "js_auth_signinwithgoogle",
+      "community": 2,
+      "norm_label": "signinwithgoogle()"
+    },
+    {
+      "label": "signOutUser()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L104",
+      "id": "js_auth_signoutuser",
+      "community": 2,
+      "norm_label": "signoutuser()"
+    },
+    {
+      "label": "initAuthGate()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L113",
+      "id": "js_auth_initauthgate",
+      "community": 2,
+      "norm_label": "initauthgate()"
+    },
+    {
+      "label": "firebase-db.js",
+      "file_type": "code",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L1",
+      "id": "js_firebase_db_js",
+      "community": 9,
+      "norm_label": "firebase-db.js"
+    },
+    {
+      "label": "firebaseConfig",
+      "file_type": "code",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L4",
+      "id": "js_firebase_db_firebaseconfig",
+      "community": 9,
+      "norm_label": "firebaseconfig"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L13",
+      "id": "js_firebase_db_app",
+      "community": 9,
+      "norm_label": "app"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L14",
+      "id": "js_firebase_db_db",
+      "community": 9,
+      "norm_label": "db"
+    },
+    {
+      "label": "saveToFirestore()",
+      "file_type": "code",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L17",
+      "id": "js_firebase_db_savetofirestore",
+      "community": 9,
+      "norm_label": "savetofirestore()"
+    },
+    {
+      "label": "deleteFromFirestore()",
+      "file_type": "code",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L25",
+      "id": "js_firebase_db_deletefromfirestore",
+      "community": 9,
+      "norm_label": "deletefromfirestore()"
+    },
+    {
+      "label": "tour.js",
+      "file_type": "code",
+      "source_file": "js/tour.js",
+      "source_location": "L1",
+      "id": "js_tour_js",
+      "community": 14,
+      "norm_label": "tour.js"
+    },
+    {
+      "label": "tourSteps",
+      "file_type": "code",
+      "source_file": "js/tour.js",
+      "source_location": "L1",
+      "id": "js_tour_toursteps",
+      "community": 14,
+      "norm_label": "toursteps"
+    },
+    {
+      "label": "initTour()",
+      "file_type": "code",
+      "source_file": "js/tour.js",
+      "source_location": "L50",
+      "id": "js_tour_inittour",
+      "community": 14,
+      "norm_label": "inittour()"
+    },
+    {
+      "label": "endTour()",
+      "file_type": "code",
+      "source_file": "js/tour.js",
+      "source_location": "L92",
+      "id": "js_tour_endtour",
+      "community": 14,
+      "norm_label": "endtour()"
+    },
+    {
+      "label": "nextStep()",
+      "file_type": "code",
+      "source_file": "js/tour.js",
+      "source_location": "L110",
+      "id": "js_tour_nextstep",
+      "community": 14,
+      "norm_label": "nextstep()"
+    },
+    {
+      "label": "renderStep()",
+      "file_type": "code",
+      "source_file": "js/tour.js",
+      "source_location": "L119",
+      "id": "js_tour_renderstep",
+      "community": 14,
+      "norm_label": "renderstep()"
+    },
+    {
+      "label": "HexGrid.js",
+      "file_type": "code",
+      "source_file": "components/HexGrid.js",
+      "source_location": "L1",
+      "id": "components_hexgrid_js",
+      "community": 4,
+      "norm_label": "hexgrid.js"
+    },
+    {
+      "label": "initHexGrid()",
+      "file_type": "code",
+      "source_file": "components/HexGrid.js",
+      "source_location": "L5",
+      "id": "components_hexgrid_inithexgrid",
+      "community": 4,
+      "norm_label": "inithexgrid()"
+    },
+    {
+      "label": "Locations.js",
+      "file_type": "code",
+      "source_file": "components/Locations.js",
+      "source_location": "L1",
+      "id": "components_locations_js",
+      "community": 4,
+      "norm_label": "locations.js"
+    },
+    {
+      "label": "initLocations()",
+      "file_type": "code",
+      "source_file": "components/Locations.js",
+      "source_location": "L5",
+      "id": "components_locations_initlocations",
+      "community": 4,
+      "norm_label": "initlocations()"
+    },
+    {
+      "label": "Hero.js",
+      "file_type": "code",
+      "source_file": "components/Hero.js",
+      "source_location": "L1",
+      "id": "components_hero_js",
+      "community": 4,
+      "norm_label": "hero.js"
+    },
+    {
+      "label": "initHero()",
+      "file_type": "code",
+      "source_file": "components/Hero.js",
+      "source_location": "L5",
+      "id": "components_hero_inithero",
+      "community": 4,
+      "norm_label": "inithero()"
+    },
+    {
+      "label": "Mission.js",
+      "file_type": "code",
+      "source_file": "components/Mission.js",
+      "source_location": "L1",
+      "id": "components_mission_js",
+      "community": 4,
+      "norm_label": "mission.js"
+    },
+    {
+      "label": "initMission()",
+      "file_type": "code",
+      "source_file": "components/Mission.js",
+      "source_location": "L5",
+      "id": "components_mission_initmission",
+      "community": 4,
+      "norm_label": "initmission()"
+    },
+    {
+      "label": "RoomSlider.js",
+      "file_type": "code",
+      "source_file": "components/RoomSlider.js",
+      "source_location": "L1",
+      "id": "components_roomslider_js",
+      "community": 4,
+      "norm_label": "roomslider.js"
+    },
+    {
+      "label": "initRoomSlider()",
+      "file_type": "code",
+      "source_file": "components/RoomSlider.js",
+      "source_location": "L5",
+      "id": "components_roomslider_initroomslider",
+      "community": 4,
+      "norm_label": "initroomslider()"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L1",
+      "id": "functions_index_js",
+      "community": 1,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "{ onDocumentWritten }",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L1",
+      "id": "functions_index_ondocumentwritten",
+      "community": 1,
+      "norm_label": "{ ondocumentwritten }"
+    },
+    {
+      "label": "{ onRequest }",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L2",
+      "id": "functions_index_onrequest",
+      "community": 1,
+      "norm_label": "{ onrequest }"
+    },
+    {
+      "label": "{ defineSecret }",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L3",
+      "id": "functions_index_definesecret",
+      "community": 1,
+      "norm_label": "{ definesecret }"
+    },
+    {
+      "label": "{ initializeApp }",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L4",
+      "id": "functions_index_initializeapp",
+      "community": 1,
+      "norm_label": "{ initializeapp }"
+    },
+    {
+      "label": "{ getFirestore }",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L5",
+      "id": "functions_index_getfirestore",
+      "community": 1,
+      "norm_label": "{ getfirestore }"
+    },
+    {
+      "label": "nodemailer",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L6",
+      "id": "functions_index_nodemailer",
+      "community": 1,
+      "norm_label": "nodemailer"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L9",
+      "id": "functions_index_db",
+      "community": 1,
+      "norm_label": "db"
+    },
+    {
+      "label": "GMAIL_APP_PASSWORD",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L12",
+      "id": "functions_index_gmail_app_password",
+      "community": 1,
+      "norm_label": "gmail_app_password"
+    },
+    {
+      "label": "PRICING_CONFIG",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L16",
+      "id": "functions_index_pricing_config",
+      "community": 1,
+      "norm_label": "pricing_config"
+    },
+    {
+      "label": "newValue",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L38",
+      "id": "functions_index_newvalue",
+      "community": 1,
+      "norm_label": "newvalue"
+    },
+    {
+      "label": "contactRef",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L46",
+      "id": "functions_index_contactref",
+      "community": 1,
+      "norm_label": "contactref"
+    },
+    {
+      "label": "projectRef",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L58",
+      "id": "functions_index_projectref",
+      "community": 1,
+      "norm_label": "projectref"
+    },
+    {
+      "label": "financialRef",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L104",
+      "id": "functions_index_financialref",
+      "community": 1,
+      "norm_label": "financialref"
+    },
+    {
+      "label": "{ google }",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L120",
+      "id": "functions_index_google",
+      "community": 1,
+      "norm_label": "{ google }"
+    },
+    {
+      "label": "getCalendarAuth()",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L125",
+      "id": "functions_index_getcalendarauth",
+      "community": 1,
+      "norm_label": "getcalendarauth()"
+    },
+    {
+      "label": "calendar",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L145",
+      "id": "functions_index_calendar",
+      "community": 1,
+      "norm_label": "calendar"
+    },
+    {
+      "label": "startTime",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L153",
+      "id": "functions_index_starttime",
+      "community": 1,
+      "norm_label": "starttime"
+    },
+    {
+      "label": "endTime",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L154",
+      "id": "functions_index_endtime",
+      "community": 1,
+      "norm_label": "endtime"
+    },
+    {
+      "label": "eventToInsert",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L156",
+      "id": "functions_index_eventtoinsert",
+      "community": 1,
+      "norm_label": "eventtoinsert"
+    },
+    {
+      "label": "transporter",
+      "file_type": "code",
+      "source_file": "functions/index.js",
+      "source_location": "L378",
+      "id": "functions_index_transporter",
+      "community": 1,
+      "norm_label": "transporter"
+    },
+    {
+      "label": "FIREBASE_SETUP.md",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L1",
+      "id": "docs_firebase_setup_md",
+      "community": 7,
+      "norm_label": "firebase_setup.md"
+    },
+    {
+      "label": "Firebase Setup Guide",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L1",
+      "id": "docs_firebase_setup_firebase_setup_guide",
+      "community": 7,
+      "norm_label": "firebase setup guide"
+    },
+    {
+      "label": "1. Create a Firebase Project",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L5",
+      "id": "docs_firebase_setup_1_create_a_firebase_project",
+      "community": 7,
+      "norm_label": "1. create a firebase project"
+    },
+    {
+      "label": "2. Register Web App",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L10",
+      "id": "docs_firebase_setup_2_register_web_app",
+      "community": 7,
+      "norm_label": "2. register web app"
+    },
+    {
+      "label": "3. Enable Services",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L15",
+      "id": "docs_firebase_setup_3_enable_services",
+      "community": 7,
+      "norm_label": "3. enable services"
+    },
+    {
+      "label": "Authentication",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L16",
+      "id": "docs_firebase_setup_authentication",
+      "community": 7,
+      "norm_label": "authentication"
+    },
+    {
+      "label": "Firestore Database",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L21",
+      "id": "docs_firebase_setup_firestore_database",
+      "community": 7,
+      "norm_label": "firestore database"
+    },
+    {
+      "label": "Storage",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L26",
+      "id": "docs_firebase_setup_storage",
+      "community": 7,
+      "norm_label": "storage"
+    },
+    {
+      "label": "4. Add Configuration to Project",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L31",
+      "id": "docs_firebase_setup_4_add_configuration_to_project",
+      "community": 7,
+      "norm_label": "4. add configuration to project"
+    },
+    {
+      "label": "code:javascript (/* Placeholder for your Firebase Config */)",
+      "file_type": "document",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L34",
+      "id": "docs_firebase_setup_codeblock_1",
+      "community": 7,
+      "norm_label": "code:javascript (/* placeholder for your firebase config */)"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": "L1",
+      "id": "docs_readme_md",
+      "community": 20,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Force Per4mance - Elite Football Academy",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": "L1",
+      "id": "docs_readme_force_per4mance_elite_football_academy",
+      "community": 20,
+      "norm_label": "force per4mance - elite football academy"
+    },
+    {
+      "label": "Project Structure",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": "L5",
+      "id": "docs_readme_project_structure",
+      "community": 20,
+      "norm_label": "project structure"
+    },
+    {
+      "label": "Tech Stack",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": "L15",
+      "id": "docs_readme_tech_stack",
+      "community": 20,
+      "norm_label": "tech stack"
+    },
+    {
+      "label": "Getting Started",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": "L21",
+      "id": "docs_readme_getting_started",
+      "community": 20,
+      "norm_label": "getting started"
+    },
+    {
+      "label": "ROADMAP.md",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L1",
+      "id": "docs_roadmap_md",
+      "community": 15,
+      "norm_label": "roadmap.md"
+    },
+    {
+      "label": "Project Roadmap",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L1",
+      "id": "docs_roadmap_project_roadmap",
+      "community": 15,
+      "norm_label": "project roadmap"
+    },
+    {
+      "label": "Phase 1: Foundation & Brand (Completed)",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L3",
+      "id": "docs_roadmap_phase_1_foundation_brand_completed",
+      "community": 15,
+      "norm_label": "phase 1: foundation & brand (completed)"
+    },
+    {
+      "label": "Phase 2: Backend & Persistence (Current)",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L8",
+      "id": "docs_roadmap_phase_2_backend_persistence_current",
+      "community": 15,
+      "norm_label": "phase 2: backend & persistence (current)"
+    },
+    {
+      "label": "Phase 3: Advanced Features (Planned)",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L14",
+      "id": "docs_roadmap_phase_3_advanced_features_planned",
+      "community": 15,
+      "norm_label": "phase 3: advanced features (planned)"
+    },
+    {
+      "label": "Phase 4: Optimization & Launch",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L20",
+      "id": "docs_roadmap_phase_4_optimization_launch",
+      "community": 15,
+      "norm_label": "phase 4: optimization & launch"
+    },
+    {
+      "label": "modern-web-guidance.md",
+      "file_type": "document",
+      "source_file": "skills/modern-web-guidance.md",
+      "source_location": "L1",
+      "id": "skills_modern_web_guidance_md",
+      "community": 24,
+      "norm_label": "modern-web-guidance.md"
+    },
+    {
+      "label": "Modern Web Guidance",
+      "file_type": "document",
+      "source_file": "skills/modern-web-guidance.md",
+      "source_location": "L1",
+      "id": "skills_modern_web_guidance_modern_web_guidance",
+      "community": 24,
+      "norm_label": "modern web guidance"
+    },
+    {
+      "label": "Layouts & Structure",
+      "file_type": "document",
+      "source_file": "skills/modern-web-guidance.md",
+      "source_location": "L5",
+      "id": "skills_modern_web_guidance_layouts_structure",
+      "community": 24,
+      "norm_label": "layouts & structure"
+    },
+    {
+      "label": "Motion & Interactive States",
+      "file_type": "document",
+      "source_file": "skills/modern-web-guidance.md",
+      "source_location": "L10",
+      "id": "skills_modern_web_guidance_motion_interactive_states",
+      "community": 24,
+      "norm_label": "motion & interactive states"
+    },
+    {
+      "label": "firebase-integration.md",
+      "file_type": "document",
+      "source_file": "skills/firebase-integration.md",
+      "source_location": "L1",
+      "id": "skills_firebase_integration_md",
+      "community": 25,
+      "norm_label": "firebase-integration.md"
+    },
+    {
+      "label": "Firebase Integration Guidance",
+      "file_type": "document",
+      "source_file": "skills/firebase-integration.md",
+      "source_location": "L1",
+      "id": "skills_firebase_integration_firebase_integration_guidance",
+      "community": 25,
+      "norm_label": "firebase integration guidance"
+    },
+    {
+      "label": "Configuration",
+      "file_type": "document",
+      "source_file": "skills/firebase-integration.md",
+      "source_location": "L5",
+      "id": "skills_firebase_integration_configuration",
+      "community": 25,
+      "norm_label": "configuration"
+    },
+    {
+      "label": "Operations",
+      "file_type": "document",
+      "source_file": "skills/firebase-integration.md",
+      "source_location": "L10",
+      "id": "skills_firebase_integration_operations",
+      "community": 25,
+      "norm_label": "operations"
+    },
+    {
+      "label": "working-prefs-v2.md",
+      "file_type": "document",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L1",
+      "id": "skills_working_prefs_v2_md",
+      "community": 12,
+      "norm_label": "working-prefs-v2.md"
+    },
+    {
+      "label": "Working Preferences",
+      "file_type": "document",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L1",
+      "id": "skills_working_prefs_v2_working_preferences",
+      "community": 12,
+      "norm_label": "working preferences"
+    },
+    {
+      "label": "General Rules",
+      "file_type": "document",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L3",
+      "id": "skills_working_prefs_v2_general_rules",
+      "community": 12,
+      "norm_label": "general rules"
+    },
+    {
+      "label": "Output Format",
+      "file_type": "document",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L9",
+      "id": "skills_working_prefs_v2_output_format",
+      "community": 12,
+      "norm_label": "output format"
+    },
+    {
+      "label": "Content Creation",
+      "file_type": "document",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L14",
+      "id": "skills_working_prefs_v2_content_creation",
+      "community": 12,
+      "norm_label": "content creation"
+    },
+    {
+      "label": "Handling Ambiguity",
+      "file_type": "document",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L20",
+      "id": "skills_working_prefs_v2_handling_ambiguity",
+      "community": 12,
+      "norm_label": "handling ambiguity"
+    },
+    {
+      "label": "YouTube & Scripting",
+      "file_type": "document",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L24",
+      "id": "skills_working_prefs_v2_youtube_scripting",
+      "community": 12,
+      "norm_label": "youtube & scripting"
+    },
+    {
+      "label": "Communication & Tone",
+      "file_type": "document",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L30",
+      "id": "skills_working_prefs_v2_communication_tone",
+      "community": 12,
+      "norm_label": "communication & tone"
+    },
+    {
+      "label": "global-instructions.md",
+      "file_type": "document",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L1",
+      "id": "skills_global_instructions_md",
+      "community": 10,
+      "norm_label": "global-instructions.md"
+    },
+    {
+      "label": "Global Instructions: EQ Labs AI Partner",
+      "file_type": "document",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L1",
+      "id": "skills_global_instructions_global_instructions_eq_labs_ai_partner",
+      "community": 10,
+      "norm_label": "global instructions: eq labs ai partner"
+    },
+    {
+      "label": "Role",
+      "file_type": "document",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L3",
+      "id": "skills_global_instructions_role",
+      "community": 10,
+      "norm_label": "role"
+    },
+    {
+      "label": "Output Structure",
+      "file_type": "document",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L6",
+      "id": "skills_global_instructions_output_structure",
+      "community": 10,
+      "norm_label": "output structure"
+    },
+    {
+      "label": "Communication & Tone",
+      "file_type": "document",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L13",
+      "id": "skills_global_instructions_communication_tone",
+      "community": 10,
+      "norm_label": "communication & tone"
+    },
+    {
+      "label": "Content Principles",
+      "file_type": "document",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L20",
+      "id": "skills_global_instructions_content_principles",
+      "community": 10,
+      "norm_label": "content principles"
+    },
+    {
+      "label": "Forbidden Vocabulary",
+      "file_type": "document",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L26",
+      "id": "skills_global_instructions_forbidden_vocabulary",
+      "community": 10,
+      "norm_label": "forbidden vocabulary"
+    },
+    {
+      "label": "Style for Scripts & Media",
+      "file_type": "document",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L35",
+      "id": "skills_global_instructions_style_for_scripts_media",
+      "community": 10,
+      "norm_label": "style for scripts & media"
+    },
+    {
+      "label": "Core Competencies",
+      "file_type": "document",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L40",
+      "id": "skills_global_instructions_core_competencies",
+      "community": 10,
+      "norm_label": "core competencies"
+    },
+    {
+      "label": "design-system.md",
+      "file_type": "document",
+      "source_file": "skills/design-system.md",
+      "source_location": "L1",
+      "id": "skills_design_system_md",
+      "community": 11,
+      "norm_label": "design-system.md"
+    },
+    {
+      "label": "Design System - Scandinavian Claymorphism",
+      "file_type": "document",
+      "source_file": "skills/design-system.md",
+      "source_location": "L1",
+      "id": "skills_design_system_design_system_scandinavian_claymorphism",
+      "community": 11,
+      "norm_label": "design system - scandinavian claymorphism"
+    },
+    {
+      "label": "Color Palette (Sleek & Warm Pastels)",
+      "file_type": "document",
+      "source_file": "skills/design-system.md",
+      "source_location": "L5",
+      "id": "skills_design_system_color_palette_sleek_warm_pastels",
+      "community": 11,
+      "norm_label": "color palette (sleek & warm pastels)"
+    },
+    {
+      "label": "Claymorphism & 3D Shading (Tactile Neumorphism)",
+      "file_type": "document",
+      "source_file": "skills/design-system.md",
+      "source_location": "L16",
+      "id": "skills_design_system_claymorphism_3d_shading_tactile_neumorphism",
+      "community": 11,
+      "norm_label": "claymorphism & 3d shading (tactile neumorphism)"
+    },
+    {
+      "label": "Outset Panels",
+      "file_type": "document",
+      "source_file": "skills/design-system.md",
+      "source_location": "L20",
+      "id": "skills_design_system_outset_panels",
+      "community": 11,
+      "norm_label": "outset panels"
+    },
+    {
+      "label": "code:css (.clay-card {)",
+      "file_type": "document",
+      "source_file": "skills/design-system.md",
+      "source_location": "L21",
+      "id": "skills_design_system_codeblock_1",
+      "community": 11,
+      "norm_label": "code:css (.clay-card {)"
+    },
+    {
+      "label": "Inset Active Elements (Buttons, Inputs, Toggle Channels)",
+      "file_type": "document",
+      "source_file": "skills/design-system.md",
+      "source_location": "L32",
+      "id": "skills_design_system_inset_active_elements_buttons_inputs_toggle_channels",
+      "community": 11,
+      "norm_label": "inset active elements (buttons, inputs, toggle channels)"
+    },
+    {
+      "label": "code:css (.clay-inset {)",
+      "file_type": "document",
+      "source_file": "skills/design-system.md",
+      "source_location": "L33",
+      "id": "skills_design_system_codeblock_2",
+      "community": 11,
+      "norm_label": "code:css (.clay-inset {)"
+    },
+    {
+      "label": "Typography",
+      "file_type": "document",
+      "source_file": "skills/design-system.md",
+      "source_location": "L43",
+      "id": "skills_design_system_typography",
+      "community": 11,
+      "norm_label": "typography"
+    },
+    {
+      "label": "Brandvoice.md",
+      "file_type": "document",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L1",
+      "id": "skills_brandvoice_md",
+      "community": 13,
+      "norm_label": "brandvoice.md"
+    },
+    {
+      "label": "EQ Labs Europe Brand Voice",
+      "file_type": "document",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L1",
+      "id": "skills_brandvoice_eq_labs_europe_brand_voice",
+      "community": 13,
+      "norm_label": "eq labs europe brand voice"
+    },
+    {
+      "label": "1. Identity & Tone",
+      "file_type": "document",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L3",
+      "id": "skills_brandvoice_1_identity_tone",
+      "community": 13,
+      "norm_label": "1. identity & tone"
+    },
+    {
+      "label": "2. Content Structure",
+      "file_type": "document",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L10",
+      "id": "skills_brandvoice_2_content_structure",
+      "community": 13,
+      "norm_label": "2. content structure"
+    },
+    {
+      "label": "3. Writing Rules",
+      "file_type": "document",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L17",
+      "id": "skills_brandvoice_3_writing_rules",
+      "community": 13,
+      "norm_label": "3. writing rules"
+    },
+    {
+      "label": "4. Content Principles",
+      "file_type": "document",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L24",
+      "id": "skills_brandvoice_4_content_principles",
+      "community": 13,
+      "norm_label": "4. content principles"
+    },
+    {
+      "label": "5. Vocabulary",
+      "file_type": "document",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L31",
+      "id": "skills_brandvoice_5_vocabulary",
+      "community": 13,
+      "norm_label": "5. vocabulary"
+    },
+    {
+      "label": "6. Visual & Layout Style",
+      "file_type": "document",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L46",
+      "id": "skills_brandvoice_6_visual_layout_style",
+      "community": 13,
+      "norm_label": "6. visual & layout style"
+    },
+    {
+      "label": "about-eq-labs-europe-v2.md",
+      "file_type": "document",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L1",
+      "id": "skills_about_eq_labs_europe_v2_md",
+      "community": 16,
+      "norm_label": "about-eq-labs-europe-v2.md"
+    },
+    {
+      "label": "EQ Labs Europe",
+      "file_type": "document",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L1",
+      "id": "skills_about_eq_labs_europe_v2_eq_labs_europe",
+      "community": 16,
+      "norm_label": "eq labs europe"
+    },
+    {
+      "label": "Facilities & Performance",
+      "file_type": "document",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L5",
+      "id": "skills_about_eq_labs_europe_v2_facilities_performance",
+      "community": 16,
+      "norm_label": "facilities & performance"
+    },
+    {
+      "label": "Digital Engineering & Development",
+      "file_type": "document",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L10",
+      "id": "skills_about_eq_labs_europe_v2_digital_engineering_development",
+      "community": 16,
+      "norm_label": "digital engineering & development"
+    },
+    {
+      "label": "Marketing & Travel",
+      "file_type": "document",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L15",
+      "id": "skills_about_eq_labs_europe_v2_marketing_travel",
+      "community": 16,
+      "norm_label": "marketing & travel"
+    },
+    {
+      "label": "Heritage & Design",
+      "file_type": "document",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L19",
+      "id": "skills_about_eq_labs_europe_v2_heritage_design",
+      "community": 16,
+      "norm_label": "heritage & design"
+    },
+    {
+      "label": "FIREBASE_SETUP.md",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L1",
+      "id": "random_files_firebase_setup_md",
+      "community": 8,
+      "norm_label": "firebase_setup.md"
+    },
+    {
+      "label": "Firebase Setup Guide",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L1",
+      "id": "random_files_firebase_setup_firebase_setup_guide",
+      "community": 8,
+      "norm_label": "firebase setup guide"
+    },
+    {
+      "label": "1. Create a Firebase Project",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L5",
+      "id": "random_files_firebase_setup_1_create_a_firebase_project",
+      "community": 8,
+      "norm_label": "1. create a firebase project"
+    },
+    {
+      "label": "2. Register Web App",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L10",
+      "id": "random_files_firebase_setup_2_register_web_app",
+      "community": 8,
+      "norm_label": "2. register web app"
+    },
+    {
+      "label": "3. Enable Services",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L15",
+      "id": "random_files_firebase_setup_3_enable_services",
+      "community": 8,
+      "norm_label": "3. enable services"
+    },
+    {
+      "label": "Authentication",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L16",
+      "id": "random_files_firebase_setup_authentication",
+      "community": 8,
+      "norm_label": "authentication"
+    },
+    {
+      "label": "Firestore Database",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L21",
+      "id": "random_files_firebase_setup_firestore_database",
+      "community": 8,
+      "norm_label": "firestore database"
+    },
+    {
+      "label": "Storage",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L26",
+      "id": "random_files_firebase_setup_storage",
+      "community": 8,
+      "norm_label": "storage"
+    },
+    {
+      "label": "4. Add Configuration to Project",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L31",
+      "id": "random_files_firebase_setup_4_add_configuration_to_project",
+      "community": 8,
+      "norm_label": "4. add configuration to project"
+    },
+    {
+      "label": "code:javascript (/* Placeholder for your Firebase Config */)",
+      "file_type": "document",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L34",
+      "id": "random_files_firebase_setup_codeblock_1",
+      "community": 8,
+      "norm_label": "code:javascript (/* placeholder for your firebase config */)"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "Random files/README.md",
+      "source_location": "L1",
+      "id": "random_files_readme_md",
+      "community": 21,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Force Per4mance - Elite Football Academy",
+      "file_type": "document",
+      "source_file": "Random files/README.md",
+      "source_location": "L1",
+      "id": "random_files_readme_force_per4mance_elite_football_academy",
+      "community": 21,
+      "norm_label": "force per4mance - elite football academy"
+    },
+    {
+      "label": "Project Structure",
+      "file_type": "document",
+      "source_file": "Random files/README.md",
+      "source_location": "L5",
+      "id": "random_files_readme_project_structure",
+      "community": 21,
+      "norm_label": "project structure"
+    },
+    {
+      "label": "Tech Stack",
+      "file_type": "document",
+      "source_file": "Random files/README.md",
+      "source_location": "L15",
+      "id": "random_files_readme_tech_stack",
+      "community": 21,
+      "norm_label": "tech stack"
+    },
+    {
+      "label": "Getting Started",
+      "file_type": "document",
+      "source_file": "Random files/README.md",
+      "source_location": "L21",
+      "id": "random_files_readme_getting_started",
+      "community": 21,
+      "norm_label": "getting started"
+    },
+    {
+      "label": "ROADMAP.md",
+      "file_type": "document",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L1",
+      "id": "random_files_roadmap_md",
+      "community": 17,
+      "norm_label": "roadmap.md"
+    },
+    {
+      "label": "Project Roadmap",
+      "file_type": "document",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L1",
+      "id": "random_files_roadmap_project_roadmap",
+      "community": 17,
+      "norm_label": "project roadmap"
+    },
+    {
+      "label": "Phase 1: Foundation & Brand (Completed)",
+      "file_type": "document",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L3",
+      "id": "random_files_roadmap_phase_1_foundation_brand_completed",
+      "community": 17,
+      "norm_label": "phase 1: foundation & brand (completed)"
+    },
+    {
+      "label": "Phase 2: Backend & Persistence (Current)",
+      "file_type": "document",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L8",
+      "id": "random_files_roadmap_phase_2_backend_persistence_current",
+      "community": 17,
+      "norm_label": "phase 2: backend & persistence (current)"
+    },
+    {
+      "label": "Phase 3: Advanced Features (Planned)",
+      "file_type": "document",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L14",
+      "id": "random_files_roadmap_phase_3_advanced_features_planned",
+      "community": 17,
+      "norm_label": "phase 3: advanced features (planned)"
+    },
+    {
+      "label": "Phase 4: Optimization & Launch",
+      "file_type": "document",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L20",
+      "id": "random_files_roadmap_phase_4_optimization_launch",
+      "community": 17,
+      "norm_label": "phase 4: optimization & launch"
+    },
+    {
+      "label": "newBooking",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L328",
+      "community": 0,
+      "norm_label": "newbooking",
+      "id": "js_crm_newbooking"
+    },
+    {
+      "label": "bookingTask",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L342",
+      "community": 0,
+      "norm_label": "bookingtask",
+      "id": "js_crm_bookingtask"
+    },
+    {
+      "label": "validationError",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L223",
+      "community": 0,
+      "norm_label": "validationerror",
+      "id": "js_crm_validationerror"
+    },
+    {
+      "label": "isDuplicate",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L230",
+      "community": 0,
+      "norm_label": "isduplicate",
+      "id": "js_crm_isduplicate"
+    },
+    {
+      "label": "leads",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L79",
+      "community": 0,
+      "norm_label": "leads",
+      "id": "js_crm_leads"
+    },
+    {
+      "label": "tasks",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L80",
+      "community": 0,
+      "norm_label": "tasks",
+      "id": "js_crm_tasks"
+    },
+    {
+      "label": "saveBookingsState()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L107",
+      "community": 0,
+      "norm_label": "savebookingsstate()",
+      "id": "js_crm_savebookingsstate"
+    },
+    {
+      "label": "initTutorialTour()",
+      "file_type": "code",
+      "source_file": "js/crm.js",
+      "source_location": "L749",
+      "community": 0,
+      "norm_label": "inittutorialtour()",
+      "id": "js_crm_inittutorialtour"
+    },
+    {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "js/db.js",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "db.js",
+      "id": "js_db_js"
+    },
+    {
+      "label": "submitApplication()",
+      "file_type": "code",
+      "source_file": "js/db.js",
+      "source_location": "L22",
+      "community": 5,
+      "norm_label": "submitapplication()",
+      "id": "js_db_submitapplication"
+    },
+    {
+      "label": "updateApplicationStatus()",
+      "file_type": "code",
+      "source_file": "js/db.js",
+      "source_location": "L41",
+      "community": 5,
+      "norm_label": "updateapplicationstatus()",
+      "id": "js_db_updateapplicationstatus"
+    },
+    {
+      "label": "getAllApplications()",
+      "file_type": "code",
+      "source_file": "js/db.js",
+      "source_location": "L55",
+      "community": 5,
+      "norm_label": "getallapplications()",
+      "id": "js_db_getallapplications"
+    },
+    {
+      "label": "updatePlayerProfile()",
+      "file_type": "code",
+      "source_file": "js/db.js",
+      "source_location": "L68",
+      "community": 5,
+      "norm_label": "updateplayerprofile()",
+      "id": "js_db_updateplayerprofile"
+    },
+    {
+      "label": "createScoutProfile()",
+      "file_type": "code",
+      "source_file": "js/db.js",
+      "source_location": "L85",
+      "community": 5,
+      "norm_label": "createscoutprofile()",
+      "id": "js_db_createscoutprofile"
+    },
+    {
+      "label": "getApprovedPlayers()",
+      "file_type": "code",
+      "source_file": "js/db.js",
+      "source_location": "L103",
+      "community": 5,
+      "norm_label": "getapprovedplayers()",
+      "id": "js_db_getapprovedplayers"
+    },
+    {
+      "label": "updatePlayerAdmin()",
+      "file_type": "code",
+      "source_file": "js/db.js",
+      "source_location": "L117",
+      "community": 5,
+      "norm_label": "updateplayeradmin()",
+      "id": "js_db_updateplayeradmin"
+    },
+    {
+      "label": "loginUser()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L16",
+      "community": 2,
+      "norm_label": "loginuser()",
+      "id": "js_auth_loginuser"
+    },
+    {
+      "label": "registerUser()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L29",
+      "community": 2,
+      "norm_label": "registeruser()",
+      "id": "js_auth_registeruser"
+    },
+    {
+      "label": "logoutUser()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L42",
+      "community": 2,
+      "norm_label": "logoutuser()",
+      "id": "js_auth_logoutuser"
+    },
+    {
+      "label": "monitorAuthState()",
+      "file_type": "code",
+      "source_file": "js/auth.js",
+      "source_location": "L54",
+      "community": 2,
+      "norm_label": "monitorauthstate()",
+      "id": "js_auth_monitorauthstate"
+    },
+    {
+      "label": "firebase-config.js",
+      "file_type": "code",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "firebase-config.js",
+      "id": "js_firebase_config_js"
+    },
+    {
+      "label": "firebaseConfig",
+      "file_type": "code",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L14",
+      "community": 5,
+      "norm_label": "firebaseconfig",
+      "id": "js_firebase_config_firebaseconfig"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L24",
+      "community": 5,
+      "norm_label": "app",
+      "id": "js_firebase_config_app"
+    },
+    {
+      "label": "auth",
+      "file_type": "code",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L25",
+      "community": 5,
+      "norm_label": "auth",
+      "id": "js_firebase_config_auth"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L26",
+      "community": 5,
+      "norm_label": "db",
+      "id": "js_firebase_config_db"
+    },
+    {
+      "label": "storage",
+      "file_type": "code",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L27",
+      "community": 5,
+      "norm_label": "storage",
+      "id": "js_firebase_config_storage"
+    },
+    {
+      "label": "premium-home.js",
+      "file_type": "code",
+      "source_file": "assets/js/premium-home.js",
+      "source_location": "L1",
+      "community": 34,
+      "norm_label": "premium-home.js",
+      "id": "assets_js_premium_home_js"
+    },
+    {
+      "label": "initPremiumHome()",
+      "file_type": "code",
+      "source_file": "assets/js/premium-home.js",
+      "source_location": "L3",
+      "community": 34,
+      "norm_label": "initpremiumhome()",
+      "id": "js_premium_home_initpremiumhome"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_js",
+      "target": "eqxxx_test_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_js",
+      "target": "eqxxx_test_jsdom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_js",
+      "target": "eqxxx_test_html"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_js",
+      "target": "eqxxx_test_dom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-html.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_html_js",
+      "target": "eqxxx_test_html_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-html.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_html_js",
+      "target": "eqxxx_test_html_html"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-html.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_html_js",
+      "target": "eqxxx_test_html_scriptmatch"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-pup2.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_pup2_js",
+      "target": "eqxxx_test_pup2_puppeteer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-replace3.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_replace3_js",
+      "target": "eqxxx_test_replace3_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-replace3.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_replace3_js",
+      "target": "eqxxx_test_replace3_code"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-replace2.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_replace2_js",
+      "target": "eqxxx_test_replace2_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-replace2.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_replace2_js",
+      "target": "eqxxx_test_replace2_code"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-replace.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_replace_js",
+      "target": "eqxxx_test_replace_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-replace.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_replace_js",
+      "target": "eqxxx_test_replace_code"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_hero_inithero"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_hexgrid_inithexgrid"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_roomslider_initroomslider"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_locations_initlocations"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_mission_initmission"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "eqxxx_main_herocontainer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "eqxxx_main_hexgridcontainer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "eqxxx_main_roomslidercontainer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "eqxxx_main_locationscontainer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "eqxxx_main_missioncontainer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "eqxxx_main_header"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_hero_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_hexgrid_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_roomslider_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_locations_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_js",
+      "target": "components_mission_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "extracted-script.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extracted_script_js",
+      "target": "js_crm_initcrm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extracted-script.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extracted_script_js",
+      "target": "eqxxx_extracted_script_leadmodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extracted-script.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extracted_script_js",
+      "target": "eqxxx_extracted_script_openleadbtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extracted-script.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extracted_script_js",
+      "target": "eqxxx_extracted_script_closeleadbtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extracted-script.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extracted_script_js",
+      "target": "eqxxx_extracted_script_projmodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extracted-script.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extracted_script_js",
+      "target": "eqxxx_extracted_script_closeprojbtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extracted-script.js",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extracted_script_js",
+      "target": "eqxxx_extracted_script_success"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-pup.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_pup_js",
+      "target": "eqxxx_test_pup_puppeteer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-tour.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_tour_js",
+      "target": "eqxxx_test_tour_puppeteer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_mockleads"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_mocktasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_projectcategories"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_defaultcontacts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_defaultprojects"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_defaultfinancials"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_defaultalerts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_defaultfilereviews"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L239",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_firebase_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L239",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_firebase_db_db"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L239",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_firebase_db_savetofirestore"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L239",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_firebase_db_deletefromfirestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L244",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_unsubscribes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L246",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_setupfirebaselisteners"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L137",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_savelocalstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_validateleaddata"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L318",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_createbookingrecord"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L377",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_checkedboxes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L378",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_selectedrooms"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L383",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_room"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L166",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_lead"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L236",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_newlead"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L422",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_newproj"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L479",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_populateclientdropdown"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L542",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_autoselectclientbycategory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_initcrm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L344",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_shownotification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L377",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_refreshdata"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L405",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendermetricsheader"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L424",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderdashboardtab"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L538",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderalertitems"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L566",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendercirculargauge"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L587",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderbarreport"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L601",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderpastdueinvoices"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L620",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderpipelinetab"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L763",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderleaddetailsdrawer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L896",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendercontactstab"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L958",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendercontactslist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1001",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendercontactdetailspane"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1058",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendercalendartab"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1210",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderschedulergridwidget"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1241",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderprojectstab"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1294",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderprojectslist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1352",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderprojectdetailspane"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1460",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderfilereviewtab"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1613",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendertimelinemarkerflags"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1923",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderprototypemarkers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1623",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendercommentstimeline"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1640",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_formattimelabel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1646",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_updateplaybackstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1677",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_initwaveformsimulator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1714",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderfinancialstab"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1830",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_renderfinanciallistitems"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1871",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_index"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1897",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendertodostab"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1980",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendertodoslistitems"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3044",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_auth_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3044",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_auth_subscribetoadmins"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3044",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_auth_addadminuser"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3044",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_auth_removeadminuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3053",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_rendersettingstab"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3223",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_booking"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3231",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_contact"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3236",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_modal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3237",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_toel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3238",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_clientnameel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3239",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_dateel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3240",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_durationel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3241",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_roomel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3242",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_directionsel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3243",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_customnotesel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3245",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_cleanroomname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3259",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_cleanedroom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3282",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_closebtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3283",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_cancelbtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3284",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_sendbtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3286",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_closemodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3301",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_overlay"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3302",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_progress"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3303",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_title"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3304",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_desc"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3305",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_icon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L3321",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_payload"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_newbooking"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L183",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_bookingtask"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L223",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_validationerror"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L230",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_isduplicate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_leads"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_tasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_savebookingsstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L465",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_js",
+      "target": "js_crm_inittutorialtour"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L641",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_initcrm",
+      "target": "js_crm_setupfirebaselisteners"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L359",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_createbookingrecord",
+      "target": "js_crm_savelocalstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L425",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_initcrm",
+      "target": "js_crm_validateleaddata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L355",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_createbookingrecord",
+      "target": "js_crm_shownotification"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L361",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_createbookingrecord",
+      "target": "js_crm_refreshdata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/crm.js",
+      "source_location": "L352",
+      "weight": 1.0,
+      "source": "js_crm_createbookingrecord",
+      "target": "js_firebase_db_savetofirestore"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L786",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_populateclientdropdown"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L340",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_initcrm",
+      "target": "js_crm_refreshdata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L393",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_rendermetricsheader"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L394",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_renderdashboardtab"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L395",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_renderpipelinetab"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L396",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_rendercontactstab"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L397",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_rendercalendartab"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L398",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_renderprojectstab"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L399",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_renderfilereviewtab"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L400",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_renderfinancialstab"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L401",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_rendertodostab"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L798",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_refreshdata",
+      "target": "js_crm_rendersettingstab"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L459",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderdashboardtab",
+      "target": "js_crm_renderalertitems"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L473",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderdashboardtab",
+      "target": "js_crm_rendercirculargauge"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L483",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderdashboardtab",
+      "target": "js_crm_renderbarreport"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L502",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderdashboardtab",
+      "target": "js_crm_renderpastdueinvoices"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L760",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderpipelinetab",
+      "target": "js_crm_renderleaddetailsdrawer"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L955",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_rendercontactstab",
+      "target": "js_crm_rendercontactslist"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L998",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_rendercontactslist",
+      "target": "js_crm_rendercontactdetailspane"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1158",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_rendercalendartab",
+      "target": "js_crm_renderschedulergridwidget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1291",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderprojectstab",
+      "target": "js_crm_renderprojectslist"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1349",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderprojectslist",
+      "target": "js_crm_renderprojectdetailspane"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1732",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderfilereviewtab",
+      "target": "js_crm_renderprototypemarkers"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1493",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderfilereviewtab",
+      "target": "js_crm_rendertimelinemarkerflags"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1522",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderfilereviewtab",
+      "target": "js_crm_rendercommentstimeline"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1751",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_renderfinancialstab",
+      "target": "js_crm_renderfinanciallistitems"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/crm.js",
+      "source_location": "L1977",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_crm_rendertodostab",
+      "target": "js_crm_rendertodoslistitems"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/crm.js",
+      "source_location": "L3176",
+      "weight": 1.0,
+      "source": "js_crm_rendersettingstab",
+      "target": "js_auth_subscribetoadmins"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/ui.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_ui_js",
+      "target": "js_auth_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/ui.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_ui_js",
+      "target": "js_auth_monitorauthstate"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/ui.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_ui_js",
+      "target": "js_auth_logoutuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/ui.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_ui_js",
+      "target": "js_ui_loadcomponent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/ui.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_ui_js",
+      "target": "js_ui_initglobalui"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/ui.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_ui_initglobalui",
+      "target": "js_ui_loadcomponent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/media.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_media_js",
+      "target": "js_media_fetchyoutubevideos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/media.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_media_js",
+      "target": "js_media_rendervideos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_firebaseconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_auth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_seed_admins"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_seedadmins"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_fetchadmins"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_subscribetoadmins"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_addadminuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_removeadminuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_signinwithgoogle"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_signoutuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L113",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_initauthgate"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_firebase_config_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_firebase_config_auth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_loginuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_registeruser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_logoutuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_js",
+      "target": "js_auth_monitorauthstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/auth.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_auth_initauthgate",
+      "target": "js_auth_seedadmins"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_db_js",
+      "target": "js_firebase_db_firebaseconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_db_js",
+      "target": "js_firebase_db_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_db_js",
+      "target": "js_firebase_db_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_db_js",
+      "target": "js_firebase_db_savetofirestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-db.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_db_js",
+      "target": "js_firebase_db_deletefromfirestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/tour.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_tour_js",
+      "target": "js_tour_toursteps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/tour.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_tour_js",
+      "target": "js_tour_inittour"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/tour.js",
+      "source_location": "L92",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_tour_js",
+      "target": "js_tour_endtour"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/tour.js",
+      "source_location": "L110",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_tour_js",
+      "target": "js_tour_nextstep"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/tour.js",
+      "source_location": "L119",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_tour_js",
+      "target": "js_tour_renderstep"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/tour.js",
+      "source_location": "L113",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_tour_nextstep",
+      "target": "js_tour_endtour"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/tour.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_tour_nextstep",
+      "target": "js_tour_renderstep"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/HexGrid.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_hexgrid_js",
+      "target": "components_hexgrid_inithexgrid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Locations.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_locations_js",
+      "target": "components_locations_initlocations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Hero.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_hero_js",
+      "target": "components_hero_inithero"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Mission.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_mission_js",
+      "target": "components_mission_initmission"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/RoomSlider.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_roomslider_js",
+      "target": "components_roomslider_initroomslider"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_ondocumentwritten"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_onrequest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_definesecret"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_initializeapp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_getfirestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_nodemailer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_gmail_app_password"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_pricing_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_newvalue"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_contactref"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_projectref"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_financialref"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L119",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_google"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L124",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_getcalendarauth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L190",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_calendar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L152",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_starttime"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L153",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_endtime"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L204",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_eventtoinsert"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/index.js",
+      "source_location": "L377",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "functions_index_js",
+      "target": "functions_index_transporter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_firebase_setup_md",
+      "target": "docs_firebase_setup_firebase_setup_guide"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_firebase_setup_firebase_setup_guide",
+      "target": "docs_firebase_setup_1_create_a_firebase_project"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_firebase_setup_firebase_setup_guide",
+      "target": "docs_firebase_setup_2_register_web_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_firebase_setup_firebase_setup_guide",
+      "target": "docs_firebase_setup_3_enable_services"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_firebase_setup_firebase_setup_guide",
+      "target": "docs_firebase_setup_4_add_configuration_to_project"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_firebase_setup_3_enable_services",
+      "target": "docs_firebase_setup_authentication"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_firebase_setup_3_enable_services",
+      "target": "docs_firebase_setup_firestore_database"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_firebase_setup_3_enable_services",
+      "target": "docs_firebase_setup_storage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FIREBASE_SETUP.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_firebase_setup_4_add_configuration_to_project",
+      "target": "docs_firebase_setup_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_readme_md",
+      "target": "docs_readme_force_per4mance_elite_football_academy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_readme_force_per4mance_elite_football_academy",
+      "target": "docs_readme_project_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_readme_force_per4mance_elite_football_academy",
+      "target": "docs_readme_tech_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/README.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_readme_force_per4mance_elite_football_academy",
+      "target": "docs_readme_getting_started"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_md",
+      "target": "docs_roadmap_project_roadmap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_project_roadmap",
+      "target": "docs_roadmap_phase_1_foundation_brand_completed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_project_roadmap",
+      "target": "docs_roadmap_phase_2_backend_persistence_current"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_project_roadmap",
+      "target": "docs_roadmap_phase_3_advanced_features_planned"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_project_roadmap",
+      "target": "docs_roadmap_phase_4_optimization_launch"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/modern-web-guidance.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_modern_web_guidance_md",
+      "target": "skills_modern_web_guidance_modern_web_guidance"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/modern-web-guidance.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_modern_web_guidance_modern_web_guidance",
+      "target": "skills_modern_web_guidance_layouts_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/modern-web-guidance.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_modern_web_guidance_modern_web_guidance",
+      "target": "skills_modern_web_guidance_motion_interactive_states"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/firebase-integration.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_firebase_integration_md",
+      "target": "skills_firebase_integration_firebase_integration_guidance"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/firebase-integration.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_firebase_integration_firebase_integration_guidance",
+      "target": "skills_firebase_integration_configuration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/firebase-integration.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_firebase_integration_firebase_integration_guidance",
+      "target": "skills_firebase_integration_operations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_working_prefs_v2_md",
+      "target": "skills_working_prefs_v2_working_preferences"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_working_prefs_v2_working_preferences",
+      "target": "skills_working_prefs_v2_general_rules"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_working_prefs_v2_working_preferences",
+      "target": "skills_working_prefs_v2_output_format"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_working_prefs_v2_working_preferences",
+      "target": "skills_working_prefs_v2_content_creation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_working_prefs_v2_working_preferences",
+      "target": "skills_working_prefs_v2_handling_ambiguity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_working_prefs_v2_working_preferences",
+      "target": "skills_working_prefs_v2_youtube_scripting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/working-prefs-v2.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_working_prefs_v2_working_preferences",
+      "target": "skills_working_prefs_v2_communication_tone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_global_instructions_md",
+      "target": "skills_global_instructions_global_instructions_eq_labs_ai_partner"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_global_instructions_global_instructions_eq_labs_ai_partner",
+      "target": "skills_global_instructions_role"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_global_instructions_global_instructions_eq_labs_ai_partner",
+      "target": "skills_global_instructions_output_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_global_instructions_global_instructions_eq_labs_ai_partner",
+      "target": "skills_global_instructions_communication_tone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_global_instructions_global_instructions_eq_labs_ai_partner",
+      "target": "skills_global_instructions_content_principles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_global_instructions_global_instructions_eq_labs_ai_partner",
+      "target": "skills_global_instructions_forbidden_vocabulary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_global_instructions_global_instructions_eq_labs_ai_partner",
+      "target": "skills_global_instructions_style_for_scripts_media"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/global-instructions.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_global_instructions_global_instructions_eq_labs_ai_partner",
+      "target": "skills_global_instructions_core_competencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/design-system.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_design_system_md",
+      "target": "skills_design_system_design_system_scandinavian_claymorphism"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/design-system.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_design_system_design_system_scandinavian_claymorphism",
+      "target": "skills_design_system_color_palette_sleek_warm_pastels"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/design-system.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_design_system_design_system_scandinavian_claymorphism",
+      "target": "skills_design_system_claymorphism_3d_shading_tactile_neumorphism"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/design-system.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_design_system_design_system_scandinavian_claymorphism",
+      "target": "skills_design_system_typography"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/design-system.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_design_system_claymorphism_3d_shading_tactile_neumorphism",
+      "target": "skills_design_system_outset_panels"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/design-system.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_design_system_claymorphism_3d_shading_tactile_neumorphism",
+      "target": "skills_design_system_inset_active_elements_buttons_inputs_toggle_channels"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/design-system.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_design_system_outset_panels",
+      "target": "skills_design_system_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/design-system.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_design_system_inset_active_elements_buttons_inputs_toggle_channels",
+      "target": "skills_design_system_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_brandvoice_md",
+      "target": "skills_brandvoice_eq_labs_europe_brand_voice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_brandvoice_eq_labs_europe_brand_voice",
+      "target": "skills_brandvoice_1_identity_tone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_brandvoice_eq_labs_europe_brand_voice",
+      "target": "skills_brandvoice_2_content_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_brandvoice_eq_labs_europe_brand_voice",
+      "target": "skills_brandvoice_3_writing_rules"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_brandvoice_eq_labs_europe_brand_voice",
+      "target": "skills_brandvoice_4_content_principles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_brandvoice_eq_labs_europe_brand_voice",
+      "target": "skills_brandvoice_5_vocabulary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/Brandvoice.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_brandvoice_eq_labs_europe_brand_voice",
+      "target": "skills_brandvoice_6_visual_layout_style"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_about_eq_labs_europe_v2_md",
+      "target": "skills_about_eq_labs_europe_v2_eq_labs_europe"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_about_eq_labs_europe_v2_eq_labs_europe",
+      "target": "skills_about_eq_labs_europe_v2_facilities_performance"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_about_eq_labs_europe_v2_eq_labs_europe",
+      "target": "skills_about_eq_labs_europe_v2_digital_engineering_development"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_about_eq_labs_europe_v2_eq_labs_europe",
+      "target": "skills_about_eq_labs_europe_v2_marketing_travel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/about-eq-labs-europe-v2.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "skills_about_eq_labs_europe_v2_eq_labs_europe",
+      "target": "skills_about_eq_labs_europe_v2_heritage_design"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_firebase_setup_md",
+      "target": "random_files_firebase_setup_firebase_setup_guide"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_firebase_setup_firebase_setup_guide",
+      "target": "random_files_firebase_setup_1_create_a_firebase_project"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_firebase_setup_firebase_setup_guide",
+      "target": "random_files_firebase_setup_2_register_web_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_firebase_setup_firebase_setup_guide",
+      "target": "random_files_firebase_setup_3_enable_services"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_firebase_setup_firebase_setup_guide",
+      "target": "random_files_firebase_setup_4_add_configuration_to_project"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_firebase_setup_3_enable_services",
+      "target": "random_files_firebase_setup_authentication"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_firebase_setup_3_enable_services",
+      "target": "random_files_firebase_setup_firestore_database"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_firebase_setup_3_enable_services",
+      "target": "random_files_firebase_setup_storage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/FIREBASE_SETUP.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_firebase_setup_4_add_configuration_to_project",
+      "target": "random_files_firebase_setup_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_readme_md",
+      "target": "random_files_readme_force_per4mance_elite_football_academy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_readme_force_per4mance_elite_football_academy",
+      "target": "random_files_readme_project_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_readme_force_per4mance_elite_football_academy",
+      "target": "random_files_readme_tech_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/README.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_readme_force_per4mance_elite_football_academy",
+      "target": "random_files_readme_getting_started"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_roadmap_md",
+      "target": "random_files_roadmap_project_roadmap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_roadmap_project_roadmap",
+      "target": "random_files_roadmap_phase_1_foundation_brand_completed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_roadmap_project_roadmap",
+      "target": "random_files_roadmap_phase_2_backend_persistence_current"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_roadmap_project_roadmap",
+      "target": "random_files_roadmap_phase_3_advanced_features_planned"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Random files/ROADMAP.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "random_files_roadmap_project_roadmap",
+      "target": "random_files_roadmap_phase_4_optimization_launch"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/db.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_db_js",
+      "target": "js_firebase_config_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "js/db.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_db_js",
+      "target": "js_firebase_config_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/db.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_db_js",
+      "target": "js_db_submitapplication"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/db.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_db_js",
+      "target": "js_db_updateapplicationstatus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/db.js",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_db_js",
+      "target": "js_db_getallapplications"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/db.js",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_db_js",
+      "target": "js_db_updateplayerprofile"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/db.js",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_db_js",
+      "target": "js_db_createscoutprofile"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/db.js",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_db_js",
+      "target": "js_db_getapprovedplayers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/db.js",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_db_js",
+      "target": "js_db_updateplayeradmin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_config_js",
+      "target": "js_firebase_config_firebaseconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_config_js",
+      "target": "js_firebase_config_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_config_js",
+      "target": "js_firebase_config_auth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_config_js",
+      "target": "js_firebase_config_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/firebase-config.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_firebase_config_js",
+      "target": "js_firebase_config_storage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "assets/js/premium-home.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "assets_js_premium_home_js",
+      "target": "js_premium_home_initpremiumhome"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "189e0abc93d63664fda3fcd0fd2f06142afa09e3"
+}

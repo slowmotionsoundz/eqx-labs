@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/crm", "destination": "/crm.html" },
+    { "source": "/studio", "destination": "/studio.html" }
+  ]
+}
