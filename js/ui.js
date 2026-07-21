@@ -1,5 +1,5 @@
 /**
- * FORCE PER4MANCE — UI Utilities
+ * EQX — UI Utilities
  * Handle dynamic loading of shared components.
  */
 import { monitorAuthState, logoutUser } from './auth.js';

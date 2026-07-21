@@ -1,5 +1,5 @@
 /**
- * FORCE PER4MANCE — Media & YouTube Integration
+ * EQX — Media & YouTube Integration
  */
 
 // Configuration
@@ -57,7 +57,7 @@ export async function fetchYouTubeVideos() {
             },
             {
                 id: 'sCsHSlQZZ64',
-                title: 'TAKE YOUR SHOT. | Force Per4mance',
+                title: 'TAKE YOUR SHOT. | EQX',
                 thumbnail: 'https://img.youtube.com/vi/sCsHSlQZZ64/maxresdefault.jpg',
                 publishedAt: '2024-02-20'
             }
