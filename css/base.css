@@ -1,0 +1,279 @@
+/* EQX Labs — base.css | CSS custom properties, reset & typography */
+
+/* ===== EQX MASTER STYLE SHEET — DESIGN SYSTEM v2.0 (DARK + LIGHT THEME) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap');
+
+/* ============================================================
+   DARK THEME (Default)
+   ============================================================ */
+:root {
+  /* Core Backgrounds */
+  --eqx-dark-bg: #191B1A;
+  --eqx-dark-panel: #242826;
+  --eqx-dark-card: #1E2120;
+
+  /* Accent */
+  --eqx-accent: #C3B59F;
+  --eqx-accent-light: #E5DAC9;
+
+  /* Primary Action Color — vibrant orange-red */
+  --eqx-primary: #DF6044;
+  --eqx-primary-hover: #E57962;
+  --eqx-primary-active: #D64529;
+  --eqx-primary-shadow: rgba(223, 96, 68, 0.42);
+  --eqx-primary-glow: rgba(223, 96, 68, 0.25);
+
+  /* Text */
+  --eqx-text-light: #F5F5F5;
+  --eqx-text-muted: #9A9E9B;
+
+  /* Borders */
+  --eqx-border-light: rgba(255, 255, 255, 0.11);
+  --eqx-border-dark: rgba(255, 255, 255, 0.05);
+
+  /* Neumorphic Shadows */
+  --eqx-neu-shadow-dark: rgba(0, 0, 0, 0.58);
+  --eqx-neu-shadow-light: rgba(255, 255, 255, 0.055);
+  --eqx-neu-bg: #1E2120;
+
+  /* Glassmorphism */
+  --eqx-glass-bg: rgba(28, 32, 30, 0.62);
+  --eqx-glass-border: rgba(255, 255, 255, 0.08);
+  --eqx-glass-blur: blur(22px) saturate(1.85);
+
+  /* Sidebar */
+  --eqx-sidebar-bg: #18191A;
+  --eqx-sidebar-active-bg: rgba(223, 96, 68, 0.12);
+  --eqx-sidebar-active-border: rgba(223, 96, 68, 0.35);
+  --eqx-sidebar-active-color: #E57962;
+
+  /* Scrollbar */
+  --eqx-scrollbar-thumb: #3A3D3B;
+
+  /* Fonts */
+  --font-head: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Transitions */
+  --transition-smooth: 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-bounce: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-theme: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 100px;
+}
+
+/* ============================================================
+   LIGHT THEME OVERRIDES
+   Apply via: <body data-theme="light">
+   ============================================================ */
+[data-theme="light"] {
+  --eqx-dark-bg: #F0EFED;
+  --eqx-dark-panel: #FFFFFF;
+  --eqx-dark-card: #FFFFFF;
+
+  --eqx-text-light: #1A1C1B;
+  --eqx-text-muted: #696660;
+
+  --eqx-border-light: rgba(0, 0, 0, 0.10);
+  --eqx-border-dark: rgba(0, 0, 0, 0.05);
+
+  --eqx-neu-shadow-dark: rgba(0, 0, 0, 0.08);
+  --eqx-neu-shadow-light: rgba(255, 255, 255, 0.95);
+  --eqx-neu-bg: #FFFFFF;
+
+  --eqx-glass-bg: rgba(255, 255, 255, 0.65);
+  --eqx-glass-border: rgba(0, 0, 0, 0.07);
+
+  --eqx-sidebar-bg: #2C2B28;
+  --eqx-sidebar-active-bg: rgba(223, 96, 68, 0.12);
+  --eqx-sidebar-active-border: rgba(223, 96, 68, 0.35);
+  --eqx-sidebar-active-color: #E57962;
+
+  --eqx-scrollbar-thumb: #C8C1B8;
+
+  /* Primary — slightly deeper for light bg contrast */
+  --eqx-primary: #CC5A43;
+  --eqx-primary-hover: #D6705C;
+  --eqx-primary-active: #AE422E;
+  --eqx-primary-shadow: rgba(204, 90, 67, 0.38);
+  --eqx-primary-glow: rgba(204, 90, 67, 0.18);
+}
+
+/* Light theme html background sync */
+[data-theme="light"] html,
+[data-theme="light"] body {
+  background: var(--eqx-dark-bg);
+}
+
+/* Light theme: form selects and inputs need proper text color */
+[data-theme="light"] select.form-input,
+[data-theme="light"] input.form-input,
+[data-theme="light"] textarea.form-input {
+  color: var(--eqx-text-light);
+  background: var(--eqx-dark-card);
+}
+
+/* Light theme: status select dropdown */
+[data-theme="light"] .status-select {
+  color: var(--eqx-text-light);
+  background: var(--eqx-dark-panel);
+}
+
+/* Light theme: crm-layout background */
+[data-theme="light"] .crm-layout {
+  background-color: var(--eqx-dark-bg);
+}
+
+/* Light theme sidebar overrides - keeping sidebar dark and legible */
+[data-theme="light"] .crm-sidebar {
+  border-right-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="light"] .crm-sidebar-logo {
+  color: #F5F5F5;
+}
+[data-theme="light"] .crm-sidebar-toggle {
+  color: #9A9E9B;
+}
+[data-theme="light"] .crm-sidebar-toggle:hover {
+  color: #F5F5F5;
+  background: rgba(255, 255, 255, 0.08);
+}
+[data-theme="light"] .crm-nav-item {
+  color: #9A9E9B;
+}
+[data-theme="light"] .crm-nav-item:hover {
+  color: var(--eqx-sidebar-active-color);
+  background: var(--eqx-sidebar-active-bg);
+  border-color: var(--eqx-sidebar-active-border);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.055) inset,
+    0 6px 14px rgba(0, 0, 0, 0.3);
+}
+[data-theme="light"] .crm-nav-item.active {
+  color: var(--eqx-sidebar-active-color);
+  background: var(--eqx-sidebar-active-bg);
+  border-color: var(--eqx-sidebar-active-border);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.055) inset,
+    0 4px 10px rgba(0, 0, 0, 0.3);
+}
+[data-theme="light"] .theme-toggle-btn {
+  background: #373633;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #9A9E9B;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 3px 8px rgba(0, 0, 0, 0.3);
+}
+[data-theme="light"] .theme-toggle-btn:hover {
+  color: var(--eqx-sidebar-active-color);
+  border-color: var(--eqx-sidebar-active-border);
+  background: var(--eqx-sidebar-active-bg);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Light theme: financial table */
+[data-theme="light"] .financial-table-wrapper {
+  background: var(--eqx-dark-panel);
+}
+
+[data-theme="light"] .financial-table th {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .financial-table td,
+[data-theme="light"] .financial-table th {
+  color: var(--eqx-text-light);
+  border-color: var(--eqx-border-dark);
+}
+
+[data-theme="light"] .financial-table tr:hover td {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+/* Light theme: pipeline drag-over */
+[data-theme="light"] .pipeline-column.drag-over {
+  background: rgba(255, 87, 51, 0.04);
+  border-color: rgba(255, 87, 51, 0.3);
+}
+
+/* Light theme: lead card dragging */
+[data-theme="light"] .lead-card.dragging {
+  border: 1px dashed var(--eqx-primary);
+}
+
+/* Light theme: tutorial box stays light */
+[data-theme="light"] .tutorial-box {
+  background: #FAFAF8;
+  color: #2F3E3A;
+}
+
+/* Light theme: gauge bg ring */
+[data-theme="light"] .gauge-bg-circle {
+  stroke: rgba(0, 0, 0, 0.05);
+}
+
+/* Light theme: alerts tab hover */
+[data-theme="light"] .alerts-tab:hover,
+[data-theme="light"] .alerts-tab.active {
+  background: rgba(255, 87, 51, 0.08);
+  border-color: var(--eqx-primary);
+  color: var(--eqx-text-light);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--eqx-dark-bg);
+}
+
+body {
+  background: var(--eqx-dark-bg);
+  color: var(--eqx-text-light);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: var(--transition-theme);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--eqx-dark-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--eqx-scrollbar-thumb);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--eqx-accent);
+}
+

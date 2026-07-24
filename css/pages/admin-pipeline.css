@@ -1,0 +1,586 @@
+/* EQX Labs — admin-pipeline.css | CRM pipeline, lead cards & status workflows */
+
+}
+
+.pipeline-view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pipeline-filter-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pipeline-filter-btn {
+  background: var(--eqx-dark-panel);
+  border: 1px solid var(--eqx-border-light);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  color: var(--eqx-text-muted);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  transition: all 0.18s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.pipeline-filter-btn:hover {
+  color: var(--eqx-accent);
+  border-color: var(--eqx-accent);
+  border-bottom-color: rgba(195, 181, 159, 0.4);
+  background: rgba(195, 181, 159, 0.07);
+  transform: translateY(-2px);
+  top: -2px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 6px 14px rgba(195, 181, 159, 0.2),
+    0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pipeline-filter-btn.active {
+  color: #FFFFFF;
+  background: linear-gradient(160deg, var(--eqx-primary-hover) 0%, var(--eqx-primary) 55%, var(--eqx-primary-active) 100%);
+  border-color: transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.28);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.20) inset,
+    0 5px 14px var(--eqx-primary-shadow),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.pipeline-filter-btn:active {
+  transform: translateY(1px);
+  top: 1px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pipeline-column {
+  background: var(--eqx-glass-bg);
+  backdrop-filter: var(--eqx-glass-blur);
+  -webkit-backdrop-filter: var(--eqx-glass-blur);
+  border: 1px solid var(--eqx-glass-border);
+  border-radius: 16px;
+  padding: 16px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow:
+    0 8px 28px var(--eqx-neu-shadow-dark),
+    0 1px 0 var(--eqx-neu-shadow-light) inset;
+  transition: var(--transition-theme);
+}
+
+.pipeline-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--eqx-border-dark);
+}
+
+.pipeline-column-title {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pipeline-column-count {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--eqx-border-dark);
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: var(--eqx-text-muted);
+}
+
+.leads-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+/* CRM Lead Card */
+.lead-card {
+  background: var(--eqx-dark-card);
+  border: 1px solid var(--eqx-border-dark);
+  border-bottom: 2px solid var(--eqx-neu-shadow-dark);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: grab;
+  transition: all 0.18s cubic-bezier(0.25, 1, 0.5, 1), var(--transition-theme);
+  position: relative;
+  top: 0;
+  box-shadow:
+    0 1px 0 var(--eqx-neu-shadow-light) inset,
+    0 4px 12px var(--eqx-neu-shadow-dark);
+}
+
+.lead-card:hover, .lead-card.active {
+  border-color: var(--eqx-border-light);
+  border-bottom-color: var(--eqx-neu-shadow-dark);
+  box-shadow:
+    0 1px 0 var(--eqx-neu-shadow-light) inset,
+    0 10px 24px var(--eqx-neu-shadow-dark),
+    0 3px 7px var(--eqx-primary-glow);
+  transform: translateY(-3px);
+  top: -3px;
+}
+
+.lead-card:active {
+  cursor: grabbing;
+  transform: translateY(0px) scale(1.01);
+  top: 0;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.1) inset,
+    0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.lead-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.lead-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--eqx-text-light);
+}
+
+.lead-value {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  color: var(--eqx-accent);
+}
+
+.lead-company {
+  font-size: 0.75rem;
+  color: var(--eqx-text-muted);
+  margin-bottom: 12px;
+}
+
+.lead-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.lead-source {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--eqx-border-dark);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--eqx-text-muted);
+  text-transform: uppercase;
+}
+
+.lead-location {
+  color: var(--eqx-text-muted);
+}
+
+/* Lead Status Color Badges */
+.lead-card.status-new { border-left: 3px solid #E29578; }
+.lead-card.status-contacted { border-left: 3px solid #83C5BE; }
+.lead-card.status-qualified { border-left: 3px solid var(--eqx-accent); }
+.lead-card.status-disqualified { border-left: 3px solid #6E7E7A; }
+
+/* Right Details Sidebar */
+.crm-details-panel {
+  background: var(--eqx-glass-bg);
+  backdrop-filter: var(--eqx-glass-blur);
+  -webkit-backdrop-filter: var(--eqx-glass-blur);
+  border: 1px solid var(--eqx-glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 600px;
+  box-shadow:
+    0 8px 32px var(--eqx-neu-shadow-dark),
+    0 1px 0 var(--eqx-neu-shadow-light) inset;
+  transition: var(--transition-theme);
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--eqx-border-dark);
+  padding-bottom: 20px;
+}
+
+.details-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(195, 181, 159, 0.1);
+  border: 1px solid var(--eqx-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  color: var(--eqx-accent);
+}
+
+.details-title h3 {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  color: var(--eqx-text-light);
+}
+
+.details-title p {
+  font-size: 0.75rem;
+  color: var(--eqx-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.details-quick-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  flex: 1;
+  background: linear-gradient(160deg, #2E3230 0%, #262928 60%, #1E2120 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  color: var(--eqx-text-light);
+  padding: 9px 10px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  letter-spacing: 0.02em;
+  transition: all 0.18s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 4px 8px rgba(0, 0, 0, 0.35),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:hover {
+  border-color: rgba(195, 181, 159, 0.3);
+  border-bottom-color: rgba(195, 181, 159, 0.15);
+  color: var(--eqx-accent);
+  background: linear-gradient(160deg, #343836 0%, #2E3230 60%, #282B28 100%);
+  transform: translateY(-2px);
+  top: -2px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 8px 18px rgba(0, 0, 0, 0.4),
+    0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.action-btn:active {
+  transform: translateY(1px);
+  top: 1px;
+  border-bottom-width: 1px;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.1) inset,
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.details-section-title {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--eqx-accent);
+  margin-bottom: 12px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.info-label {
+  color: var(--eqx-text-muted);
+}
+
+.info-value {
+  color: var(--eqx-text-light);
+  font-weight: 500;
+}
+
+/* History logs */
+.history-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.history-item {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+}
+
+.history-marker {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--eqx-accent);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.history-date {
+  font-size: 0.7rem;
+  color: var(--eqx-text-muted);
+}
+
+.history-note {
+  color: var(--eqx-text-light);
+  line-height: 1.4;
+}
+
+/* Active status selector inside drawer */
+.status-select {
+  width: 100%;
+  background: var(--eqx-dark-panel);
+  border: 1px solid var(--eqx-border-light);
+  color: var(--eqx-text-light);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+/* Interactive Tutorial Highlight Elements */
+.tutorial-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  z-index: 900;
+  display: none;
+  pointer-events: auto;
+}
+
+.tutorial-overlay.active {
+  display: block;
+}
+
+.tutorial-highlighted {
+  position: relative !important;
+  z-index: 950 !important;
+  box-shadow: 0 0 0 8px rgba(195, 181, 159, 0.25), 0 0 20px rgba(0, 0, 0, 0.5) !important;
+  border-color: var(--eqx-accent) !important;
+  pointer-events: none !important;
+  background: var(--eqx-dark-card) !important;
+}
+
+.tutorial-box {
+  position: absolute;
+  background: #FCFAF7;
+  color: #2F3E3A;
+  padding: 24px;
+  border-radius: 16px;
+  width: 320px;
+  z-index: 1000;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid rgba(195, 181, 159, 0.5);
+}
+
+.tutorial-box.active {
+  display: flex;
+}
+
+.tutorial-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tutorial-step {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #E29578;
+  font-weight: 600;
+}
+
+.tutorial-close {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #6E7E7A;
+  cursor: pointer;
+}
+
+.tutorial-title {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.tutorial-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #6E7E7A;
+}
+
+.tutorial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.tutorial-skip {
+  font-size: 0.75rem;
+  color: #6E7E7A;
+  background: none;
+  cursor: pointer;
+}
+
+.tutorial-next {
+  background: #E29578;
+  color: #FFFFFF;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ===== CRM DRAG AND DROP & BOOKING STYLES ===== */
+.lead-card.dragging {
+  opacity: 0.4;
+  transform: scale(0.98);
+  border: 1px dashed var(--eqx-accent);
+  box-shadow: none;
+}
+
+.pipeline-column.drag-over {
+  background: rgba(195, 181, 159, 0.04);
+  border-color: rgba(195, 181, 159, 0.4);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tab Management */
+.crm-tab-content {
+  display: none;
+}
+
+.crm-tab-content.active {
+  display: block;
+}
+
+.crm-tab-content.active.grid {
+  display: grid;
+}
+
+/* Concise Metrics Schedule Row */
+.crm-schedule-strip {
+  background: var(--eqx-dark-panel);
+  border: 1px solid var(--eqx-border-light);
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.schedule-strip-title {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--eqx-accent);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.schedule-strip-items {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  flex-grow: 1;
+  scrollbar-width: none; /* Firefox */
+}
+
+.schedule-strip-items::-webkit-scrollbar {
+  display: none; /* Safari & Chrome */
+}
+
+.schedule-strip-card {
+  background: var(--eqx-dark-card);
+  border: 1px solid var(--eqx-border-dark);
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  min-width: 240px;
+  flex-shrink: 0;
+}
+
+.schedule-strip-type {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.schedule-strip-time {
+  color: var(--eqx-accent);
+  font-weight: 500;
+}
+
+/* Calendar Booking Tab Layout */
+.bookings-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;

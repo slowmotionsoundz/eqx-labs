@@ -1,0 +1,336 @@
+/* EQX Labs — booking-wizard.css | Guided booking wizard steps, pillars & service rows */
+
+/* ===== STEP 1 & STEP 2 GUIDED BOOKING WIZARD STYLES ===== */
+.wizard-step {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.wizard-step.hidden {
+  display: none !important;
+}
+
+.wizard-step-num {
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--eqx-accent);
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ===== FEY-STYLE VERTICAL ACCORDION PILLARS ===== */
+.vertical-accordion-container {
+  display: flex;
+  height: 480px;
+  gap: 12px;
+  margin-top: 40px;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.vertical-pillar {
+  flex: 1;
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, rgba(27, 30, 28, 0.7) 0%, rgba(18, 20, 19, 0.95) 100%), var(--pillar-bg) no-repeat center center/cover;
+  border: 1px solid var(--eqx-border-light);
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.vertical-pillar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(12, 14, 13, 0.9) 100%);
+  z-index: 1;
+}
+
+.vertical-pillar:hover,
+.vertical-pillar.active {
+  flex: 3.5;
+  border-color: var(--eqx-accent);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.8), 0 0 30px rgba(195, 181, 159, 0.15);
+}
+
+/* Collapsed Pillar Label (Vertical Rotated Text) */
+.pillar-collapsed-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 32px;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.vertical-pillar.active .pillar-collapsed-label {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pillar-icon {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.pillar-title-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--eqx-text-light);
+  white-space: nowrap;
+}
+
+/* Expanded Pillar Content Panel */
+.pillar-expanded-content {
+  position: relative;
+  z-index: 3;
+  padding: 36px 32px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vertical-pillar.active .pillar-expanded-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pillar-badge {
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--eqx-accent);
+  background: rgba(195, 181, 159, 0.15);
+  border: 1px solid var(--eqx-accent);
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.pillar-title {
+  font-family: var(--font-head);
+  font-size: 1.45rem;
+  font-weight: 300;
+  color: var(--eqx-text-light);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  color: var(--eqx-text-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 320px;
+}
+
+.pillar-preview-rates {
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  color: var(--eqx-text-light);
+  margin-bottom: 20px;
+}
+
+.pillar-preview-rates strong {
+  color: var(--eqx-accent);
+  font-size: 1.15rem;
+}
+
+@media (max-width: 860px) {
+  .vertical-accordion-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .vertical-pillar {
+    height: 140px;
+    flex: none !important;
+  }
+  .vertical-pillar.active {
+    height: 320px;
+  }
+  .pillar-collapsed-label {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-left: 24px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .pillar-title-vertical {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+  .pillar-icon {
+    margin-bottom: 0;
+    margin-right: 14px;
+  }
+}
+
+.goal-row-action {
+  flex-shrink: 0;
+}
+
+.compact-btn {
+  padding: 8px 18px !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.1em !important;
+}
+
+@media (max-width: 640px) {
+  .goal-table-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .goal-row-action {
+    width: 100%;
+  }
+  .compact-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Step 2 Header Nav & Service Option Rows */
+.wizard-header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-to-goals-btn {
+  background: none;
+  border: 1px solid var(--eqx-border-light);
+  color: var(--eqx-text-light);
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.back-to-goals-btn:hover {
+  background: rgba(195, 181, 159, 0.15);
+  border-color: var(--eqx-accent);
+  color: var(--eqx-accent);
+}
+
+.wizard-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 36px;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wizard-service-row {
+  background: var(--eqx-dark-card);
+  border: 1px solid var(--eqx-border-light);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.wizard-service-row:hover {
+  transform: translateY(-2px);
+  border-color: var(--eqx-accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.service-row-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.service-row-info {
+  flex-grow: 1;
+}
+
+.service-row-duration {
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--eqx-accent);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.service-row-title {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--eqx-text-light);
+  margin-bottom: 8px;
+}
+
+.service-row-desc {
+  font-size: 0.86rem;
+  color: var(--eqx-text-muted);
+  line-height: 1.5;
+}
+
+.service-row-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.service-row-price {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--eqx-text-light);
+}
+
+@media (max-width: 768px) {
+  .wizard-service-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .service-row-photo {
+    width: 100%;
+    height: 160px;
+  }
+  .service-row-action {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(195, 181, 159, 0.1);
+    padding-top: 14px;
+  }
+}

@@ -1,0 +1,335 @@
+/* EQX Labs — studio.css | Studio page & stage viewer styles */
+
+/* ===== STUDIO PAGE SCROLL CANVAS ANIMATION STYLES ===== */
+.hero-track {
+  height: 420vh;
+  position: relative;
+  background: var(--eqx-dark-bg);
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.hero-sticky canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-copy-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(24px, 6vw, 80px);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hero-phase {
+  position: absolute;
+  left: clamp(24px, 6vw, 80px);
+  bottom: clamp(24px, 8vh, 96px);
+  max-width: 38ch;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.hero-phase.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-phase .phase-kicker {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--eqx-accent);
+  margin-bottom: 12px;
+}
+
+.hero-phase h1, .hero-phase h2 {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4.5vw, 56px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #F5F2EC;
+}
+
+.hero-phase.dark-text h2, .hero-phase.dark-text h1 {
+  color: #14181C;
+}
+
+.hero-phase.dark-text .phase-kicker {
+  color: #D96F0F;
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%);
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--eqx-text-light);
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+  animation: bounceArrow 2s infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.hero-scroll-hint.off {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Section 1: Hexagon Grid slides up over Hero */
+/* ===== OPTION 1: STACKED 3D STAGE VIEWER & GLASSMORPHISM PANEL STYLES ===== */
+.tour-section {
+  padding: 80px 20px 120px;
+  background: var(--eqx-dark-bg);
+  position: relative;
+}
+
+.stage-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.stage-tab-btn {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--eqx-text-muted);
+  padding: 12px 24px;
+  background: rgba(32, 34, 33, 0.6);
+  border: 1px solid var(--eqx-border-light);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.stage-tab-btn:hover,
+.stage-tab-btn.active {
+  color: var(--eqx-text-light);
+  background: rgba(195, 181, 159, 0.15);
+  border-color: var(--eqx-accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(195, 181, 159, 0.12);
+}
+
+/* Single Stacked 3D Stage Container */
+.stage-viewer-container {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--eqx-border-light);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  background: #0B0D0C;
+}
+
+.stage-render-stack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 480px;
+}
+
+/* Stacked Layers with Smooth Opacity Crossfade */
+.stage-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.stage-layer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.stage-frame-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 40%, rgba(11, 13, 12, 0.7) 100%),
+              linear-gradient(180deg, rgba(11, 13, 12, 0.2) 0%, rgba(11, 13, 12, 0.85) 100%);
+  pointer-events: none;
+}
+
+/* Interactive Hotspot Pulser */
+.stage-hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hotspot-pulse {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--eqx-accent);
+  box-shadow: 0 0 0 0 rgba(195, 181, 159, 0.7);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(195, 181, 159, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 16px rgba(195, 181, 159, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(195, 181, 159, 0); }
+}
+
+.hotspot-tooltip {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(20, 24, 22, 0.9);
+  color: var(--eqx-text-light);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--eqx-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.stage-hotspot:hover .hotspot-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* Scandinavian Glassmorphism Info Panel & Dynamic Positioning */
+.stage-info-panel {
+  position: absolute;
+  max-width: 380px;
+  background: rgba(20, 24, 22, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(195, 181, 159, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+  z-index: 12;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stage-info-panel.pos-bottom-left {
+  bottom: 28px;
+  left: 28px;
+  top: auto;
+  right: auto;
+}
+
+.stage-info-panel.pos-bottom-right {
+  bottom: 28px;
+  right: 28px;
+  top: auto;
+  left: auto;
+}
+
+.stage-info-panel.pos-top-right {
+  top: 28px;
+  right: 28px;
+  bottom: auto;
+  left: auto;
+}
+
+.stage-info-panel.pos-top-left {
+  top: 28px;
+  left: 28px;
+  bottom: auto;
+  right: auto;
+}
+
+.stage-badge {
+  display: inline-block;
+  background: rgba(195, 181, 159, 0.18);
+  border: 1px solid var(--eqx-accent);
+  color: var(--eqx-accent);
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.stage-title {
+  font-family: var(--font-head);
+  font-size: 1.35rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--eqx-text-light);
+  margin-bottom: 10px;
+}
+
+.stage-desc {
+  font-size: 0.88rem;
+  color: var(--eqx-text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.stage-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stage-bullets li {
+  font-size: 0.8rem;
+  color: var(--eqx-text-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .stage-info-panel {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    border-radius: 0;
+    background: var(--eqx-dark-card);
+  }
+}
+

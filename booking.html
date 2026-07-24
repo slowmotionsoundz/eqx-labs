@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EQX | Studio Booking & Service Inquiries</title>
+  <meta name="description" content="Book studio recording sessions, mixing & mastering, studio stay packages, travel experiences, and discovery calls with EQX Landskrona." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/base.css?v=52" />
+  <link rel="stylesheet" href="css/layout.css?v=52" />
+  <link rel="stylesheet" href="css/components.css?v=52" />
+  <link rel="stylesheet" href="css/animations.css?v=52" />
+  <link rel="stylesheet" href="css/pages/booking.css?v=52" />
+  <link rel="stylesheet" href="css/pages/booking-wizard.css?v=52" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+
+  <!-- ===== GLOBAL HEADER ===== -->
+  <header class="eqx-header">
+    <div class="logo-container">
+      <a href="index.html" class="logo-eqx">EQX</a>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="index.html#hex-services" class="nav-link">Solutions</a></li>
+      <li><a href="studio.html" class="nav-link">Studio</a></li>
+      <li><a href="booking.html" class="nav-link active">Booking</a></li>
+      <li><a href="index.html#mission" class="nav-link">Mission</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="booking.html" class="clay-button">Book Session</a>
+    </div>
+  </header>
+
+  <!-- ===== BOOKING HERO ===== -->
+  <section class="booking-hero">
+    <div class="booking-hero-container">
+      <span class="booking-header-badge">Online Reservations</span>
+      <h1 class="booking-hero-title">Book <span>EQX Facilities &amp; Services</span></h1>
+      <p class="booking-hero-desc">
+        Flexible studio packages, mixing &amp; mastering, residency stays, and strategic project consultations. Select your session below to get started.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== GUIDED BOOKING WIZARD PORTAL ===== -->
+  <section class="booking-portal-section">
+    <div class="showcase-container">
+
+      <!-- STEP 1: CHOOSE YOUR GOAL -->
+      <div class="wizard-step" id="wizard-step-1">
+        <div class="wizard-header text-center">
+          <span class="wizard-step-num">Step 1 of 2</span>
+          <h2 class="grid-title">What would you like to <span>book today?</span></h2>
+          <p class="tour-intro" style="color: var(--eqx-text-muted); max-width: 580px; margin: 10px auto 0;">Select your main objective below to view tailored sessions, studio packages, and rates.</p>
+        </div>
+
+        <!-- Fey-Style Vertical Accordion Pillars Container -->
+        <div class="vertical-accordion-container" id="verticalAccordion">
+          
+          <!-- Pillar 1: Studio Sessions -->
+          <div class="vertical-pillar active" data-goal="studio-sessions" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqcontrol.jpeg');">
+            <div class="pillar-collapsed-label">
+              <span class="pillar-icon">🎙️</span>
+              <span class="pillar-title-vertical">Studio Access &amp; Recording</span>
+            </div>
+            <div class="pillar-expanded-content">
+              <span class="pillar-badge">EQ Control Room</span>
+              <h3 class="pillar-title">Studio Access &amp; Recording</h3>
+              <p class="pillar-desc">Self-serve studio access or full engineer-led recording sessions in Landskrona Control Room.</p>
+              <div class="pillar-preview-rates">From <strong>1,050 SEK</strong> / 3 Hours</div>
+              <button class="clay-button compact-btn pillar-action-btn">Explore Sessions &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Mixing & Mastering -->
+          <div class="vertical-pillar" data-goal="post-production" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqcontrol.jpeg');">
+            <div class="pillar-collapsed-label">
+              <span class="pillar-icon">🎚️</span>
+              <span class="pillar-title-vertical">Mixing, Mastering &amp; Beats</span>
+            </div>
+            <div class="pillar-expanded-content">
+              <span class="pillar-badge">EQ Control Room</span>
+              <h3 class="pillar-title">Mixing, Mastering &amp; Beats</h3>
+              <p class="pillar-desc">Track mixing, stereo mastering polish, mix+master bundles, and beat production sessions.</p>
+              <div class="pillar-preview-rates">From <strong>450 SEK</strong> / Track</div>
+              <button class="clay-button compact-btn pillar-action-btn">Explore Rates &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Studio Plus & Stay -->
+          <div class="vertical-pillar" data-goal="studio-plus" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqlounge.jpeg');">
+            <div class="pillar-collapsed-label">
+              <span class="pillar-icon">🏡</span>
+              <span class="pillar-title-vertical">Studio Plus &amp; Stay</span>
+            </div>
+            <div class="pillar-expanded-content">
+              <span class="pillar-badge">EQ Living Room &amp; Airbnb</span>
+              <h3 class="pillar-title">Studio Plus &amp; Stay</h3>
+              <p class="pillar-desc">Bundled studio time with Airbnb lodging in EQ Living Room and group recording retreats.</p>
+              <div class="pillar-preview-rates">From <strong>2,000 SEK</strong> Deposit</div>
+              <button class="clay-button compact-btn pillar-action-btn">Explore Stays &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Consultations & Strategy -->
+          <div class="vertical-pillar" data-goal="consultations" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqlounge.jpeg');">
+            <div class="pillar-collapsed-label">
+              <span class="pillar-icon">💡</span>
+              <span class="pillar-title-vertical">Consultations &amp; Strategy</span>
+            </div>
+            <div class="pillar-expanded-content">
+              <span class="pillar-badge">EQ Living Room</span>
+              <h3 class="pillar-title">Consultations &amp; Strategy</h3>
+              <p class="pillar-desc">1-on-1 artist development, music tech setup advice, and business strategy sessions.</p>
+              <div class="pillar-preview-rates">From <strong>500 SEK</strong> / 30 Min</div>
+              <button class="clay-button compact-btn pillar-action-btn">Explore Consults &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Pillar 5: Free Discovery Calls -->
+          <div class="vertical-pillar" data-goal="project-inquiries" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqoffice.jpeg');">
+            <div class="pillar-collapsed-label">
+              <span class="pillar-icon">📞</span>
+              <span class="pillar-title-vertical">Free Discovery Calls</span>
+            </div>
+            <div class="pillar-expanded-content">
+              <span class="pillar-badge">EQ Office</span>
+              <h3 class="pillar-title">Free Discovery Calls</h3>
+              <p class="pillar-desc">20-minute calls for Web &amp; App development (EQ Office), sports marketing, and project management.</p>
+              <div class="pillar-preview-rates"><strong>FREE</strong> / Included</div>
+              <button class="clay-button compact-btn pillar-action-btn">Book Call &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Pillar 6: Discount Packages -->
+          <div class="vertical-pillar" data-goal="packages" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqcontrol.jpeg');">
+            <div class="pillar-collapsed-label">
+              <span class="pillar-icon">🎟️</span>
+              <span class="pillar-title-vertical">Discount Studio Packages</span>
+            </div>
+            <div class="pillar-expanded-content">
+              <span class="pillar-badge">EQ Control Room</span>
+              <h3 class="pillar-title">Discount Studio Packages</h3>
+              <p class="pillar-desc">Multi-session hourly packages split across 60 days at discounted bulk rates.</p>
+              <div class="pillar-preview-rates"><strong>2,800 SEK</strong> / 8 Hours</div>
+              <button class="clay-button compact-btn pillar-action-btn">Explore Discounts &rarr;</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- STEP 2: CHOOSE YOUR SPECIFIC SESSION -->
+      <div class="wizard-step hidden" id="wizard-step-2">
+        <div class="wizard-header-nav">
+          <button class="back-to-goals-btn" id="backToGoalsBtn">&larr; Back to Main Options</button>
+          <span class="wizard-step-num">Step 2 of 2</span>
+        </div>
+
+        <div class="wizard-header text-center" style="margin-top: 10px;">
+          <h2 class="grid-title" id="step2Title">Select Your <span>Session</span></h2>
+          <p class="tour-intro" id="step2Subtitle" style="color: var(--eqx-text-muted); max-width: 580px; margin: 8px auto 0;">Choose the option that best matches your time requirement and budget.</p>
+        </div>
+
+        <!-- Service Options List -->
+        <div class="wizard-services-list" id="wizardServicesList"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== BOOKING MODAL (DATE/TIME & CLIENT DETAILS & PAYMENTS) ===== -->
+  <div class="booking-modal-backdrop" id="bookingModal">
+    <div class="booking-modal-content">
+      <button class="booking-modal-close" id="modalCloseBtn">&times;</button>
+      
+      <div class="booking-modal-header">
+        <span class="booking-modal-category" id="modalCategory">[ 01 ] Studio Sessions</span>
+        <h3 class="booking-modal-title" id="modalTitle">Studio Session Name</h3>
+        <div class="booking-modal-meta">
+          <span class="meta-duration" id="modalDuration">3 Hours</span>
+          <span class="meta-price" id="modalPrice">SEK 1,050.00</span>
+        </div>
+      </div>
+
+      <div class="booking-modal-body">
+        <p class="booking-modal-desc" id="modalDesc">Session description details...</p>
+
+        <form class="booking-form" id="bookingCheckoutForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" required placeholder="Leighton Hicks" id="clientName" />
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" required placeholder="artist@eqx.com" id="clientEmail" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" required placeholder="+46 70 123 45 67" id="clientPhone" />
+            </div>
+            <div class="form-group">
+              <label>Preferred Date & Time *</label>
+              <input type="datetime-local" required id="clientDateTime" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Project Notes / Special Requests</label>
+            <textarea rows="3" placeholder="Tell us about your tracks, equipment needs, or session goal..." id="clientNotes"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Package / Certificate Code (Optional)</label>
+            <input type="text" placeholder="Enter promo or package code" id="clientCode" />
+          </div>
+
+          <div class="booking-checkout-summary">
+            <div class="summary-line">
+              <span>Subtotal:</span>
+              <strong id="summarySubtotal">SEK 1,050.00</strong>
+            </div>
+            <div class="summary-line">
+              <span>Deposit Due Now:</span>
+              <strong id="summaryDeposit">SEK 1,050.00</strong>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="clay-button full-width-btn" id="paySubmitBtn">
+              Proceed to Secure Checkout
+            </button>
+            <a href="https://eqlandskrona.as.me" target="_blank" rel="noopener noreferrer" class="acuity-direct-link" id="acuityDirectBtn">
+              Or Book Direct on Acuity Scheduling &rarr;
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GLOBAL FOOTER ===== -->
+  <footer class="eqx-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-eqx">EQX</a>
+        <p class="footer-desc">
+          We build custom digital products, produce content, and shape sound.
+        </p>
+      </div>
+      
+      <div class="footer-column">
+        <h4 class="footer-col-title">Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#hex-services" class="footer-link">Digital Engineering</a></li>
+          <li><a href="index.html#hex-services" class="footer-link">Music & Sound</a></li>
+          <li><a href="index.html#hex-services" class="footer-link">Content Production</a></li>
+          <li><a href="index.html#hex-services" class="footer-link">Project Logistics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-col-title">Locations</h4>
+        <ul class="footer-links">
+          <li><span class="footer-link" style="cursor: default;">Landskrona, SE</span></li>
+          <li><span class="footer-link" style="cursor: default;">Huntsville, AL</span></li>
+          <li><span class="footer-link" style="cursor: default;">Europe Hub</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-col-title">Connect</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@eqx.com" class="footer-link">Email Us</a></li>
+          <li><a href="#" class="footer-link">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 EQX. All rights reserved.</p>
+      <p>Designed by Øzone Solutions AB.</p>
+    </div>
+  </footer>
+
+  <!-- Booking Portal Script -->
+  <script type="module">
+    import { initBookingPortal } from './components/BookingPortal.js?v=36';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initBookingPortal();
+    });
+  </script>
+</body>
+</html>

@@ -24,7 +24,7 @@ export function initHexGrid(container, onLearnMore) {
 
           <!-- Hex 2: Music -->
           <div class="hex-card" data-index="1">
-            <div class="hex-card-bg" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_001.jpg'); background-position: center top;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
               <h3 class="hex-title">Music</h3>
@@ -49,7 +49,7 @@ export function initHexGrid(container, onLearnMore) {
           
           <!-- Hex 4: Project Logistics -->
           <div class="hex-card" data-index="3">
-            <div class="hex-card-bg" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/20220808_192335.jpg'); background-position: center;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
               <h3 class="hex-title">Project Logistics</h3>
@@ -59,7 +59,7 @@ export function initHexGrid(container, onLearnMore) {
 
           <!-- Hex 5: Team -->
           <div class="hex-card" id="trigger-mission">
-            <div class="hex-card-bg" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_004.jpg'); background-position: center top;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
               <h3 class="hex-title">Company</h3>
@@ -74,7 +74,7 @@ export function initHexGrid(container, onLearnMore) {
           
           <!-- Hex 6: Contact -->
           <div class="hex-card" id="trigger-contact">
-            <div class="hex-card-bg" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_020.jpg'); background-position: center top;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
               <h3 class="hex-title">Contact</h3>

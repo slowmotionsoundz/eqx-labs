@@ -9,7 +9,11 @@
   <!-- Preconnect to Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=10" />
+  <link rel="stylesheet" href="css/base.css?v=52" />
+  <link rel="stylesheet" href="css/layout.css?v=52" />
+  <link rel="stylesheet" href="css/components.css?v=52" />
+  <link rel="stylesheet" href="css/animations.css?v=52" />
+  <link rel="stylesheet" href="css/pages/studio.css?v=52" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
   
   <style>
@@ -370,54 +374,11 @@
     </div>
   </section>
 
-  <!-- ===== FACILITIES SECTION ===== -->
-  <section class="facilities-section">
-    <div class="showcase-container">
-      <h2 class="grid-title">Our Facilities</h2>
-      <div class="facilities-grid">
-        
-        <!-- Facility 1: Studio Spaces -->
-        <div class="facility-card">
-          <div class="facility-icon">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-            </svg>
-          </div>
-          <h3 class="facility-title">Studio Spaces</h3>
-          <p class="facility-desc">
-            Professional recording, podcasting, and gaming suites designed with premium acoustics and engineering standards.
-          </p>
-        </div>
+  <!-- ===== STUDIO CANVAS SCROLL SEQUENCE ===== -->
+  <div id="studio-canvas-root"></div>
 
-        <!-- Facility 2: Live Venue -->
-        <div class="facility-card">
-          <div class="facility-icon">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-            </svg>
-          </div>
-          <h3 class="facility-title">Live Venue</h3>
-          <p class="facility-desc">
-            Versatile rehearsal spaces and an intimate venue built to capture live performances and stage rehearsals.
-          </p>
-        </div>
-
-        <!-- Facility 3: Visuals -->
-        <div class="facility-card">
-          <div class="facility-icon">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 class="facility-title">Visuals</h3>
-          <p class="facility-desc">
-            Professional filming and high-quality livestreaming services to broadcast and record your creative sessions.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <!-- ===== VIRTUAL STUDIO TOUR & SPOTLIGHT ===== -->
+  <div id="studio-tour-root"></div>
 
   <!-- ===== RELEASE ARCHIVE & FUTURE UPLOADS ===== -->
   <section class="releases-grid-section">
@@ -515,5 +476,17 @@
     </div>
   </footer>
 
+  <!-- Studio Entry Script -->
+  <script type="module">
+    import { initStudioTour } from './components/StudioTour.js?v=29';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const canvasRoot = document.getElementById('studio-canvas-root');
+      const tourRoot = document.getElementById('studio-tour-root');
+      if (canvasRoot && tourRoot) {
+        initStudioTour(canvasRoot, tourRoot);
+      }
+    });
+  </script>
 </body>
 </html>

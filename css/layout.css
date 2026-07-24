@@ -1,0 +1,192 @@
+/* EQX Labs — layout.css | Header, nav, footer & layout containers */
+
+/* ===== GLOBAL HEADER / NAVIGATION ===== */
+.eqx-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+  z-index: 100;
+  border-bottom: 1px solid var(--eqx-border-dark);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-eqx {
+  font-family: var(--font-head);
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  color: var(--eqx-text-light);
+}
+
+.logo-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--eqx-accent);
+  border-radius: 50%;
+  margin-left: 2px;
+  vertical-align: middle;
+  cursor: default;
+  box-shadow: 0 0 8px var(--eqx-accent);
+  transition: opacity 0.3s;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--eqx-text-muted);
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--eqx-text-light);
+}
+
+.nav-cta-btn {
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 8px 18px;
+  border: 1px solid var(--eqx-border-light);
+  color: var(--eqx-text-light);
+  transition: var(--transition-smooth);
+}
+
+.nav-cta-btn:hover {
+  background: var(--eqx-text-light);
+  color: var(--eqx-dark-bg);
+  border-color: var(--eqx-text-light);
+}
+
+/* ===== MINIMALIST APIDURA FOOTER ===== */
+.eqx-footer {
+  background: var(--eqx-dark-bg);
+  padding: 80px 60px 40px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-desc {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--eqx-text-muted);
+  max-width: 320px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-col-title {
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--eqx-text-light);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.footer-link {
+  font-size: 0.8rem;
+  color: var(--eqx-text-muted);
+  transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+  color: var(--eqx-text-light);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  color: var(--eqx-text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ===== RESPONSIVE LAYOUTS ===== */
+@media (max-width: 992px) {
+  .eqx-header {
+    padding: 20px 30px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hex-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .hex-row.offset-row {
+    margin-top: 10px;
+  }
+  .popover-container {
+    flex-direction: column;
+    height: 90vh;
+    overflow-y: auto;
+  }
+  .clay-card-info {
+    padding: 30px 24px;
+  }
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+  .founders-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+

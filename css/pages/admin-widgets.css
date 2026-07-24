@@ -1,0 +1,573 @@
+/* EQX Labs — admin-widgets.css | CRM calendar, contacts, rooms & projects */
+
+}
+
+.bookings-list-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bookings-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.bookings-grid-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Booking Card */
+.booking-card {
+  background: var(--eqx-dark-card);
+  border: 1px solid var(--eqx-border-light);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.booking-card:hover {
+  border-color: rgba(195, 181, 159, 0.25);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.booking-info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.booking-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.booking-badge {
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.badge-session {
+  background: rgba(226, 149, 120, 0.1);
+  color: #E29578;
+  border: 1px solid rgba(226, 149, 120, 0.2);
+}
+
+.badge-meeting {
+  background: rgba(131, 197, 190, 0.1);
+  color: #83C5BE;
+  border: 1px solid rgba(131, 197, 190, 0.2);
+}
+
+.badge-work {
+  background: rgba(195, 181, 159, 0.1);
+  color: var(--eqx-accent);
+  border: 1px solid rgba(195, 181, 159, 0.2);
+}
+
+.booking-title {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--eqx-text-light);
+}
+
+.booking-client {
+  font-size: 0.8rem;
+  color: var(--eqx-text-muted);
+}
+
+.booking-client span {
+  color: var(--eqx-text-light);
+  font-weight: 500;
+}
+
+.booking-time-group {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.booking-date {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  color: var(--eqx-text-light);
+}
+
+.booking-time-hours {
+  font-size: 0.8rem;
+  color: var(--eqx-text-muted);
+}
+
+/* Interactive Calendar Grid widget */
+.calendar-widget {
+  background: var(--eqx-glass-bg);
+  backdrop-filter: var(--eqx-glass-blur);
+  -webkit-backdrop-filter: var(--eqx-glass-blur);
+  border: 1px solid var(--eqx-glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow:
+    0 8px 32px var(--eqx-neu-shadow-dark),
+    0 1px 0 var(--eqx-neu-shadow-light) inset;
+  transition: var(--transition-theme);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-month-title {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.calendar-day-header {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--eqx-text-muted);
+  text-transform: uppercase;
+  padding-bottom: 8px;
+}
+
+.calendar-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  color: var(--eqx-text-muted);
+  border: 1px solid transparent;
+  transition: var(--transition-smooth);
+}
+
+.calendar-cell.active-month {
+  color: var(--eqx-text-light);
+  background: rgba(255, 255, 255, 0.01);
+  border-color: var(--eqx-border-dark);
+}
+
+.calendar-cell.active-month:hover {
+  border-color: var(--eqx-accent);
+  background: rgba(195, 181, 159, 0.05);
+  cursor: pointer;
+}
+
+.calendar-cell.has-booking {
+  background: rgba(195, 181, 159, 0.08);
+  border-color: var(--eqx-accent);
+  color: var(--eqx-accent);
+  font-weight: 600;
+}
+
+.calendar-cell.selected {
+  background: var(--eqx-accent) !important;
+  color: var(--eqx-dark-bg) !important;
+  font-weight: 600;
+}
+
+/* Action button variations */
+.action-delete-btn {
+  background: none;
+  border: none;
+  color: var(--eqx-text-muted);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.action-delete-btn:hover {
+  color: #E29578;
+  background: rgba(226, 149, 120, 0.08);
+}
+
+/* ===== CONTACTS DIRECTORY TAB ===== */
+.contacts-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+}
+
+.contacts-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex-grow: 1;
+  max-width: 320px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--eqx-text-muted);
+  pointer-events: none;
+}
+
+.contacts-search {
+  padding-left: 36px !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.contact-card {
+  background: var(--eqx-dark-card);
+  border: 1px solid var(--eqx-border-dark);
+  border-bottom: 3px solid var(--eqx-neu-shadow-dark);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  transition: all 0.18s cubic-bezier(0.25, 1, 0.5, 1), var(--transition-theme);
+  box-shadow:
+    0 1px 0 var(--eqx-neu-shadow-light) inset,
+    0 4px 12px var(--eqx-neu-shadow-dark);
+}
+
+.contact-card:hover, .contact-card.active {
+  border-color: var(--eqx-border-light);
+  border-bottom-color: var(--eqx-neu-shadow-dark);
+  box-shadow:
+    0 1px 0 var(--eqx-neu-shadow-light) inset,
+    0 10px 24px var(--eqx-neu-shadow-dark),
+    0 3px 7px var(--eqx-primary-glow);
+  transform: translateY(-3px);
+  top: -3px;
+}
+
+.contact-card:active {
+  transform: translateY(0px);
+  top: 0;
+  border-bottom-width: 1.5px;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.1) inset,
+    0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(195, 181, 159, 0.1);
+  color: var(--eqx-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.contact-basic-info h4 {
+  margin: 0 0 4px 0;
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  color: var(--eqx-text-light);
+}
+
+.contact-basic-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--eqx-text-muted);
+}
+
+.contact-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  margin-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 16px;
+}
+
+.contact-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-detail-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--eqx-text-muted);
+}
+
+.contact-detail-val {
+  font-size: 0.8rem;
+  color: var(--eqx-text-light);
+}
+
+/* ===== MULTI-ROOM CALENDAR SCHEDULER ===== */
+.room-columns-layout {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.room-col {
+  background: var(--eqx-glass-bg);
+  backdrop-filter: var(--eqx-glass-blur);
+  -webkit-backdrop-filter: var(--eqx-glass-blur);
+  border: 1px solid var(--eqx-glass-border);
+  border-radius: 16px;
+  padding: 12px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow:
+    0 8px 28px var(--eqx-neu-shadow-dark),
+    0 1px 0 var(--eqx-neu-shadow-light) inset;
+  transition: var(--transition-theme);
+}
+
+.room-col-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--eqx-border-dark);
+}
+
+.room-badge {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.room-badge.studio-a { background: rgba(0, 180, 216, 0.15); color: #00B4D8; border: 1px solid rgba(0, 180, 216, 0.25); }
+.room-badge.studio-b { background: rgba(226, 149, 120, 0.15); color: #E29578; border: 1px solid rgba(226, 149, 120, 0.25); }
+.room-badge.studio-c { background: rgba(131, 197, 190, 0.15); color: #83C5BE; border: 1px solid rgba(131, 197, 190, 0.25); }
+.room-badge.studio-d { background: rgba(187, 134, 252, 0.15); color: #BB86FC; border: 1px solid rgba(187, 134, 252, 0.25); }
+.room-badge.studio-e { background: rgba(255, 193, 7, 0.15); color: #FFC107; border: 1px solid rgba(255, 193, 7, 0.25); }
+
+.room-bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.room-booking-card {
+  background: var(--eqx-dark-card);
+  border: 1px solid var(--eqx-border-dark);
+  border-bottom: 2.5px solid var(--eqx-neu-shadow-dark);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.18s cubic-bezier(0.25, 1, 0.5, 1), var(--transition-theme);
+  position: relative;
+  top: 0;
+  box-shadow:
+    0 1px 0 var(--eqx-neu-shadow-light) inset,
+    0 4px 12px var(--eqx-neu-shadow-dark);
+}
+
+.room-booking-card:hover {
+  transform: translateY(-2px);
+  top: -2px;
+  border-color: var(--eqx-border-light);
+  box-shadow:
+    0 1px 0 var(--eqx-neu-shadow-light) inset,
+    0 8px 20px var(--eqx-neu-shadow-dark),
+    0 2px 4px var(--eqx-primary-glow);
+}
+
+.room-booking-card:active {
+  transform: translateY(1px);
+  top: 1px;
+  border-bottom-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== PROJECTS MANAGEMENT ===== */
+.projects-layout {
+  display: grid;
+  grid-template-columns: 1.10fr 0.90fr;
+  gap: 32px;
+}
+
+.project-card {
+  background: var(--eqx-dark-card);
+  border: 1px solid var(--eqx-border-dark);
+  border-bottom: 3px solid var(--eqx-neu-shadow-dark);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  transition: all 0.18s cubic-bezier(0.25, 1, 0.5, 1), var(--transition-theme);
+  box-shadow:
+    0 1px 0 var(--eqx-neu-shadow-light) inset,
+    0 4px 12px var(--eqx-neu-shadow-dark);
+}
+
+.project-card:hover, .project-card.active {
+  border-color: var(--eqx-border-light);
+  border-bottom-color: var(--eqx-neu-shadow-dark);
+  box-shadow:
+    0 1px 0 var(--eqx-neu-shadow-light) inset,
+    0 10px 24px var(--eqx-neu-shadow-dark),
+    0 3px 7px var(--eqx-primary-glow);
+  transform: translateY(-3px);
+  top: -3px;
+}
+
+.project-card:active {
+  transform: translateY(0px);
+  top: 0;
+  border-bottom-width: 1.5px;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.1) inset,
+    0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-title {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--eqx-text-light);
+}
+
+.project-client-name {
+  font-size: 0.8rem;
+  color: var(--eqx-text-muted);
+}
+
+.project-stage-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.project-stage-line {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.16);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.project-stage-line-active {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  height: 2px;
+  background: var(--eqx-accent);
+  z-index: 2;
+  transform: translateY(-50%);
+  transition: width 0.4s ease;
+}
+
+.project-stage-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--eqx-dark-card);
+  border: 2px solid var(--eqx-border-light);
+  z-index: 3;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.project-stage-dot.completed {
+  border-color: var(--eqx-accent);
+  background: var(--eqx-accent);
+}
+
+.project-stage-dot.active {
+  border-color: #FF5C3E;
+  background: #FF5C3E;
+  box-shadow: 0 0 8px rgba(255, 92, 62, 0.6);
+}
+
+.project-stage-label {
+  font-size: 0.6rem;
+  color: var(--eqx-text-muted);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.project-meta-row {
+  display: flex;
+  gap: 16px;
+  font-size: 0.75rem;
+  color: var(--eqx-text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 12px;
+}
+
