@@ -14,7 +14,7 @@ export function initHexGrid(container, onLearnMore) {
           
           <!-- Hex 1: Digital Engineering -->
           <div class="hex-card" data-index="0">
-            <div class="hex-card-bg" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/eqoffice.jpeg'); background-position: center;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
               <h3 class="hex-title">Digital Engineering</h3>
@@ -24,7 +24,7 @@ export function initHexGrid(container, onLearnMore) {
 
           <!-- Hex 2: Music -->
           <div class="hex-card" data-index="1">
-            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_001.jpg'); background-position: center top;"></div>
+            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/eqcontrol.jpeg'); background-position: center;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
               <h3 class="hex-title">Music</h3>
@@ -34,10 +34,10 @@ export function initHexGrid(container, onLearnMore) {
 
           <!-- Hex 3: Content -->
           <div class="hex-card" data-index="2">
-            <div class="hex-card-bg" style="background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_049.jpg'); background-position: center;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
-              <h3 class="hex-title">Content</h3>
+              <h3 class="hex-title">Content Production</h3>
               <button class="hex-cta-btn">Learn More</button>
             </div>
           </div>

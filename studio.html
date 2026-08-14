@@ -381,8 +381,8 @@
     </div>
   </section>
 
-  <!-- ===== STUDIO CANVAS SCROLL SEQUENCE (Hidden for now) ===== -->
-  <!-- <div id="studio-canvas-root"></div> -->
+  <!-- ===== 3D ISOMETRIC BUILDING RENDER & ROOM DESCRIPTIONS ===== -->
+  <div id="eqx-slider-root"></div>
 
   <!-- ===== VIRTUAL STUDIO TOUR & SPOTLIGHT ===== -->
   <div id="studio-tour-root"></div>
@@ -485,13 +485,17 @@
 
   <!-- Studio Entry Script -->
   <script type="module">
-    import { initStudioTour } from './components/StudioTour.js?v=29';
+    import { initStudioTour } from './components/StudioTour.js?v=60';
+    import { initRoomSlider } from './components/RoomSlider.js?v=60';
 
     document.addEventListener('DOMContentLoaded', () => {
-      const canvasRoot = document.getElementById('studio-canvas-root');
       const tourRoot = document.getElementById('studio-tour-root');
-      if (canvasRoot || tourRoot) {
-        initStudioTour(canvasRoot, tourRoot);
+      if (tourRoot) {
+        initStudioTour(null, tourRoot);
+      }
+      const roomSliderRoot = document.getElementById('eqx-slider-root');
+      if (roomSliderRoot) {
+        initRoomSlider(roomSliderRoot);
       }
     });
   </script>
