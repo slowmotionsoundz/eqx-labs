@@ -78,6 +78,8 @@ export function initRoomSlider(container) {
         'Process automation & plugin development'
       ],
       floorBg: '#3B3F3D',
+      leftWallBg: 'assets/EQX Website Photos/eqoffice.jpeg',
+      rightWallBg: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_020.jpg',
       nodes: [
         { bottom: '110px', right: '70px', tip: 'Custom App & Backend Architecture' },
         { bottom: '160px', left: '50px', tip: 'Workflow Automation & Managerial Tools' }
@@ -93,6 +95,8 @@ export function initRoomSlider(container) {
         'Spatial audio system structures'
       ],
       floorBg: '#453C33',
+      leftWallBg: 'assets/EQX Website Photos/eqcontrol.jpeg',
+      rightWallBg: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_001.jpg',
       nodes: [
         { bottom: '130px', right: '110px', tip: 'Advanced Audio Mixing Console' },
         { bottom: '100px', left: '70px', tip: 'Studio Acoustic Engineering' }
@@ -108,6 +112,8 @@ export function initRoomSlider(container) {
         'Scandinavian design layouts'
       ],
       floorBg: '#3E4133',
+      leftWallBg: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_049.jpg',
+      rightWallBg: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_076.jpg',
       nodes: [
         { bottom: '140px', right: '80px', tip: 'Custom 3D Vector Designs' }
       ]
@@ -122,6 +128,8 @@ export function initRoomSlider(container) {
         'Dockerized deployments & CI/CD pipelines'
       ],
       floorBg: '#3E3B45',
+      leftWallBg: 'assets/EQX Website Photos/eqx.jpeg',
+      rightWallBg: 'assets/EQX Website Photos/20220808_192335.jpg',
       nodes: [
         { bottom: '120px', right: '90px', tip: 'Firebase Infrastructure Setup' },
         { bottom: '160px', left: '60px', tip: 'Interactive Project Roadmaps' }
@@ -143,6 +151,8 @@ export function initRoomSlider(container) {
   const elDesc = container.querySelector('#room-desc');
   const elBullets = container.querySelector('#room-bullets');
   const elFloor = container.querySelector('#room-floor');
+  const elLeftWall = container.querySelector('#room-left');
+  const elRightWall = container.querySelector('#room-right');
   const elNodes = container.querySelector('#room-nodes-container');
   const elTooltip = container.querySelector('#room-tooltip-el');
 
@@ -160,6 +170,18 @@ export function initRoomSlider(container) {
 
     // Render floor color
     elFloor.style.background = data.floorBg;
+
+    // Render wall custom backgrounds
+    if (elLeftWall && data.leftWallBg) {
+      elLeftWall.style.backgroundImage = `url('${data.leftWallBg}')`;
+      elLeftWall.style.backgroundSize = 'cover';
+      elLeftWall.style.backgroundPosition = 'center';
+    }
+    if (elRightWall && data.rightWallBg) {
+      elRightWall.style.backgroundImage = `url('${data.rightWallBg}')`;
+      elRightWall.style.backgroundSize = 'cover';
+      elRightWall.style.backgroundPosition = 'center';
+    }
 
     // Toggle between Spotify Embed and Isometric Room
     const isoBox = container.querySelector('#isometric-box-el');
