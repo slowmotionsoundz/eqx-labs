@@ -3,802 +3,170 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EQX Hub | Project Operations Suite</title>
-  <meta name="description" content="Manage leads, projects, contacts, invoices, workspaces, and review creative files for EQX Europe." />
-  
-  <!-- Preconnect to Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/base.css?v=52" />
-  <link rel="stylesheet" href="css/layout.css?v=52" />
-  <link rel="stylesheet" href="css/components.css?v=52" />
-  <link rel="stylesheet" href="css/animations.css?v=52" />
-  <link rel="stylesheet" href="css/pages/admin.css?v=52" />
+  <title>EQX Labs | Agency Project Operations Suite</title>
+  <meta name="description" content="Revolutionary Project Management Suite for Music Production, Digital Engineering, Live Sound, DJ Gigs, and Marketing." />
+  <link rel="stylesheet" href="css/crm.css?v=1100" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
-  
-  <style>
-    body {
-      background: var(--eqx-dark-bg);
-      overflow-x: hidden;
-    }
-
-    .crm-add-lead-btn {
-      /* Legacy alias — routes through btn-primary */
-      background: linear-gradient(160deg, #FF6B4A 0%, #FF5733 55%, #E84820 100%);
-      color: #FFFFFF;
-      border: none;
-      border-bottom: 3px solid rgba(0, 0, 0, 0.32);
-      padding: 10px 24px;
-      border-radius: 100px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.025em;
-      cursor: pointer;
-      position: relative;
-      top: 0;
-      transition: all 0.18s cubic-bezier(0.25, 1, 0.5, 1);
-      box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.20) inset,
-        0 6px 18px rgba(255, 87, 51, 0.42),
-        0 2px 4px rgba(0, 0, 0, 0.28);
-      white-space: nowrap;
-    }
-
-    .crm-add-lead-btn:hover {
-      background: linear-gradient(160deg, #FF7D5E 0%, #FF6B4A 55%, #FF5733 100%);
-      box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.25) inset,
-        0 10px 24px rgba(255, 87, 51, 0.48),
-        0 4px 10px rgba(0, 0, 0, 0.22);
-      transform: translateY(-2px);
-      top: -2px;
-    }
-
-    .crm-add-lead-btn:active {
-      background: linear-gradient(160deg, #E84820 0%, #D43A10 55%, #C02E08 100%);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-      box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.10) inset,
-        0 2px 6px rgba(255, 87, 51, 0.30),
-        0 1px 2px rgba(0, 0, 0, 0.38);
-      transform: translateY(2px);
-      top: 2px;
-    }
-
-    /* Modal Form Styling */
-    .lead-modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(8px) saturate(1.5);
-      z-index: 1100;
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lead-modal-overlay.active {
-      display: flex;
-    }
-
-    .lead-modal {
-      background: var(--eqx-dark-panel);
-      border: 1px solid var(--eqx-border-light);
-      border-radius: 22px;
-      padding: 36px;
-      width: 100%;
-      max-width: 490px;
-      box-shadow:
-        0 20px 50px var(--eqx-neu-shadow-dark),
-        0 1px 0 var(--eqx-neu-shadow-light) inset;
-      position: relative;
-    }
-
-    .lead-modal-close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: none;
-      color: var(--eqx-text-muted);
-      font-size: 1.25rem;
-      cursor: pointer;
-    }
-
-    .lead-modal h3 {
-      font-family: var(--font-head);
-      font-size: 1.5rem;
-      font-weight: 300;
-      margin-bottom: 24px;
-      color: var(--eqx-text-light);
-    }
-
-    .form-group {
-      margin-bottom: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--eqx-text-muted);
-    }
-
-    .form-input {
-      background: var(--eqx-dark-card);
-      border: 1px solid var(--eqx-border-light);
-      color: var(--eqx-text-light);
-      padding: 10px 14px;
-      border-radius: 10px;
-      outline: none;
-      font-size: 0.9rem;
-      font-family: var(--font-body);
-      transition: border-color 0.2s ease, background 0.2s ease;
-    }
-
-    .form-input:focus {
-      border-color: var(--eqx-primary);
-      box-shadow: 0 0 0 3px var(--eqx-primary-glow);
-    }
-
-    .tour-trigger-float {
-      position: fixed;
-      bottom: 24px;
-      left: 24px;
-      background: var(--eqx-dark-panel);
-      border: 1px solid var(--eqx-border-light);
-      color: var(--eqx-text-muted);
-      padding: 8px 16px;
-      border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      cursor: pointer;
-      z-index: 100;
-      transition: var(--transition-smooth);
-    }
-
-    .tour-trigger-float:hover {
-      background: var(--eqx-primary);
-      color: #FFFFFF;
-      border-color: var(--eqx-primary);
-      box-shadow: 0 4px 15px var(--eqx-primary-shadow);
-    }
-
-    /* ===== AUTH GATE ===== */
-    #auth-gate-overlay {
-      position: fixed;
-      inset: 0;
-      background: var(--eqx-dark-bg);
-      z-index: 9999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-    #auth-gate-overlay.active { display: flex; }
-    .auth-gate-card {
-      background: var(--eqx-dark-panel);
-      border: 1px solid var(--eqx-glass-border);
-      border-radius: 24px;
-      padding: 48px 40px;
-      width: 100%;
-      max-width: 420px;
-      text-align: center;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.7), 0 1px 0 rgba(255,255,255,0.06) inset;
-      position: relative;
-    }
-    .auth-gate-logo {
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      color: var(--eqx-text-light);
-      margin-bottom: 6px;
-    }
-    .auth-gate-logo .auth-logo-dot {
-      display: inline-block;
-      width: 8px; height: 8px;
-      background: var(--eqx-primary);
-      border-radius: 50%;
-      margin-left: 2px;
-      vertical-align: middle;
-      position: relative;
-      top: -2px;
-      box-shadow: 0 0 8px var(--eqx-primary-shadow);
-    }
-    .auth-gate-sub {
-      font-size: 0.85rem;
-      color: var(--eqx-text-muted);
-      margin-bottom: 32px;
-    }
-    .auth-google-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: #fff;
-      color: #1f1f1f;
-      border: none;
-      border-radius: 100px;
-      padding: 12px 28px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.18s ease;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-    }
-    .auth-google-btn:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.4); transform: translateY(-1px); }
-    .auth-google-btn:active { transform: translateY(1px); }
-    .auth-google-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-    #auth-error-msg {
-      margin-top: 16px;
-      font-size: 0.8rem;
-      color: #FF6B6B;
-      min-height: 1.2em;
-    }
-    #auth-user-display {
-      font-size: 0.82rem;
-      color: var(--eqx-text-muted);
-    }
-    #auth-sign-out-btn {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.12);
-      color: var(--eqx-text-muted);
-      padding: 6px 14px;
-      border-radius: 100px;
-      font-size: 0.75rem;
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }
-    #auth-sign-out-btn:hover { border-color: #FF6B4A; color: #FF6B4A; }
-
-    /* ===== MOBILE RESPONSIVENESS ===== */
-    @media (max-width: 576px) {
-      .lead-modal {
-        padding: 20px 16px !important;
-        max-width: 94% !important;
-        margin: 0 auto;
-      }
-      .lead-modal-overlay {
-        padding: 10px;
-      }
-      /* Specifically optimize the email preview modal for mobile */
-      #email-preview-modal .lead-modal {
-        padding: 16px 12px 16px !important;
-        border-radius: 16px;
-      }
-      #email-preview-modal div[style*="display: flex"][style*="align-items: flex-start"],
-      #email-preview-modal div[style*="display: flex"][style*="align-items:flex-start"] {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        gap: 12px !important;
-      }
-      #email-preview-modal div[style*="flex-shrink: 0"],
-      #email-preview-modal div[style*="flex-shrink:0"] {
-        order: -1; /* Put image/badge on top of text when vertical */
-      }
-      #email-preview-modal div[style*="display: flex"][style*="gap: 0"] {
-        flex-direction: row !important; /* Keep detail strip columns horizontal */
-        padding: 12px 6px !important;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <div class="crm-layout" style="display: none;">
-    
-    <!-- Left Navigation Bar -->
+  <!-- Fullscreen Dashboard Layout -->
+  <div class="crm-window">
+
+    <!-- Sidebar Navigation (Dribbble Shot Matched) -->
     <aside class="crm-sidebar">
-      <div class="crm-sidebar-header">
-        <div class="crm-sidebar-logo">EQX</div>
-        <button class="crm-sidebar-toggle" id="sidebar-toggle-btn" aria-label="Collapse Sidebar" title="Collapse Sidebar">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
-          </svg>
+      <div>
+        <!-- Workspace Selector Header -->
+        <div class="crm-brand-selector">
+          <div class="crm-brand-logo-circle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div style="flex: 1;">
+            <div class="crm-brand-name">EQX Agency</div>
+            <div class="crm-brand-sub">Creative Agency</div>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2"><path d="M7 15l5 5 5-5M7 9l5-5 5 5"/></svg>
+        </div>
+
+        <!-- Updates Notification Link -->
+        <button class="crm-nav-link crm-updates-link" onclick="alert('Viewing 2 New Project Notifications')">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span>Updates</span>
+          </div>
+          <span class="crm-badge-red">2</span>
+        </button>
+
+        <div class="crm-divider"></div>
+
+        <!-- Main Navigation Links corresponding to Sidebar -->
+        <nav class="crm-nav-group">
+          <button class="crm-nav-link active" id="nav-link-dashboard" onclick="window.navigateToView('dashboard')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+            <span>Dashboard</span>
+          </button>
+
+          <button class="crm-nav-link" id="nav-link-calendar" onclick="window.navigateToView('calendar')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Calendar</span>
+          </button>
+
+          <button class="crm-nav-link" id="nav-link-tasks" onclick="window.navigateToView('tasks')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>My Tasks</span>
+          </button>
+
+          <button class="crm-nav-link" id="nav-link-projects" onclick="window.navigateToView('projects')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <span>Projects</span>
+          </button>
+
+          <button class="crm-nav-link" id="nav-link-teams" onclick="window.navigateToView('teams')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Teams</span>
+          </button>
+
+          <button class="crm-nav-link" id="nav-link-leads" onclick="window.navigateToView('leads')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+            <span>Leads</span>
+          </button>
+
+          <button class="crm-nav-link" id="nav-link-clients" onclick="window.navigateToView('clients')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Clients</span>
+          </button>
+
+          <button class="crm-nav-link" id="nav-link-invoices" onclick="window.navigateToView('invoices')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span>Invoices</span>
+          </button>
+
+          <button class="crm-nav-link" id="nav-link-documents" onclick="window.navigateToView('documents')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span>Documents</span>
+          </button>
+        </nav>
+
+        <!-- Favourite Section -->
+        <div class="crm-nav-section-label" style="margin-top: 16px;">FAVOURITE</div>
+        <div class="crm-fav-group">
+          <button class="crm-nav-link" onclick="window.navigateToView('projects'); window.filterByCategory('digital');">
+            <span style="font-size: 16px;">🥊</span> <span>Filllo Website</span>
+          </button>
+          <button class="crm-nav-link" onclick="window.navigateToView('tasks');">
+            <span style="font-size: 16px;">🌍</span> <span>Portfolio Tasks</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bottom Settings & Support Section -->
+      <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #E2E8F0;">
+        <button class="crm-nav-link" id="nav-link-settings" onclick="window.navigateToView('settings')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings</span>
+        </button>
+        <button class="crm-nav-link" id="nav-link-support" onclick="window.navigateToView('support')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          <span>Support</span>
         </button>
       </div>
-      
-      <a href="index.html" class="crm-nav-item" aria-label="Go Home" data-tooltip="Go Home">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>
-        <span class="crm-nav-label">Go Home</span>
-      </a>
-      
-      <a href="studio.html" class="crm-nav-item" aria-label="Acoustic Studios" data-tooltip="Acoustic Studios">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-        </svg>
-        <span class="crm-nav-label">Acoustic Studios</span>
-      </a>
-      
-      <hr style="width: 40px; border: none; border-top: 1px solid rgba(255,255,255,0.05); margin: 4px 0;" class="sidebar-hr" />
-
-      <!-- Dashboard Overview -->
-      <button class="crm-nav-item active" id="sidebar-tab-dashboard" aria-label="Dashboard Overview" data-tooltip="Dashboard Overview">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z" />
-        </svg>
-        <span class="crm-nav-label">Dashboard Overview</span>
-      </button>
-
-      <!-- Leads Directory -->
-      <button class="crm-nav-item" id="sidebar-tab-contacts" aria-label="Leads Directory" data-tooltip="Leads Directory">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-        <span class="crm-nav-label">Leads Directory</span>
-      </button>
-
-      <!-- Leads Kanban -->
-      <button class="crm-nav-item" id="sidebar-tab-pipeline" aria-label="Leads Kanban" data-tooltip="Leads Kanban">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-        <span class="crm-nav-label">Leads Kanban</span>
-      </button>
-
-      <!-- Multi-Room Calendar -->
-      <button class="crm-nav-item" id="sidebar-tab-calendar" aria-label="Room Schedule" data-tooltip="Room Schedule">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-        <span class="crm-nav-label">Room Schedule</span>
-      </button>
-
-      <!-- Projects Tracker -->
-      <button class="crm-nav-item" id="sidebar-tab-projects" aria-label="Projects Tracker" data-tooltip="Projects Tracker">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-        </svg>
-        <span class="crm-nav-label">Projects Tracker</span>
-      </button>
-
-      <!-- To-Dos Checklist -->
-      <button class="crm-nav-item" id="sidebar-tab-todos" aria-label="To-Dos Checklist" data-tooltip="To-Dos Checklist">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-        </svg>
-        <span class="crm-nav-label">To-Dos Checklist</span>
-      </button>
-
-      <!-- Collaborative File Review -->
-      <button class="crm-nav-item" id="sidebar-tab-review" aria-label="File Review Portal" data-tooltip="File Review Portal">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-        </svg>
-        <span class="crm-nav-label">File Review Portal</span>
-      </button>
-
-      <!-- Invoicing & Financials -->
-      <button class="crm-nav-item" id="sidebar-tab-financials" aria-label="Quotes & Financials" data-tooltip="Quotes & Financials">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M12 16V5" />
-        </svg>
-        <span class="crm-nav-label">Quotes & Financials</span>
-      </button>      <!-- Settings -->
-      <button class="crm-nav-item" id="sidebar-tab-settings" aria-label="Settings" style="margin-top: auto;" data-tooltip="Settings">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-        <span class="crm-nav-label">Settings</span>
-      </button>
- 
-      <!-- Theme Toggle (Dark/Light) -->
-      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark/Light Theme" title="Toggle Theme" data-tooltip="Toggle Theme">
-        <!-- Sun icon (shown in dark mode) -->
-        <svg id="theme-icon-sun" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-        <!-- Moon icon (shown in light mode) -->
-        <svg id="theme-icon-moon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display:none;">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-        </svg>
-        <span class="crm-nav-label">Toggle Theme</span>
-      </button>
     </aside>
 
-    <!-- Main Workspace -->
+    <!-- Main Content Workspace -->
     <main class="crm-workspace">
-      
-      <!-- Top Title and Database integrations controls -->
-      <section class="crm-header-row">
-        <div class="crm-title-group">
-          <h1>EQX Hub &amp; Project Operations Suite</h1>
-        </div>
-        
-        <div class="crm-controls">
-          <div id="auth-user-display" style="font-size:0.82rem;color:var(--eqx-text-muted);"></div>
-          <button id="auth-sign-out-btn" style="display:none;">Sign Out</button>
-          <button class="crm-add-lead-btn" id="start-tour-btn" style="background: transparent; border: 1px solid var(--neon-cyan); box-shadow: 0 0 10px rgba(0,255,255,0.2); margin-right: 8px;">▶ Tutorial</button>
-          <button class="crm-add-lead-btn" id="open-lead-modal-btn">+ Add Lead</button>
-        </div>
-      </section>
-
-      <!-- KPI Statistics row -->
-      <section class="crm-metrics-grid" id="tutorial-step-2" style="margin-bottom: 24px;">
-        
-        <div class="metric-card" id="kpi-card-pipeline">
-          <div class="metric-icon">
-            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M12 16V5" />
-            </svg>
-          </div>
-          <div>
-            <div class="metric-label">Pipeline Value</div>
-            <div class="metric-value" id="kpi-total-revenue">0 SEK</div>
-          </div>
-        </div>
-
-        <div class="metric-card" id="kpi-card-uncontacted">
-          <div class="metric-icon">
-            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <div>
-            <div class="metric-label">Uncontacted Leads</div>
-            <div class="metric-value" id="kpi-new-leads">0</div>
-          </div>
-        </div>
-
-        <div class="metric-card" id="kpi-card-pending">
-          <div class="metric-icon">
-            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5H7" />
-            </svg>
-          </div>
-          <div>
-            <div class="metric-label">Pending Operations</div>
-            <div class="metric-value" id="kpi-pending-tasks">0</div>
-          </div>
-        </div>
-
-      </section>
-
-      <!-- Active tab content panel workspace containers -->
-      <div id="crm-tab-dashboard" class="crm-tab-content active"></div>
-      <div id="crm-tab-pipeline" class="crm-tab-content"></div>
-      <div id="crm-tab-contacts" class="crm-tab-content"></div>
-      <div id="crm-tab-calendar" class="crm-tab-content"></div>
-      <div id="crm-tab-projects" class="crm-tab-content"></div>
-      <div id="crm-tab-review" class="crm-tab-content"></div>
-      <div id="crm-tab-financials" class="crm-tab-content"></div>
-      <div id="crm-tab-todos" class="crm-tab-content"></div>
-      <div id="crm-tab-settings" class="crm-tab-content"></div>
-
+      <!-- Dynamically populated by JS SPA View Router -->
     </main>
 
   </div>
 
-  <!-- Manual Add Lead Modal Overlay -->
-  <div class="lead-modal-overlay" id="add-lead-modal">
-    <div class="lead-modal">
-      <button class="lead-modal-close" id="close-lead-modal-btn">&times;</button>
-      <h3>Create New Lead</h3>
-      <form id="add-lead-form" onsubmit="event.preventDefault(); submitManualLead();">
-        <div style="display:flex; gap:16px;">
-          <div class="form-group" style="flex:1;">
-            <label for="lead-first-name">First Name</label>
-            <input type="text" id="lead-first-name" class="form-input" />
-          </div>
-          <div class="form-group" style="flex:1;">
-            <label for="lead-last-name">Last Name</label>
-            <input type="text" id="lead-last-name" class="form-input" />
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label for="lead-email">Email Address</label>
-          <input type="email" id="lead-email" class="form-input" />
-        </div>
-
-        <div class="form-group">
-          <label for="lead-phone">Phone Number</label>
-          <input type="tel" id="lead-phone" class="form-input" />
-        </div>
-
-        <div class="form-group">
-          <label for="lead-company">Company Name</label>
-          <input type="text" id="lead-company" class="form-input" placeholder="e.g. Acme Corp" />
-        </div>
-
-        <div style="display:flex; gap:16px;">
-          <div class="form-group" style="flex:1;">
-            <label for="lead-value">Deal Value (SEK)</label>
-            <input type="number" id="lead-value" class="form-input" placeholder="e.g. 25000" />
-          </div>
-          <div class="form-group" style="flex:1;">
-            <label for="lead-location">Branch Location</label>
-            <select id="lead-location" class="form-input" style="background:var(--eqx-dark-card);">
-              <option value="Landskrona, SE">Landskrona</option>
-              <option value="Huntsville, AL">Huntsville</option>
-              <option value="Europe Hub" selected>Europe Hub</option>
-            </select>
-          </div>
-        </div>
-
-        <button type="submit" class="crm-add-lead-btn" style="width:100%; margin-top:10px;">Add Lead</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Project Creation Modal Overlay -->
-  <div class="lead-modal-overlay" id="add-project-modal">
-    <div class="lead-modal">
-      <button class="lead-modal-close" id="close-project-modal-btn">&times;</button>
-      <h3>Initialize New Project</h3>
-      <form id="add-project-form" onsubmit="event.preventDefault(); submitManualProject();">
-        <div class="form-group">
-          <label for="project-form-title">Project Name</label>
-          <input type="text" id="project-form-title" class="form-input" placeholder="e.g. Website Overhaul" required />
-        </div>
-        
-        <div class="form-group">
-          <label for="project-form-client">Client / Organization</label>
-          <select id="project-form-client" class="form-input" style="background:var(--eqx-dark-card);" required>
-            <option value="" disabled selected>Select a client...</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="project-form-category">Project Category</label>
-          <select id="project-form-category" class="form-input" style="background:var(--eqx-dark-card);">
-            <option value="web-app">Web & App Platform</option>
-            <option value="audio-media">Audio & Podcast Production</option>
-            <option value="digital-design">Creative Brand & Design</option>
-            <option value="general-ops">General Project Operations</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="project-form-notes">Project Log / Specs</label>
-          <textarea id="project-form-notes" class="form-input" style="height:80px; resize:none;" placeholder="Initial specs or notes..."></textarea>
-        </div>
-
-        <button type="submit" class="crm-add-lead-btn" style="width:100%; margin-top:10px;">Initialize Project</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Auth Gate Overlay -->
-  <div id="auth-gate-overlay" class="active">
-    <div class="auth-gate-card">
-      <div class="auth-gate-logo">EQX</div>
-      <p class="auth-gate-sub">Hub &amp; Project Operations Suite<br><small style="opacity:0.5;">Admin Access Required</small></p>
-      <button class="auth-google-btn" id="auth-sign-in-btn">
-        <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.35-8.16 2.35-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/><path fill="none" d="M0 0h48v48H0z"/></svg>
-        Sign in with Google
-      </button>
-      <div id="auth-error-msg"></div>
-    </div>
-  </div>
-
-  <!-- Onboarding Elements Anchor Root -->
-  <div id="tour-anchor-root"></div>
-
-  <!-- Script Modules -->
-  <script type="module">
-    import './admin/index.js';
-    import { initTour } from './js/tour.js';
-    import { initAuthGate } from './js/auth.js';
-
-    // Handle Tutorial
-    const tourBtn = document.getElementById("start-tour-btn");
-    if (tourBtn) {
-      tourBtn.addEventListener("click", () => {
-        initTour();
-      });
-    }
-
-    // Initialize Auth Gate — CRM boots only after a valid admin signs in
-    initAuthGate((user, role) => {
-      // Show sign-out button once authenticated
-      const signOutBtn = document.getElementById("auth-sign-out-btn");
-      if (signOutBtn) signOutBtn.style.display = "";
-    });
-
-    // Handle Manual Lead Submission Modals
-    const leadModal = document.getElementById("add-lead-modal");
-    const openLeadBtn = document.getElementById("open-lead-modal-btn");
-    const closeLeadBtn = document.getElementById("close-lead-modal-btn");
-
-    openLeadBtn.addEventListener("click", () => leadModal.classList.add("active"));
-    closeLeadBtn.addEventListener("click", () => leadModal.classList.remove("active"));
-    leadModal.addEventListener("click", (e) => {
-      if (e.target === leadModal) leadModal.classList.remove("active");
-    });
-
-    // Handle Project Creation Modals
-    window.openProjectModal = () => {
-      const projModal = document.getElementById("add-project-modal");
-      if (projModal) projModal.classList.add("active");
-    };
-
-    const projModal = document.getElementById("add-project-modal");
-    const closeProjBtn = document.getElementById("close-project-modal-btn");
-    if (closeProjBtn) closeProjBtn.addEventListener("click", () => projModal.classList.remove("active"));
-    if (projModal) {
-      projModal.addEventListener("click", (e) => {
-        if (e.target === projModal) projModal.classList.remove("active");
-      });
-    }
-
-    // Submit form mapping
-    window.submitManualLead = () => {
-      const firstName = document.getElementById("lead-first-name").value;
-      const lastName = document.getElementById("lead-last-name").value;
-      const email = document.getElementById("lead-email").value;
-      const phone = document.getElementById("lead-phone").value;
-      const company = document.getElementById("lead-company").value;
-      const value = document.getElementById("lead-value").value;
-      const loc = document.getElementById("lead-location").value;
-
-      const success = window.createNewLead(firstName, lastName, email, phone, company, value, loc, "manual");
-      if (success) {
-        leadModal.classList.remove("active");
-        document.getElementById("add-lead-form").reset();
-      }
-    };
-
-    // Submit Project Form
-    window.submitManualProject = () => {
-      const title = document.getElementById("project-form-title").value;
-      const client = document.getElementById("project-form-client").value;
-      const category = document.getElementById("project-form-category").value;
-      const notes = document.getElementById("project-form-notes").value;
-
-      const success = window.createNewProject(title, client, category, notes);
-      if (success) {
-        projModal.classList.remove("active");
-        document.getElementById("add-project-form").reset();
-      }
-    };
-  </script>
-
-  <!-- Client Booking Email Preview Modal -->
-  <div class="lead-modal-overlay" id="email-preview-modal">
-    <div class="lead-modal" style="max-width: 560px; padding: 24px 24px 20px; overflow-y: auto; max-height: 92vh; position: relative;">
-      <button class="lead-modal-close" id="close-email-modal-btn">&times;</button>
+  <!-- New Project Creation Modal -->
+  <div class="crm-modal-overlay" id="crm-new-project-modal">
+    <div class="crm-modal-card">
+      <button class="crm-modal-close" onclick="window.closeNewProjectModal()">&times;</button>
       
-      <!-- Modal meta header -->
-      <h3 style="margin-bottom: 3px; font-family: var(--font-head); font-weight: 300; font-size: 1rem;">Email Notification Preview</h3>
-      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--eqx-border-light); border-radius: 8px; padding: 8px 12px; font-size: 0.78rem; margin-bottom: 14px; display: flex; flex-direction: column; gap: 3px;">
-        <div style="color: var(--eqx-text-muted);"><strong style="color:var(--eqx-text-light);">To:</strong> <span id="email-preview-to">client@example.com</span></div>
-        <div style="color: var(--eqx-text-muted);"><strong style="color:var(--eqx-text-light);">Subject:</strong> Your EQX Studio Session is Confirmed ✓</div>
+      <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--crm-cyan); font-weight: 700; margin-bottom: 4px;">
+        EQX Operations
       </div>
+      <h3 style="font-family: var(--font-head); font-size: 1.4rem; font-weight: 700; color: var(--crm-text-bright); margin-bottom: 20px;">
+        Initialize New Agency Project
+      </h3>
 
-      <!-- ── EMAIL TEMPLATE (light, styled like reference) ── -->
-      <div style="background: #f4f4f8; border-radius: 12px; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size: 14px; color: #1a1a2e; margin-bottom: 16px;">
-
-        <!-- Top logo bar -->
-        <div style="background: #ffffff; text-align: center; padding: 18px 24px 14px; border-bottom: 1px solid #e8e8f0;">
-          <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.04em; color: #1a1a2e;">
-            EQX<span style="display:inline-block; width:7px; height:7px; background:#FF5733; border-radius:50%; box-shadow:0 0 6px rgba(255,87,51,0.5); position:relative; top:-1px;"></span>
-          </div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div>
+          <label style="display: block; font-size: 0.82rem; font-weight: 600; color: var(--crm-text-bright); margin-bottom: 6px;">Project Title</label>
+          <input type="text" id="new-proj-title" placeholder="e.g. Stem Mixing & Mastering EP" style="width: 100%; background: #0B1120; border: 1px solid var(--crm-border); color: var(--crm-text-bright); padding: 12px; border-radius: 10px; outline: none;" />
         </div>
 
-        <!-- Hero section -->
-        <div style="background: #ffffff; text-align: center; padding: 28px 32px 22px;">
-          <p style="margin: 0 0 6px 0; font-size: 0.78rem; font-weight: 700; color: #FF5733; text-transform: uppercase; letter-spacing: 0.06em;">Session Confirmed</p>
-          <h1 style="margin: 0; font-size: 2rem; font-weight: 800; color: #1a1a2e; line-height: 1.15;" id="email-hero-headline">Your Studio Session<br/>is Locked In ✓</h1>
+        <div>
+          <label style="display: block; font-size: 0.82rem; font-weight: 600; color: var(--crm-text-bright); margin-bottom: 6px;">Client Name / Organization</label>
+          <input type="text" id="new-proj-client" placeholder="e.g. Nordic Creative Hub" style="width: 100%; background: #0B1120; border: 1px solid var(--crm-border); color: var(--crm-text-bright); padding: 12px; border-radius: 10px; outline: none;" />
         </div>
 
-        <!-- Content card: title + text + studio image placeholder -->
-        <div style="background: #ffffff; margin: 0 16px 16px; border-radius: 12px; padding: 20px; display: flex; gap: 16px; align-items: flex-start; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-          <div style="flex: 1;">
-            <h2 style="margin: 0 0 8px 0; font-size: 1rem; font-weight: 700; color: #1a1a2e;" id="email-card-title">EQX Studio Session</h2>
-            <p style="margin: 0; font-size: 0.82rem; color: #555570; line-height: 1.55;">
-              Hi <strong id="email-client-name" style="color: #1a1a2e;">Client</strong>, your upcoming studio session has been confirmed. Our engineering team will be ready for your arrival. We look forward to working with you!
-            </p>
-          </div>
-          <!-- Studio image placeholder / icon badge -->
-          <div style="flex-shrink:0; width:72px; height:72px; border-radius: 12px; background: linear-gradient(135deg, #FF5733 0%, #FF8D75 100%); display:flex; align-items:center; justify-content:center; box-shadow: 0 4px 14px rgba(255,87,51,0.3);">
-            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
-            </svg>
-          </div>
+        <div>
+          <label style="display: block; font-size: 0.82rem; font-weight: 600; color: var(--crm-text-bright); margin-bottom: 6px;">Service Category</label>
+          <select id="new-proj-cat" style="width: 100%; background: #0B1120; border: 1px solid var(--crm-border); color: var(--crm-text-bright); padding: 12px; border-radius: 10px; outline: none;">
+            <option value="recording">🎙️ Recording & Tracking</option>
+            <option value="production">🎵 Music Production</option>
+            <option value="digital">💻 Digital Engineering</option>
+            <option value="dj-gig">🎧 DJ Gig & Set</option>
+            <option value="live-sound">🎛️ Live Sound Eng.</option>
+            <option value="marketing">📢 Marketing Campaign</option>
+          </select>
         </div>
 
-        <!-- Three-column detail strip -->
-        <div style="background: #ffffff; margin: 0 16px 16px; border-radius: 12px; padding: 16px 12px; display: flex; gap: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-          <div style="flex: 1; width: 33.33%; text-align: center; border-right: 1px solid #e8e8f0; padding: 0 6px; box-sizing: border-box;">
-            <div style="font-size: 0.7rem; color: #888899; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em;">📅 Date</div>
-            <div style="font-size: 0.88rem; font-weight: 700; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="email-session-date">June 15, 2026</div>
-          </div>
-          <div style="flex: 1; width: 33.33%; text-align: center; border-right: 1px solid #e8e8f0; padding: 0 6px; box-sizing: border-box;">
-            <div style="font-size: 0.7rem; color: #888899; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em;">⏱ Duration</div>
-            <div style="font-size: 0.88rem; font-weight: 700; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="email-session-duration">3 Hours</div>
-          </div>
-          <div style="flex: 1; width: 33.33%; text-align: center; padding: 0 6px; box-sizing: border-box;">
-            <div style="font-size: 0.7rem; color: #888899; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em;">🎙 Studio</div>
-            <div style="font-size: 0.88rem; font-weight: 700; color: #FF5733; word-wrap: break-word; line-height: 1.25;" id="email-session-room">Control Room</div>
-          </div>
+        <div>
+          <label style="display: block; font-size: 0.82rem; font-weight: 600; color: var(--crm-text-bright); margin-bottom: 6px;">Project Value (SEK)</label>
+          <input type="number" id="new-proj-val" placeholder="e.g. 25000" style="width: 100%; background: #0B1120; border: 1px solid var(--crm-border); color: var(--crm-text-bright); padding: 12px; border-radius: 10px; outline: none;" />
         </div>
 
-        <!-- Body text + directions -->
-        <div style="padding: 4px 32px 16px;">
-          <p style="margin: 0 0 4px 0; font-size: 0.9rem; color: #1a1a2e; font-weight: 600;">Hi there,</p>
-          <p style="margin: 0; font-size: 0.82rem; color: #555570; line-height: 1.6;">We can't wait to have you in the studio. Everything is being set up for your arrival. Here's what you need to know before you come in:</p>
-        </div>
-
-        <!-- Getting here box (highlighted, like reference CTA box) -->
-        <div style="margin: 0 16px 16px; background: #f0f0fa; border-radius: 12px; padding: 18px 20px;">
-          <h3 style="margin: 0 0 6px 0; font-size: 0.88rem; font-weight: 700; color: #1a1a2e;">📍 Getting to the Studio</h3>
-          <p style="margin: 0 0 12px 0; font-size: 0.8rem; color: #555570;">Use the address below and arrive 10–15 minutes early so our engineers can set up your session properly.</p>
-          <div id="email-session-directions" style="font-size: 0.8rem; color: #333350; line-height: 1.55; background: #ffffff; border: 1px solid #ddddef; border-radius: 8px; padding: 10px 12px;">
-            Address will load here...
-          </div>
-
-          <!-- Editable custom notes field -->
-          <div style="margin-top: 10px;">
-            <label for="email-custom-notes" style="font-size: 0.72rem; color: #888899; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em;">Custom Arrival Notes (editable)</label>
-            <textarea id="email-custom-notes" style="width: 100%; height: 52px; font-size: 0.78rem; border: 1px solid #ddddef; border-radius: 8px; padding: 8px 10px; resize: none; box-sizing: border-box; color: #333350; background: #ffffff; font-family: inherit;" placeholder="e.g. Park in the visitors bay. Ring the security buzzer on arrival."></textarea>
-          </div>
-        </div>
-
-        <!-- Prep checklist -->
-        <div style="padding: 0 32px 16px;">
-          <p style="margin: 0 0 8px 0; font-size: 0.82rem; color: #555570; line-height: 1.6;">Please also keep the following in mind when preparing for your session:</p>
-          <ul style="margin: 0; padding-left: 18px; font-size: 0.8rem; color: #555570; line-height: 1.7;">
-            <li>Bring your raw tracks / project files on a fast USB-C SSD.</li>
-            <li>Review any digital asset agreements ahead of time.</li>
-            <li>Arrive 10–15 minutes early to align with the engineering staff.</li>
-          </ul>
-        </div>
-
-        <!-- Sign off -->
-        <div style="padding: 8px 32px 20px;">
-          <p style="margin: 0 0 2px 0; font-size: 0.82rem; color: #555570;">If you need to reschedule or have any questions, simply reply to this email and we'll get back to you as soon as possible.</p>
-          <p style="margin: 10px 0 0 0; font-size: 0.82rem; color: #555570;">Regards,<br/><strong style="color: #1a1a2e;">Team EQX</strong> <span style="color: #FF5733;">⚡</span></p>
-        </div>
-
-        <!-- Footer -->
-        <div style="background: #f0f0fa; border-top: 1px solid #e0e0ee; padding: 20px 24px; text-align: center;">
-          <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 1rem; font-weight: 800; letter-spacing: -0.03em; color: #1a1a2e; margin-bottom: 12px;">
-            EQX<span style="display:inline-block; width:5px; height:5px; background:#FF5733; border-radius:50%; position:relative; top:-1px;"></span>
-          </div>
-          <!-- Social icons -->
-          <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 12px;">
-            <div style="width:32px; height:32px; background:#1a1a2e; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;">f</div>
-            <div style="width:32px; height:32px; background:#1a1a2e; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;">ig</div>
-            <div style="width:32px; height:32px; background:#1a1a2e; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;">𝕏</div>
-            <div style="width:32px; height:32px; background:#1a1a2e; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;">▶</div>
-          </div>
-          <p style="margin: 0 0 6px 0; font-size: 0.72rem; color: #888899;">EQX operations © 2026</p>
-          <p style="margin: 0; font-size: 0.68rem; color: #aaaacc;">
-            <a href="#" style="color:#888899; text-decoration:none;">Terms & Conditions</a>
-            &nbsp;|&nbsp;
-            <a href="#" style="color:#888899; text-decoration:none;">Privacy Policy</a>
-            &nbsp;|&nbsp;
-            <a href="#" style="color:#888899; text-decoration:none;">Support</a>
-          </p>
-        </div>
-
-      </div>
-      <!-- ── END EMAIL TEMPLATE ── -->
-
-      <!-- Simulation Actions -->
-      <div style="display: flex; gap: 12px; justify-content: flex-end;">
-        <button class="crm-add-lead-btn" id="cancel-email-btn" style="background: transparent; border: 1px solid var(--eqx-border-light); color: var(--eqx-text-muted); box-shadow: none;">Cancel</button>
-        <button class="crm-add-lead-btn" id="send-simulated-email-btn" style="padding: 10px 24px;">Send Notification</button>
-      </div>
-
-      <!-- Simulated Send Status overlay -->
-      <div id="email-send-status-overlay" style="display: none; position: absolute; inset: 0; background: rgba(18, 18, 20, 0.95); border-radius: 22px; z-index: 100; align-items: center; justify-content: center; flex-direction: column; padding: 40px; box-sizing: border-box;">
-        <div style="font-size: 2.5rem; margin-bottom: 16px;" id="email-status-icon">✉️</div>
-        <h4 style="margin: 0 0 8px 0; font-family: var(--font-head); font-weight: 300; font-size: 1.3rem; color: #FFF;" id="email-status-title">Sending Notification...</h4>
-        <p style="color: var(--eqx-text-muted); font-size: 0.85rem; text-align: center; margin: 0 0 24px 0;" id="email-status-desc">Connecting to transmission host...</p>
-        <div style="width: 100%; max-width: 260px; height: 5px; background: rgba(255,255,255,0.06); border-radius: 100px; overflow: hidden; position: relative;">
-          <div id="email-status-progress" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--eqx-primary) 0%, #FF8D75 100%); border-radius: 100px; transition: width 0.1s ease;"></div>
-        </div>
+        <button type="button" onclick="window.saveNewProject()" style="margin-top: 10px; background: var(--crm-cyan); color: #000; font-weight: 700; padding: 14px; border-radius: 12px; border: none; cursor: pointer; font-size: 0.95rem;">
+          Create & Initialize Deliverable Tasks
+        </button>
       </div>
     </div>
   </div>
 
+  <!-- JavaScript Module Controller -->
+  <script type="module" src="js/crm/app.js?v=1100"></script>
 </body>
 </html>

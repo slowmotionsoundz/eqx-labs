@@ -190,20 +190,6 @@ export function initStudioTour(canvasContainer, tourContainer) {
         photo: 'assets/EQX%20Website%20Photos/eqlounge.jpeg',
         hotspot: { top: '68%', left: '46%', label: 'Central Artist Lounge' },
         panelPosition: 'pos-top-right'
-      },
-      {
-        id: 'engineering-office',
-        badge: 'Digital Engineering',
-        title: 'Software & Ops Office',
-        desc: 'Upper floor workstation for software engineering, app development, database architecture, and project management operations.',
-        bullets: [
-          'Dual-monitor software developer desks',
-          'Backend system architecture & cloud deployment hub',
-          'Project logistics & team coordination workspace'
-        ],
-        photo: 'assets/EQX%20Website%20Photos/eqoffice.jpeg',
-        hotspot: { top: '28%', left: '68%', label: 'Developer Workstations' },
-        panelPosition: 'pos-bottom-left'
       }
     ];
 

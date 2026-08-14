@@ -279,12 +279,17 @@
 
 .service-row-duration {
   font-family: var(--font-head);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--eqx-accent);
-  display: block;
-  margin-bottom: 6px;
+  display: inline-block;
+  background: color-mix(in srgb, var(--eqx-accent) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--eqx-accent) 30%, transparent);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .service-row-title {

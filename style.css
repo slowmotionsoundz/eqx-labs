@@ -6,44 +6,44 @@
    ============================================================ */
 :root {
   /* Core Backgrounds */
-  --eqx-dark-bg: #191B1A;
-  --eqx-dark-panel: #242826;
-  --eqx-dark-card: #1E2120;
+  --eqx-dark-bg: #0B1120;
+  --eqx-dark-panel: #111827;
+  --eqx-dark-card: #1E293B;
 
   /* Accent */
-  --eqx-accent: #C3B59F;
-  --eqx-accent-light: #E5DAC9;
+  --eqx-accent: #00D2D3;
+  --eqx-accent-light: #48DBFB;
 
-  /* Primary Action Color — vibrant orange-red */
-  --eqx-primary: #DF6044;
-  --eqx-primary-hover: #E57962;
-  --eqx-primary-active: #D64529;
-  --eqx-primary-shadow: rgba(223, 96, 68, 0.42);
-  --eqx-primary-glow: rgba(223, 96, 68, 0.25);
+  /* Primary Action Color — vibrant cyan */
+  --eqx-primary: #00D2D3;
+  --eqx-primary-hover: #48DBFB;
+  --eqx-primary-active: #0ABDE3;
+  --eqx-primary-shadow: rgba(0, 210, 211, 0.42);
+  --eqx-primary-glow: rgba(0, 210, 211, 0.25);
 
   /* Text */
-  --eqx-text-light: #F5F5F5;
-  --eqx-text-muted: #9A9E9B;
+  --eqx-text-light: #F8FAFC;
+  --eqx-text-muted: #94A3B8;
 
   /* Borders */
-  --eqx-border-light: rgba(255, 255, 255, 0.11);
+  --eqx-border-light: rgba(255, 255, 255, 0.15);
   --eqx-border-dark: rgba(255, 255, 255, 0.05);
 
   /* Neumorphic Shadows */
-  --eqx-neu-shadow-dark: rgba(0, 0, 0, 0.58);
-  --eqx-neu-shadow-light: rgba(255, 255, 255, 0.055);
-  --eqx-neu-bg: #1E2120;
+  --eqx-neu-shadow-dark: rgba(0, 0, 0, 0.4);
+  --eqx-neu-shadow-light: rgba(255, 255, 255, 0.05);
+  --eqx-neu-bg: #1E293B;
 
   /* Glassmorphism */
-  --eqx-glass-bg: rgba(28, 32, 30, 0.62);
+  --eqx-glass-bg: rgba(30, 41, 59, 0.62);
   --eqx-glass-border: rgba(255, 255, 255, 0.08);
-  --eqx-glass-blur: blur(22px) saturate(1.85);
+  --eqx-glass-blur: blur(12px) saturate(1.5);
 
   /* Sidebar */
-  --eqx-sidebar-bg: #18191A;
-  --eqx-sidebar-active-bg: rgba(223, 96, 68, 0.12);
-  --eqx-sidebar-active-border: rgba(223, 96, 68, 0.35);
-  --eqx-sidebar-active-color: #E57962;
+  --eqx-sidebar-bg: #0F172A;
+  --eqx-sidebar-active-bg: rgba(0, 210, 211, 0.15);
+  --eqx-sidebar-active-border: rgba(0, 210, 211, 0.5);
+  --eqx-sidebar-active-color: #00D2D3;
 
   /* Scrollbar */
   --eqx-scrollbar-thumb: #3A3D3B;
@@ -1456,12 +1456,14 @@ button {
 }
 
 .crm-nav-item.active {
-  color: var(--eqx-sidebar-active-color);
-  background: var(--eqx-sidebar-active-bg);
-  border-color: var(--eqx-sidebar-active-border);
-  box-shadow:
-    0 1px 0 var(--eqx-neu-shadow-light) inset,
-    0 4px 10px var(--eqx-neu-shadow-dark);
+  background: var(--eqx-primary);
+  color: #000 !important;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 210, 211, 0.3);
+}
+
+.crm-nav-item.active svg {
+  color: #000;
 }
 
 .crm-nav-item:active {

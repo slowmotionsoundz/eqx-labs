@@ -138,16 +138,72 @@ export function initAuthGate(onAuthorised) {
 
   if (signOutBtn) {
     signOutBtn.addEventListener("click", async () => {
+      sessionStorage.removeItem("eqx_dev_bypass");
       await signOutUser();
     });
   }
 
+  const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === "::1" || location.hostname === "";
+  if (isLocalhost) {
+    sessionStorage.setItem("eqx_dev_bypass", "true");
+  }
+
+  let devBypass = isLocalhost || sessionStorage.getItem("eqx_dev_bypass") === "true";
+
+  const unlockDevSession = () => {
+    sessionStorage.setItem("eqx_dev_bypass", "true");
+    devBypass = true;
+    if (overlay) {
+      overlay.classList.remove("active");
+      overlay.style.display = "none";
+    }
+    const layout = document.querySelector(".crm-layout");
+    if (layout) layout.style.display = "grid";
+    window.eqxCurrentUser = {
+      uid: "dev-admin-123",
+      email: "slowmotion767@gmail.com",
+      displayName: "Super Admin (Dev)",
+      photoURL: "",
+      role: "super_admin"
+    };
+    if (userDisplay) {
+      userDisplay.innerHTML = `slowmotion767@gmail.com<span style="font-size:0.65rem;background:linear-gradient(135deg,#FF6B4A,#E84820);color:#fff;padding:2px 8px;border-radius:100px;margin-left:6px;vertical-align:middle;">Super Admin</span>`;
+    }
+    if (typeof onAuthorised === "function") {
+      onAuthorised({ email: "slowmotion767@gmail.com", displayName: "Super Admin (Dev)" }, "super_admin");
+    }
+  };
+
+  const devBtn = document.getElementById("auth-dev-btn");
+  if (devBtn) {
+    devBtn.addEventListener("click", () => {
+      unlockDevSession();
+    });
+  }
+
+  // Unlock immediately on dev / localhost boot
+  if (devBypass) {
+    unlockDevSession();
+  }
+
   // React to auth state changes
   onAuthStateChanged(auth, async (user) => {
+    if (isLocalhost || sessionStorage.getItem("eqx_dev_bypass") === "true") {
+      // Dev bypass active — keep CRM unlocked and visible
+      if (overlay) {
+        overlay.classList.remove("active");
+        overlay.style.display = "none";
+      }
+      const layout = document.querySelector(".crm-layout");
+      if (layout) layout.style.display = "grid";
+      return;
+    }
+
     if (!user) {
-      // Show login gate
-      overlay.classList.add("active");
-      document.querySelector(".crm-layout").style.display = "none";
+      // Show login gate (on production remote domains only)
+      if (overlay) overlay.classList.add("active");
+      const layout = document.querySelector(".crm-layout");
+      if (layout) layout.style.display = "none";
       if (signInBtn) {
         signInBtn.disabled = false;
         signInBtn.textContent = "Sign in with Google";

@@ -2,10 +2,10 @@
 
 /* ── CSS VARIABLES ── */
 :root {
-  --accent: #C3B59F;
-  --bg: #15171E;
-  --bg2: #1B1E28;
-  --bg3: #1E222D;
+  --accent: #00D2D3;
+  --bg: #0B1120;
+  --bg2: #111827;
+  --bg3: #1E293B;
   --border: rgba(255,255,255,0.07);
   --text: #F8FAFC;
   --muted: #94A3B8;

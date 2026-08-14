@@ -4,11 +4,11 @@
  */
 export function initBookingPortal() {
   const services = [
-    // [ 01 ] Studio Sessions (Music -> EQ Control Room)
+    // [ 01 ] Dry Hire / Studio Rental
     {
       id: 'byo-3h',
-      category: 'studio-sessions',
-      categoryLabel: '[ 01 ] Studio Sessions',
+      category: 'studio-rental',
+      categoryLabel: '[ 01 ] Studio Rental',
       title: 'Studio Access — Bring Your Own Engineer',
       duration: '3 Hours',
       price: 'SEK 1,050.00',
@@ -19,8 +19,8 @@ export function initBookingPortal() {
     },
     {
       id: 'byo-half',
-      category: 'studio-sessions',
-      categoryLabel: '[ 01 ] Studio Sessions',
+      category: 'studio-rental',
+      categoryLabel: '[ 01 ] Studio Rental',
       title: 'Studio Access — Bring Your Own Engineer, Half Day',
       duration: '5 Hours',
       price: 'SEK 1,500.00',
@@ -31,8 +31,8 @@ export function initBookingPortal() {
     },
     {
       id: 'byo-full',
-      category: 'studio-sessions',
-      categoryLabel: '[ 01 ] Studio Sessions',
+      category: 'studio-rental',
+      categoryLabel: '[ 01 ] Studio Rental',
       title: 'Studio Access — Bring Your Own Engineer, Full Day',
       duration: '10 Hours',
       price: 'SEK 2,800.00',
@@ -41,10 +41,11 @@ export function initBookingPortal() {
       desc: 'The room for a full day! Enough time for a real session from setup to wrap, without the clock pressure of hourly billing.',
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     },
+    // [ 02 ] Engineer-Led Sessions
     {
       id: 'eng-3h',
-      category: 'studio-sessions',
-      categoryLabel: '[ 01 ] Studio Sessions',
+      category: 'engineer-sessions',
+      categoryLabel: '[ 02 ] Engineer-Led Sessions',
       title: 'Studio Session — With EQX Engineer',
       duration: '3 Hours',
       price: 'SEK 1,950.00',
@@ -55,8 +56,8 @@ export function initBookingPortal() {
     },
     {
       id: 'eng-half',
-      category: 'studio-sessions',
-      categoryLabel: '[ 01 ] Studio Sessions',
+      category: 'engineer-sessions',
+      categoryLabel: '[ 02 ] Engineer-Led Sessions',
       title: 'Studio Session — With Our Engineer, Half Day',
       duration: '5 Hours',
       price: 'SEK 2,900.00',
@@ -253,7 +254,8 @@ export function initBookingPortal() {
   const form = document.getElementById('bookingCheckoutForm');
 
   const goalTitles = {
-    'studio-sessions': 'Studio Access & Recording Sessions',
+    'studio-rental': 'Dry Hire / Studio Rental',
+    'engineer-sessions': 'Engineer-Led Recording Sessions',
     'post-production': 'Mixing, Mastering & Production',
     'studio-plus': 'Studio Plus, Residency & Stay',
     'consultations': 'Consultations & Strategy',
@@ -359,9 +361,11 @@ export function initBookingPortal() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.getElementById('clientName').value;
-      alert(`Thank you, ${name}! Your session request has been submitted. Redirecting to payment & scheduling confirmation...`);
-      const selectedAcuityLink = acuityDirectBtn ? acuityDirectBtn.href : 'https://eqlandskrona.as.me';
-      window.location.href = selectedAcuityLink;
+      alert(`Thank you, ${name}! Your session request has been submitted. A pending booking has been created in the CRM.`);
+      // In a real app, this would write to Firebase/Firestore to create a pending booking.
+      // We will just close the modal for now to simulate success.
+      closeModal();
+      document.getElementById('bookingForm').reset();
     });
   }
 }
