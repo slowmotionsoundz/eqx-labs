@@ -14,8 +14,8 @@ export function initLocations(container) {
         </div>
 
         <div class="locations-content reveal reveal-delay-1">
-          <div class="locations-badge">Dual Core Hubs</div>
-          <h2 class="locations-title">Consolidating <span>EQX</span></h2>
+          <div class="locations-badge">Multinational Hubs</div>
+          <h2 class="locations-title"><span>EQX</span></h2>
           <p class="locations-desc">
             Bringing together the physical and digital hubs of EQ Labs Europe and EQ Labs HSV under the unified banner of EQX. Two hemispheres, one vision.
           </p>
