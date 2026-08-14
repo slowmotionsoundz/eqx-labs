@@ -362,16 +362,16 @@
       <div class="showcase-grid">
         
         <div class="player-card">
-          <iframe style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/708dfWUVcaIxyOS0rJMSdM?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe id="hero-spotify-iframe" style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/708dfWUVcaIxyOS0rJMSdM?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
         <div class="showcase-info">
-          <div class="release-label">Latest Release Showcase</div>
-          <h2 class="release-title">Flight Risk & Tuss-AID</h2>
-          <p class="release-desc">
-            Fresh out of the studio. Our latest project is live—preview the track list directly in the player or listen to the full album on Spotify.
+          <div class="release-label" id="hero-release-label">Latest Release Showcase</div>
+          <h2 class="release-title" id="hero-release-title">Flight Risk & Tuss-AID</h2>
+          <p class="release-desc" id="hero-release-desc">
+            Fresh out of the studio. Our latest project by Mali Boy is live—preview the track list directly in the player or listen to the full album on Spotify.
           </p>
-          <a href="https://open.spotify.com/album/708dfWUVcaIxyOS0rJMSdM" target="_blank" rel="noopener noreferrer" class="clay-button">
+          <a href="https://open.spotify.com/album/708dfWUVcaIxyOS0rJMSdM" target="_blank" rel="noopener noreferrer" class="clay-button" id="hero-spotify-btn">
             Listen On Spotify
           </a>
         </div>
@@ -387,50 +387,82 @@
   <!-- ===== VIRTUAL STUDIO TOUR & SPOTLIGHT ===== -->
   <div id="studio-tour-root"></div>
 
-  <!-- ===== RELEASE ARCHIVE & FUTURE UPLOADS ===== -->
-  <section class="releases-grid-section">
+  <!-- ===== RELEASE ARCHIVE & DISCOGRAPHY CATALOG ===== -->
+  <section class="releases-grid-section" id="discography">
     <div class="showcase-container">
-      <h2 class="grid-title">Releases & Catalog</h2>
+      <div class="text-center" style="text-align: center; margin-bottom: 40px;">
+        <div class="studio-badge" style="display: inline-block; margin-bottom: 12px;">Studio Works & Discography</div>
+        <h2 class="grid-title" style="margin-bottom: 12px;">Sound <span>Catalog</span></h2>
+        <p style="color: var(--eqx-text-muted); max-width: 600px; margin: 0 auto; font-size: 0.95rem;">
+          Explore our growing catalog of albums, multi-track sessions, and upcoming studio projects engineered by Leighton Hicks (Mali Boy).
+        </p>
+      </div>
       
       <div class="releases-grid">
         
         <!-- Album 1: Flight Risk & Tuss-AID -->
-        <div class="release-card">
+        <div class="release-card active-catalog-card" data-spotify-id="708dfWUVcaIxyOS0rJMSdM" data-title="Flight Risk & Tuss-AID" data-label="Latest Release Showcase" data-desc="Fresh out of the studio. Our latest project by Mali Boy is live—preview the track list directly in the player or listen to the full album on Spotify.">
           <div class="release-artwork" style="background-image: url('https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02db2c3dfb5186ec082b6f4ffc'); background-position: center;"></div>
           <div class="release-content">
-            <h3 class="card-release-title">Flight Risk & Tuss-AID</h3>
-            <div class="card-release-subtitle">New Album Release</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <h3 class="card-release-title">Flight Risk & Tuss-AID</h3>
+              <span class="coming-soon-badge" style="position: static; background: rgba(195, 181, 159, 0.2);">New Release</span>
+            </div>
+            <div class="card-release-subtitle">Mali Boy Production</div>
             <p class="card-release-desc">
-              Featured release from Mali Boy. Multi-track soundscapes, spatial mixing, and pristine audio mastering.
+              Featured 2026 studio release. Multi-track soundscapes, spatial audio mixing, and crisp mastering highlighting the EQX signature sound engineering.
             </p>
-            <a href="https://open.spotify.com/album/708dfWUVcaIxyOS0rJMSdM" target="_blank" rel="noopener noreferrer" class="clay-button" style="text-align: center;">Listen on Spotify</a>
+            <div style="display: flex; gap: 10px; margin-top: auto;">
+              <button class="clay-button preview-in-player-btn" style="flex: 1; text-align: center; padding: 10px 14px; font-size: 0.75rem;">Play In Player</button>
+              <a href="https://open.spotify.com/album/708dfWUVcaIxyOS0rJMSdM" target="_blank" rel="noopener noreferrer" class="clay-button" style="text-align: center; padding: 10px 14px; font-size: 0.75rem; background: rgba(195, 181, 159, 0.15);">Spotify</a>
+            </div>
           </div>
         </div>
 
-        <!-- Album 2: Previous Release -->
-        <div class="release-card">
+        <!-- Album 2: EQX Studio Vol. I -->
+        <div class="release-card active-catalog-card" data-spotify-id="62waSLmGueKOnfHSxUlEcs" data-title="EQX Studio Vol. I" data-label="Catalog Showcase" data-desc="Our debut studio album featuring Mali Boy production. Refined instrumentation, analog mixing console warmth, and crisp mastering.">
           <div class="release-artwork" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_049.jpg'); background-position: center 30%;"></div>
           <div class="release-content">
-            <h3 class="card-release-title">EQX Studio Vol. I</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <h3 class="card-release-title">EQX Studio Vol. I</h3>
+              <span class="coming-soon-badge" style="position: static; background: rgba(195, 181, 159, 0.1);">Full Album</span>
+            </div>
             <div class="card-release-subtitle">Mali Boy Production</div>
             <p class="card-release-desc">
               Refined instrumentation, multi-channel soundscapes, and crisp mastering highlighting the EQX signature sound engineering.
             </p>
-            <a href="https://open.spotify.com/album/62waSLmGueKOnfHSxUlEcs" target="_blank" rel="noopener noreferrer" class="clay-button" style="text-align: center;">View Album</a>
+            <div style="display: flex; gap: 10px; margin-top: auto;">
+              <button class="clay-button preview-in-player-btn" style="flex: 1; text-align: center; padding: 10px 14px; font-size: 0.75rem;">Play In Player</button>
+              <a href="https://open.spotify.com/album/62waSLmGueKOnfHSxUlEcs" target="_blank" rel="noopener noreferrer" class="clay-button" style="text-align: center; padding: 10px 14px; font-size: 0.75rem; background: rgba(195, 181, 159, 0.15);">Spotify</a>
+            </div>
           </div>
         </div>
 
-        <!-- Placeholder 1: Coming Soon -->
+        <!-- Album 3: Studio Session Vol. II -->
         <div class="release-card coming-soon">
           <div class="coming-soon-badge">In Production</div>
           <div class="release-artwork" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_001.jpg'); background-position: center 40%;"></div>
           <div class="release-content">
-            <h3 class="card-release-title">Studio Session Vol. II</h3>
-            <div class="card-release-subtitle">Coming Soon</div>
+            <h3 class="card-release-title">Landskrona Sessions Vol. II</h3>
+            <div class="card-release-subtitle">Live Tracking & Mixing</div>
             <p class="card-release-desc">
-              Currently in multi-track recording and mixing. Follow our space for launch notifications and pre-save links.
+              Currently in multi-track recording and mixing. Follow our space for launch notifications, pre-save links, and behind-the-scenes stems.
             </p>
-            <button class="clay-button" style="cursor: not-allowed;" disabled>Stay Tuned</button>
+            <button class="clay-button" style="cursor: not-allowed; opacity: 0.6; font-size: 0.8rem;" disabled>In Production</button>
+          </div>
+        </div>
+
+        <!-- Album 4: Acoustic Sessions -->
+        <div class="release-card coming-soon">
+          <div class="coming-soon-badge">Planned Release</div>
+          <div class="release-artwork" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_093.jpg'); background-position: center 20%;"></div>
+          <div class="release-content">
+            <h3 class="card-release-title">Acoustic Soundscapes</h3>
+            <div class="card-release-subtitle">Spatial Room Captures</div>
+            <p class="card-release-desc">
+              Unplugged sessions and acoustic captures showcasing micro-detail spatial engineering and room sound design in Landskrona.
+            </p>
+            <button class="clay-button" style="cursor: not-allowed; opacity: 0.6; font-size: 0.8rem;" disabled>Coming Soon</button>
           </div>
         </div>
 
@@ -484,8 +516,8 @@
 
   <!-- Studio Entry Script -->
   <script type="module">
-    import { initStudioTour } from './components/StudioTour.js?v=60';
-    import { initRoomSlider } from './components/RoomSlider.js?v=60';
+    import { initStudioTour } from './components/StudioTour.js?v=65';
+    import { initRoomSlider } from './components/RoomSlider.js?v=65';
 
     document.addEventListener('DOMContentLoaded', () => {
       const tourRoot = document.getElementById('studio-tour-root');
@@ -496,6 +528,38 @@
       if (roomSliderRoot) {
         initRoomSlider(roomSliderRoot);
       }
+
+      // Discography Player Switcher
+      const playerIframe = document.getElementById('hero-spotify-iframe');
+      const releaseLabel = document.getElementById('hero-release-label');
+      const releaseTitle = document.getElementById('hero-release-title');
+      const releaseDesc = document.getElementById('hero-release-desc');
+      const releaseBtn = document.getElementById('hero-spotify-btn');
+
+      document.querySelectorAll('.preview-in-player-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const card = e.target.closest('.release-card');
+          if (!card) return;
+
+          const spotifyId = card.getAttribute('data-spotify-id');
+          const title = card.getAttribute('data-title');
+          const label = card.getAttribute('data-label');
+          const desc = card.getAttribute('data-desc');
+
+          if (playerIframe && spotifyId) {
+            playerIframe.src = `https://open.spotify.com/embed/album/${spotifyId}?utm_source=generator&theme=0`;
+          }
+          if (releaseTitle && title) releaseTitle.textContent = title;
+          if (releaseLabel && label) releaseLabel.textContent = label;
+          if (releaseDesc && desc) releaseDesc.textContent = desc;
+          if (releaseBtn && spotifyId) {
+            releaseBtn.href = `https://open.spotify.com/album/${spotifyId}`;
+          }
+
+          // Smooth scroll to showcase player
+          document.querySelector('.showcase-section')?.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
     });
   </script>
 </body>
