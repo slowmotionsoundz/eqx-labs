@@ -1,0 +1,85 @@
+/**
+ * EQX Studio — Discography & Catalog Data Store
+ * Easily add, edit, or categorize your 20+ album catalog releases here.
+ */
+
+export const fullCatalog = [
+  {
+    id: 'flight-risk-tuss-aid',
+    spotifyId: '708dfWUVcaIxyOS0rJMSdM',
+    title: 'Flight Risk & Tuss-AID',
+    artist: 'Mali Boy',
+    year: '2026',
+    category: 'album',
+    badge: 'New 2026 Release',
+    cover: 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02db2c3dfb5186ec082b6f4ffc',
+    spotifyUrl: 'https://open.spotify.com/album/708dfWUVcaIxyOS0rJMSdM',
+    desc: 'Featured 2026 studio release. Multi-track soundscapes, spatial audio mixing, and crisp mastering highlighting the EQX signature sound engineering.',
+    tags: ['Spatial Audio', 'Analog Mixing', '2026']
+  },
+  {
+    id: 'trap-gospel',
+    spotifyId: '62waSLmGueKOnfHSxUlEcs',
+    title: 'Trap Gospel',
+    artist: 'Mali Boy',
+    year: '2025',
+    category: 'album',
+    badge: 'Featured Album',
+    cover: 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026c507e54cb7d4881ef45f794',
+    spotifyUrl: 'https://open.spotify.com/album/62waSLmGueKOnfHSxUlEcs',
+    desc: 'Full studio album production featuring signature arrangement, multi-channel soundscapes, and crisp mastering from Mali Boy.',
+    tags: ['Full Album', 'Mali Boy', 'Mastered']
+  },
+  {
+    id: 'landskrona-sessions-2',
+    spotifyId: '',
+    title: 'Landskrona Sessions Vol. II',
+    artist: 'EQX Sound Lab',
+    year: '2026',
+    category: 'production',
+    badge: 'In Production',
+    cover: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_001.jpg',
+    spotifyUrl: '#',
+    desc: 'Currently in multi-track recording and mixing. Follow our space for launch notifications, pre-save links, and behind-the-scenes stems.',
+    tags: ['Live Stems', 'In Production']
+  },
+  {
+    id: 'acoustic-soundscapes',
+    spotifyId: '',
+    title: 'Acoustic Soundscapes',
+    artist: 'EQX Acoustic Hub',
+    year: '2026',
+    category: 'single',
+    badge: 'Planned Release',
+    cover: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_093.jpg',
+    spotifyUrl: '#',
+    desc: 'Unplugged sessions and acoustic captures showcasing micro-detail spatial engineering and room sound design in Landskrona.',
+    tags: ['Spatial Audio', 'Planned']
+  },
+  {
+    id: 'eqx-vault-vol-1',
+    spotifyId: '',
+    title: 'EQX Vault Archives: Session 01',
+    artist: 'Mali Boy & EQX Collective',
+    year: '2024',
+    category: 'album',
+    badge: 'Catalog Archive',
+    cover: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_049.jpg',
+    spotifyUrl: '#',
+    desc: 'Archival studio sessions capturing early production experiments, analog console multi-tracks, and original compositions.',
+    tags: ['Archive', 'Analog Console']
+  },
+  {
+    id: 'eqx-vault-vol-2',
+    spotifyId: '',
+    title: 'EQX Vault Archives: Session 02',
+    artist: 'Mali Boy',
+    year: '2024',
+    category: 'ep',
+    badge: 'Catalog Archive',
+    cover: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_020.jpg',
+    spotifyUrl: '#',
+    desc: 'Experimental electronic arrangements and rhythm design from the Landskrona tracking suite.',
+    tags: ['Archive', 'Sound Design']
+  }
+];

@@ -406,86 +406,41 @@
   <!-- ===== VIRTUAL STUDIO TOUR & SPOTLIGHT ===== -->
   <div id="studio-tour-root"></div>
 
-  <!-- ===== RELEASE ARCHIVE & DISCOGRAPHY CATALOG ===== -->
+  <!-- ===== RELEASE ARCHIVE & DISCOGRAPHY CATALOG (20+ ALBUMS CAPABLE) ===== -->
   <section class="releases-grid-section" id="discography">
     <div class="showcase-container">
-      <div class="text-center" style="text-align: center; margin-bottom: 40px;">
-        <div class="studio-badge" style="display: inline-block; margin-bottom: 12px;">Studio Works & Discography</div>
+      
+      <div class="text-center" style="text-align: center; margin-bottom: 30px;">
+        <div class="studio-badge" style="display: inline-block; margin-bottom: 12px;">Studio Vault & Discography</div>
         <h2 class="grid-title" style="margin-bottom: 12px;">Sound <span>Catalog</span></h2>
-        <p style="color: var(--eqx-text-muted); max-width: 600px; margin: 0 auto; font-size: 0.95rem;">
-          Explore our full catalog of released albums, multi-track sessions, and upcoming studio projects engineered by Leighton Hicks (Mali Boy).
+        <p style="color: var(--eqx-text-muted); max-width: 650px; margin: 0 auto; font-size: 0.95rem;">
+          Explore our full 20+ album discography catalog of released projects, multi-track sessions, and upcoming studio works engineered by Leighton Hicks (Mali Boy).
         </p>
       </div>
-      
-      <div class="releases-grid">
+
+      <!-- Catalog Controls: Filter Tabs & Search Bar -->
+      <div class="catalog-controls" style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; background: var(--eqx-dark-card); padding: 18px 24px; border-radius: 12px; border: 1px solid var(--eqx-border-light);">
         
-        <!-- Album 1: Flight Risk & Tuss-AID -->
-        <div class="release-card active-catalog-card" data-spotify-id="708dfWUVcaIxyOS0rJMSdM" data-title="Flight Risk & Tuss-AID" data-label="New 2026 Release" data-desc="Featured release from Mali Boy. Multi-track soundscapes, spatial mixing, and pristine audio mastering.">
-          <div class="release-artwork" style="background-image: url('https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02db2c3dfb5186ec082b6f4ffc'); background-position: center;"></div>
-          <div class="release-content">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <h3 class="card-release-title">Flight Risk & Tuss-AID</h3>
-              <span class="coming-soon-badge" style="position: static; background: rgba(195, 181, 159, 0.2);">New Release</span>
-            </div>
-            <div class="card-release-subtitle">Mali Boy Production</div>
-            <p class="card-release-desc">
-              Featured 2026 studio release. Multi-track soundscapes, spatial audio mixing, and crisp mastering highlighting the EQX signature sound engineering.
-            </p>
-            <div style="display: flex; gap: 10px; margin-top: auto;">
-              <button class="clay-button preview-in-player-btn" data-target-slot="1" style="flex: 1; text-align: center; padding: 10px 14px; font-size: 0.75rem;">Play In Player</button>
-              <a href="https://open.spotify.com/album/708dfWUVcaIxyOS0rJMSdM" target="_blank" rel="noopener noreferrer" class="clay-button" style="text-align: center; padding: 10px 14px; font-size: 0.75rem; background: rgba(195, 181, 159, 0.15);">Spotify</a>
-            </div>
-          </div>
+        <!-- Category Filter Pills -->
+        <div class="catalog-filter-tabs" style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="stage-tab-btn active catalog-filter-btn" data-filter="all" style="padding: 8px 18px; font-size: 0.78rem;">All Releases</button>
+          <button class="stage-tab-btn catalog-filter-btn" data-filter="album" style="padding: 8px 18px; font-size: 0.78rem;">Albums</button>
+          <button class="stage-tab-btn catalog-filter-btn" data-filter="single" style="padding: 8px 18px; font-size: 0.78rem;">EPs & Singles</button>
+          <button class="stage-tab-btn catalog-filter-btn" data-filter="production" style="padding: 8px 18px; font-size: 0.78rem;">In Production</button>
         </div>
 
-        <!-- Album 2: Trap Gospel -->
-        <div class="release-card active-catalog-card" data-spotify-id="62waSLmGueKOnfHSxUlEcs" data-title="Trap Gospel" data-label="Featured Album" data-desc="Featured album by Mali Boy. Refined instrumentation, analog mixing console warmth, and crisp mastering.">
-          <div class="release-artwork" style="background-image: url('https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026c507e54cb7d4881ef45f794'); background-position: center;"></div>
-          <div class="release-content">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <h3 class="card-release-title">Trap Gospel</h3>
-              <span class="coming-soon-badge" style="position: static; background: rgba(195, 181, 159, 0.15);">Featured Album</span>
-            </div>
-            <div class="card-release-subtitle">Mali Boy Production</div>
-            <p class="card-release-desc">
-              Full studio album production featuring signature arrangement, multi-channel soundscapes, and crisp mastering from Mali Boy.
-            </p>
-            <div style="display: flex; gap: 10px; margin-top: auto;">
-              <button class="clay-button preview-in-player-btn" data-target-slot="2" style="flex: 1; text-align: center; padding: 10px 14px; font-size: 0.75rem;">Play In Player</button>
-              <a href="https://open.spotify.com/album/62waSLmGueKOnfHSxUlEcs" target="_blank" rel="noopener noreferrer" class="clay-button" style="text-align: center; padding: 10px 14px; font-size: 0.75rem; background: rgba(195, 181, 159, 0.15);">Spotify</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Album 3: Studio Session Vol. II -->
-        <div class="release-card coming-soon">
-          <div class="coming-soon-badge">In Production</div>
-          <div class="release-artwork" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_001.jpg'); background-position: center 40%;"></div>
-          <div class="release-content">
-            <h3 class="card-release-title">Landskrona Sessions Vol. II</h3>
-            <div class="card-release-subtitle">Live Tracking & Mixing</div>
-            <p class="card-release-desc">
-              Currently in multi-track recording and mixing. Follow our space for launch notifications, pre-save links, and behind-the-scenes stems.
-            </p>
-            <button class="clay-button" style="cursor: not-allowed; opacity: 0.6; font-size: 0.8rem;" disabled>In Production</button>
-          </div>
-        </div>
-
-        <!-- Album 4: Acoustic Sessions -->
-        <div class="release-card coming-soon">
-          <div class="coming-soon-badge">Planned Release</div>
-          <div class="release-artwork" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_093.jpg'); background-position: center 20%;"></div>
-          <div class="release-content">
-            <h3 class="card-release-title">Acoustic Soundscapes</h3>
-            <div class="card-release-subtitle">Spatial Room Captures</div>
-            <p class="card-release-desc">
-              Unplugged sessions and acoustic captures showcasing micro-detail spatial engineering and room sound design in Landskrona.
-            </p>
-            <button class="clay-button" style="cursor: not-allowed; opacity: 0.6; font-size: 0.8rem;" disabled>Coming Soon</button>
-          </div>
+        <!-- Search Input -->
+        <div class="catalog-search-wrapper" style="position: relative; flex: 1; max-width: 320px; min-width: 220px;">
+          <input type="text" id="catalog-search-input" placeholder="Search catalog by title, tag..." style="width: 100%; padding: 10px 16px; background: rgba(0, 0, 0, 0.4); border: 1px solid var(--eqx-border-light); border-radius: 8px; color: var(--eqx-text-light); font-size: 0.85rem; font-family: var(--font-body); box-sizing: border-box;" />
         </div>
 
       </div>
+      
+      <!-- Dynamic Catalog Grid Root -->
+      <div class="releases-grid" id="dynamic-catalog-grid">
+        <!-- Catalog cards injected dynamically via JS module -->
+      </div>
+
     </div>
   </section>
 
@@ -531,12 +486,11 @@
       <div>&copy; 2026 EQX. All Rights Reserved.</div>
       <div>Designed in Sweden</div>
     </div>
-  </footer>
-
-  <!-- Studio Entry Script -->
+  </footer>  <!-- Studio Entry Script -->
   <script type="module">
-    import { initStudioTour } from './components/StudioTour.js?v=65';
-    import { initRoomSlider } from './components/RoomSlider.js?v=65';
+    import { initStudioTour } from './components/StudioTour.js?v=70';
+    import { initRoomSlider } from './components/RoomSlider.js?v=70';
+    import { fullCatalog } from './js/catalogData.js?v=70';
 
     document.addEventListener('DOMContentLoaded', () => {
       const tourRoot = document.getElementById('studio-tour-root');
@@ -548,38 +502,108 @@
         initRoomSlider(roomSliderRoot);
       }
 
-      // Discography Player Switcher
-      const playerIframe = document.getElementById('hero-spotify-iframe');
-      const releaseLabel = document.getElementById('hero-release-label');
-      const releaseTitle = document.getElementById('hero-release-title');
-      const releaseDesc = document.getElementById('hero-release-desc');
-      const releaseBtn = document.getElementById('hero-spotify-btn');
+      // Dynamic Discography Catalog Renderer
+      const gridContainer = document.getElementById('dynamic-catalog-grid');
+      const searchInput = document.getElementById('catalog-search-input');
+      const filterBtns = document.querySelectorAll('.catalog-filter-btn');
 
-      document.querySelectorAll('.preview-in-player-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          const card = e.target.closest('.release-card');
-          if (!card) return;
+      let currentFilter = 'all';
+      let searchQuery = '';
 
-          const spotifyId = card.getAttribute('data-spotify-id');
-          const title = card.getAttribute('data-title');
-          const label = card.getAttribute('data-label');
-          const desc = card.getAttribute('data-desc');
+      function renderCatalog() {
+        if (!gridContainer) return;
 
-          if (playerIframe && spotifyId) {
-            playerIframe.src = `https://open.spotify.com/embed/album/${spotifyId}?utm_source=generator&theme=0`;
-          }
-          if (releaseTitle && title) releaseTitle.textContent = title;
-          if (releaseLabel && label) releaseLabel.textContent = label;
-          if (releaseDesc && desc) releaseDesc.textContent = desc;
-          if (releaseBtn && spotifyId) {
-            releaseBtn.href = `https://open.spotify.com/album/${spotifyId}`;
-          }
+        const filtered = fullCatalog.filter(item => {
+          const matchesCategory = (currentFilter === 'all' || item.category === currentFilter);
+          const q = searchQuery.toLowerCase().trim();
+          const matchesSearch = !q || 
+            item.title.toLowerCase().includes(q) || 
+            item.artist.toLowerCase().includes(q) || 
+            (item.tags && item.tags.some(t => t.toLowerCase().includes(q)));
+          return matchesCategory && matchesSearch;
+        });
 
-          // Smooth scroll to showcase player
-          document.querySelector('.showcase-section')?.scrollIntoView({ behavior: 'smooth' });
+        if (filtered.length === 0) {
+          gridContainer.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--eqx-text-muted);">
+              <p style="font-size: 1.1rem; margin-bottom: 8px;">No catalog releases match "${searchQuery}"</p>
+              <p style="font-size: 0.85rem;">Try adjusting your filter or search keywords.</p>
+            </div>
+          `;
+          return;
+        }
+
+        gridContainer.innerHTML = filtered.map(item => `
+          <div class="release-card ${item.spotifyId ? 'active-catalog-card' : 'coming-soon'}" 
+               data-spotify-id="${item.spotifyId}" 
+               data-title="${item.title}" 
+               data-label="${item.badge}" 
+               data-desc="${item.desc}">
+            
+            <div class="release-artwork" style="background-image: url('${item.cover}'); background-position: center;"></div>
+            
+            <div class="release-content">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h3 class="card-release-title">${item.title}</h3>
+                <span class="coming-soon-badge" style="position: static; background: rgba(195, 181, 159, 0.15);">${item.badge}</span>
+              </div>
+              <div class="card-release-subtitle">${item.artist} (${item.year})</div>
+              <p class="card-release-desc">${item.desc}</p>
+
+              <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+                ${item.tags ? item.tags.map(t => `<span style="font-size: 0.65rem; background: rgba(255,255,255,0.06); padding: 3px 8px; border-radius: 4px; color: var(--eqx-text-muted);">${t}</span>`).join('') : ''}
+              </div>
+
+              <div style="display: flex; gap: 10px; margin-top: auto;">
+                ${item.spotifyId ? `
+                  <button class="clay-button preview-in-player-btn" data-slot="${item.spotifyId === '708dfWUVcaIxyOS0rJMSdM' ? '1' : '2'}" style="flex: 1; text-align: center; padding: 10px 14px; font-size: 0.75rem;">Play In Player</button>
+                  <a href="${item.spotifyUrl}" target="_blank" rel="noopener noreferrer" class="clay-button" style="text-align: center; padding: 10px 14px; font-size: 0.75rem; background: rgba(195, 181, 159, 0.15);">Spotify</a>
+                ` : `
+                  <button class="clay-button" style="width: 100%; cursor: not-allowed; opacity: 0.6; font-size: 0.8rem;" disabled>${item.badge}</button>
+                `}
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+        // Re-bind preview buttons
+        gridContainer.querySelectorAll('.preview-in-player-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const card = e.target.closest('.release-card');
+            if (!card) return;
+            const spotifyId = card.getAttribute('data-spotify-id');
+            const targetSlot = btn.getAttribute('data-slot') || '1';
+            const iframe = document.getElementById(`hero-spotify-iframe-${targetSlot}`);
+            
+            if (iframe && spotifyId) {
+              iframe.src = `https://open.spotify.com/embed/album/${spotifyId}?utm_source=generator&theme=0`;
+            }
+            document.querySelector('.showcase-section')?.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+      }
+
+      // Filter events
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.getAttribute('data-filter') || 'all';
+          renderCatalog();
         });
       });
+
+      // Search events
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          renderCatalog();
+        });
+      }
+
+      // Initial render
+      renderCatalog();
     });
-  </script>
+  </script>t>
 </body>
 </html>
