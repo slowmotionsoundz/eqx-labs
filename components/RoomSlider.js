@@ -86,7 +86,7 @@ export function initRoomSlider(container) {
     {
       num: '02',
       title: 'Music Engineering',
-      desc: 'Headed by Leighton Hicks (Mali Boy). We handle music production, mixing, and mastering, working directly with artists to get their sound exactly right. Check out our latest project on the player.',
+      desc: 'Produced by The Block Beattaz and headed by Leighton Hicks. We handle music production, mixing, and mastering, working directly with artists to get their sound exactly right. Check out our latest project on the player.',
       bullets: [
         'Our Latest Album Release (Out Now)',
         'Pro mixing, mastering & soundscapes',
