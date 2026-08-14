@@ -29,7 +29,7 @@ export function initRoomSlider(container) {
 
           <!-- Spotify Embed Container -->
           <div class="spotify-embed-wrapper" id="spotify-embed-el" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; box-sizing: border-box;">
-            <iframe style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/62waSLmGueKOnfHSxUlEcs?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/708dfWUVcaIxyOS0rJMSdM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
         </div>
 
