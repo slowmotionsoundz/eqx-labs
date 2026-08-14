@@ -15,21 +15,13 @@ export function initRoomSlider(container) {
           </svg>
         </button>
 
-        <!-- Dynamic Slide Targets -->
-        <div class="clay-card-visual">
-          <div class="isometric-box" id="isometric-box-el">
-            <div class="box-face floor" id="room-floor"></div>
-            <div class="box-face left-wall" id="room-left"></div>
-            <div class="box-face right-wall" id="room-right"></div>
-            
-            <!-- Dynamic nodes will be injected here -->
-            <div id="room-nodes-container"></div>
-          </div>
-          <div class="room-tooltip" id="room-tooltip-el">Interactive node info</div>
-
-          <!-- Spotify Embed Container -->
-          <div class="spotify-embed-wrapper" id="spotify-embed-el" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; box-sizing: border-box;">
-            <iframe style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/708dfWUVcaIxyOS0rJMSdM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <!-- Dynamic Slide Targets (Full-Bleed Facility Backgrounds) -->
+        <div class="clay-card-visual" id="room-visual-panel" style="position: relative; background-size: cover; background-position: center; overflow: hidden; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+          <div class="clay-card-image-overlay" style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.6)); z-index: 1;"></div>
+          
+          <!-- Spotify Embed Container (Music Engineering Only) -->
+          <div class="spotify-embed-wrapper" id="spotify-embed-el" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; box-sizing: border-box; z-index: 2;">
+            <iframe style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/708dfWUVcaIxyOS0rJMSdM?utm_source=generator&theme=0" width="90%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
         </div>
 
@@ -66,74 +58,51 @@ export function initRoomSlider(container) {
     </div>
   `;
 
-  // Capabilities Data
+  // Capabilities Data (Refined Copy and High-Res Images)
   const roomsData = [
     {
       num: '01',
       title: 'Digital Engineering',
-      desc: 'We build custom software suites, apps, plug-ins, and the backend infrastructure they run on. Our platforms automate managerial office tasks and simplify complex operations, giving you your time back. We solve problems by building custom tools.',
+      desc: 'We design and build bespoke software systems, mobile apps, custom plugins, and the backend cloud infrastructure that powers them. Our automation workflows streamline operations and eliminate manual tasks, giving you and your team your time back.',
       bullets: [
-        'Custom software suites & app builds',
-        'Backend infrastructure & cloud hosting',
-        'Process automation & plugin development'
+        'Bespoke software systems & mobile app builds',
+        'Secure cloud infrastructure & database engineering',
+        'Process automation & customized plugin tools'
       ],
-      floorBg: '#3B3F3D',
-      leftWallBg: 'assets/EQX Website Photos/eqoffice.jpeg',
-      rightWallBg: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_020.jpg',
-      nodes: [
-        { bottom: '110px', right: '70px', tip: 'Custom App & Backend Architecture' },
-        { bottom: '160px', left: '50px', tip: 'Workflow Automation & Managerial Tools' }
-      ]
+      photo: 'assets/EQX Website Photos/eqoffice.jpeg'
     },
     {
       num: '02',
       title: 'Music Engineering',
-      desc: 'Produced by The Block Beattaz and headed by Leighton Hicks. We handle music production, mixing, and mastering, working directly with artists to get their sound exactly right. Check out our latest project on the player.',
+      desc: 'Produced by The Block Beattaz and headed by Leighton Hicks. We handle professional music production, mixing, and mastering, working directly with artists to calibrate their sound and achieve pristine quality.',
       bullets: [
-        'Our Latest Album Release (Out Now)',
-        'Pro mixing, mastering & soundscapes',
-        'Spatial audio system structures'
+        'Professional mixing & analog mastering console',
+        'Multi-channel arrangements & spatial audio design',
+        'Vocal tracking & acoustic room calibration'
       ],
-      floorBg: '#453C33',
-      leftWallBg: 'assets/EQX Website Photos/eqcontrol.jpeg',
-      rightWallBg: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_001.jpg',
-      nodes: [
-        { bottom: '130px', right: '110px', tip: 'Advanced Audio Mixing Console' },
-        { bottom: '100px', left: '70px', tip: 'Studio Acoustic Engineering' }
-      ]
+      photo: 'assets/EQX Website Photos/eqcontrol.jpeg'
     },
     {
       num: '03',
       title: 'Content Production',
-      desc: 'Creating custom digital assets, premium layouts, and video templates that reflect clean, high-end visual styles.',
+      desc: 'Creating high-end digital assets, custom design layouts, and cinematic post-production elements. We craft clean, premium visual identities that resonate with Scandinavian minimalism and modern aesthetics.',
       bullets: [
-        'Custom vector art and icons',
-        'Video editing and post-production assets',
-        'Scandinavian design layouts'
+        'Custom visual design & brand asset layouts',
+        'Cinematic video editing & post-production templates',
+        'Minimalist Scandinavian-inspired UI/UX interfaces'
       ],
-      floorBg: '#3E4133',
-      leftWallBg: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_049.jpg',
-      rightWallBg: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_076.jpg',
-      nodes: [
-        { bottom: '140px', right: '80px', tip: 'Custom 3D Vector Designs' }
-      ]
+      photo: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_049.jpg'
     },
     {
       num: '04',
       title: 'Project Logistics',
-      desc: 'Providing database architecture, automated deployment pipelines, and server security combined with active project management. We align developmental roadmaps and team execution so your digital platforms run smoothly and launch on time.',
+      desc: 'We keep your digital projects organized and on track. From setting up secure servers and databases to managing deadlines and team execution, we make sure your platforms run reliably and launch without headaches.',
       bullets: [
-        'Project management & roadmap alignment',
-        'Server logistics, secure host & database sync',
-        'Dockerized deployments & CI/CD pipelines'
+        'Organized project management & clear timelines',
+        'Secure server setup & database management',
+        'Automated system updates & reliable launches'
       ],
-      floorBg: '#3E3B45',
-      leftWallBg: 'assets/EQX Website Photos/eqx.jpeg',
-      rightWallBg: 'assets/EQX Website Photos/20220808_192335.jpg',
-      nodes: [
-        { bottom: '120px', right: '90px', tip: 'Firebase Infrastructure Setup' },
-        { bottom: '160px', left: '60px', tip: 'Interactive Project Roadmaps' }
-      ]
+      photo: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_004.jpg'
     }
   ];
 
@@ -150,11 +119,7 @@ export function initRoomSlider(container) {
   const elTitle = container.querySelector('#room-title');
   const elDesc = container.querySelector('#room-desc');
   const elBullets = container.querySelector('#room-bullets');
-  const elFloor = container.querySelector('#room-floor');
-  const elLeftWall = container.querySelector('#room-left');
-  const elRightWall = container.querySelector('#room-right');
-  const elNodes = container.querySelector('#room-nodes-container');
-  const elTooltip = container.querySelector('#room-tooltip-el');
+  const visualPanel = container.querySelector('#room-visual-panel');
 
   function renderCard(index) {
     currentIndex = index;
@@ -168,33 +133,17 @@ export function initRoomSlider(container) {
     // Render bullets
     elBullets.innerHTML = data.bullets.map(b => `<li class="card-detail-item"><span></span> ${b}</li>`).join('');
 
-    // Render floor color
-    elFloor.style.background = data.floorBg;
-
-    // Render wall custom backgrounds
-    if (elLeftWall && data.leftWallBg) {
-      elLeftWall.style.backgroundImage = `url('${data.leftWallBg}')`;
-      elLeftWall.style.backgroundSize = 'cover';
-      elLeftWall.style.backgroundPosition = 'center';
-    }
-    if (elRightWall && data.rightWallBg) {
-      elRightWall.style.backgroundImage = `url('${data.rightWallBg}')`;
-      elRightWall.style.backgroundSize = 'cover';
-      elRightWall.style.backgroundPosition = 'center';
+    // Set full-bleed background photo
+    if (visualPanel && data.photo) {
+      visualPanel.style.backgroundImage = `url('${data.photo}')`;
     }
 
-    // Toggle between Spotify Embed and Isometric Room
-    const isoBox = container.querySelector('#isometric-box-el');
+    // Toggle between Spotify Embed and Room Image
     const spotifyEl = container.querySelector('#spotify-embed-el');
-    const tooltipEl = container.querySelector('#room-tooltip-el');
 
-    if (index === 1) { // Music
-      if (isoBox) isoBox.style.display = 'none';
-      if (tooltipEl) tooltipEl.style.display = 'none';
+    if (index === 1) { // Music Engineering
       if (spotifyEl) spotifyEl.style.display = 'flex';
     } else {
-      if (isoBox) isoBox.style.display = 'block';
-      if (tooltipEl) tooltipEl.style.display = 'block';
       if (spotifyEl) spotifyEl.style.display = 'none';
     }
 
@@ -206,24 +155,6 @@ export function initRoomSlider(container) {
       ctaBtn.textContent = 'Connect With Us';
       ctaBtn.setAttribute('href', '#mission');
     }
-
-    // Render interactive nodes
-    elNodes.innerHTML = data.nodes.map(node => `
-      <div class="room-node" style="bottom: ${node.bottom}; ${node.left ? `left: ${node.left}` : `right: ${node.right}`};" data-tip="${node.tip}">
-        <div class="room-node-pulse"></div>
-      </div>
-    `).join('');
-
-    // Rebind node event handlers
-    elNodes.querySelectorAll('.room-node').forEach(node => {
-      node.addEventListener('mouseenter', () => {
-        elTooltip.textContent = node.getAttribute('data-tip');
-        elTooltip.classList.add('visible');
-      });
-      node.addEventListener('mouseleave', () => {
-        elTooltip.classList.remove('visible');
-      });
-    });
   }
 
   // Open popover
