@@ -12,7 +12,7 @@ export function initMission(container) {
         <div class="mission-badge reveal">The EQX Mission</div>
         
         <p class="mission-text reveal reveal-delay-1">
-          Connecting our operations in Huntsville, Alabama and Landskrona, Sweden, <span>EQX</span> builds custom digital products from the ground up. Whether it's backend infrastructure, clean UI, or elite sound design, we focus on the work. No jargon, just execution.
+          With multinational operations spanning Huntsville, Alabama, and Landskrona, Sweden, <span>EQX</span> develops custom digital projects from the ground up. While music remains our core focus, we have expanded our expertise to deliver full-scale web development, project management, and specialized sports marketing and management services.
         </p>
       </div>
     </section>

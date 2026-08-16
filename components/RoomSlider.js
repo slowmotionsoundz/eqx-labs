@@ -27,7 +27,7 @@ export function initRoomSlider(container) {
 
         <div class="clay-card-info">
           <div class="card-num" id="room-num">01</div>
-          <h3 class="card-title" id="room-title">Capability</h3>
+          <h3 class="card-title" id="room-title">Service</h3>
           <p class="card-desc" id="room-desc">Details regarding the service capability.</p>
           
           <ul class="card-details-list" id="room-bullets">

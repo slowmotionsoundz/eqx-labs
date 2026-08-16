@@ -1,27 +1,27 @@
 /**
  * EQX BookingPortal Component
- * Renders categorized service cards, filters, and checkout modal workflows.
+ * 3-Step wizard: Goal selection → Package cards → Booking modal
  */
 export function initBookingPortal() {
   const services = [
-    // [ 01 ] Dry Hire / Studio Rental
+    // [ 01 ] Studio Access (Self-Run)
     {
       id: 'byo-3h',
       category: 'studio-rental',
-      categoryLabel: '[ 01 ] Studio Rental',
+      categoryLabel: '[ 01 ] Studio Access (Self-Run)',
       title: 'Studio Access — Bring Your Own Engineer',
       duration: '3 Hours',
       price: 'SEK 1,050.00',
       priceRaw: 1050,
       acuityLink: 'https://app.acuityscheduling.com/schedule.php?owner=14192678&appointmentType=95791173',
-      desc: 'The room, gear, and setup are yours to run. Full access to the live room, vocal booth, and control room. Bring your own engineer or handle it yourself. Ideal if you already know your workflow and just need the space.',
+      desc: 'The room, gear, and setup are yours to run. Full access to the live room, vocal booth, and control room. Bring your own engineer or handle it yourself.',
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     },
     {
       id: 'byo-half',
       category: 'studio-rental',
-      categoryLabel: '[ 01 ] Studio Rental',
-      title: 'Studio Access — Bring Your Own Engineer, Half Day',
+      categoryLabel: '[ 01 ] Studio Access (Self-Run)',
+      title: 'Studio Access — Half Day (BYO Engineer)',
       duration: '5 Hours',
       price: 'SEK 1,500.00',
       priceRaw: 1500,
@@ -32,8 +32,8 @@ export function initBookingPortal() {
     {
       id: 'byo-full',
       category: 'studio-rental',
-      categoryLabel: '[ 01 ] Studio Rental',
-      title: 'Studio Access — Bring Your Own Engineer, Full Day',
+      categoryLabel: '[ 01 ] Studio Access (Self-Run)',
+      title: 'Studio Access — Full Day (BYO Engineer)',
       duration: '10 Hours',
       price: 'SEK 2,800.00',
       priceRaw: 2800,
@@ -41,205 +41,206 @@ export function initBookingPortal() {
       desc: 'The room for a full day! Enough time for a real session from setup to wrap, without the clock pressure of hourly billing.',
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     },
-    // [ 02 ] Engineer-Led Sessions
+    // [ 02 ] Studio + Engineer
     {
       id: 'eng-3h',
       category: 'engineer-sessions',
-      categoryLabel: '[ 02 ] Engineer-Led Sessions',
+      categoryLabel: '[ 02 ] Studio + Engineer',
       title: 'Studio Session — With EQX Engineer',
       duration: '3 Hours',
       price: 'SEK 1,950.00',
       priceRaw: 1950,
       acuityLink: 'https://app.acuityscheduling.com/schedule.php?owner=14192678&appointmentType=95791356',
-      desc: 'Recording, tracking, and live production with an engineer behind the desk — nearly 30 years in music tech, Billboard-recognized. Best for artists who want to focus on performance and let someone else run the session.',
+      desc: 'Recording, tracking, and live production with an engineer behind the desk — nearly 30 years in music tech, Billboard-recognized. Best for artists who want to focus on performance.',
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     },
     {
       id: 'eng-half',
       category: 'engineer-sessions',
-      categoryLabel: '[ 02 ] Engineer-Led Sessions',
-      title: 'Studio Session — With Our Engineer, Half Day',
+      categoryLabel: '[ 02 ] Studio + Engineer',
+      title: 'Studio Session — Half Day (With Engineer)',
       duration: '5 Hours',
       price: 'SEK 2,900.00',
       priceRaw: 2900,
       acuityLink: 'https://app.acuityscheduling.com/schedule.php?owner=14192678&appointmentType=95791384',
-      desc: 'A full engineer-led session — enough time to track a handful of songs or work through a real production day.',
+      desc: 'A full session with an engineer — enough time to track a handful of songs or work through a real production day.',
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     },
-
-    // [ 02 ] Post-Production (Music -> EQ Control Room)
+    // [ 03 ] Post-Production
     {
       id: 'mix-track',
       category: 'post-production',
-      categoryLabel: '[ 02 ] Post-Production',
+      categoryLabel: '[ 03 ] Post-Production',
       title: 'Mixing (per track)',
-      duration: '30 Minutes per track',
+      duration: '3-5 Days Turnaround',
       price: 'SEK 900.00',
       priceRaw: 900,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: "Your track, mixed and polished — balance, depth, and clarity brought out so it's ready for release. Turnaround and revision rounds confirmed at booking.",
+      desc: "Your track, mixed and polished. A flat-rate service bringing out balance, depth, and clarity so it's fully ready for release. Includes 2 revisions.",
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     },
     {
       id: 'master-track',
       category: 'post-production',
-      categoryLabel: '[ 02 ] Post-Production',
+      categoryLabel: '[ 03 ] Post-Production',
       title: 'Mastering (per track)',
-      duration: '30 Minutes per track',
+      duration: '48-72 Hr Turnaround',
       price: 'SEK 450.00',
       priceRaw: 450,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: 'Final polish and loudness for release-ready sound across streaming, club systems, and everything in between.',
+      desc: 'Final polish and loudness for release-ready sound across streaming and club systems. Flat rate per track.',
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     },
     {
       id: 'mix-master-bundle',
       category: 'post-production',
-      categoryLabel: '[ 02 ] Post-Production',
+      categoryLabel: '[ 03 ] Post-Production',
       title: 'Mix + Master Bundle (per track)',
-      duration: '30 Minutes per track',
+      duration: '5-7 Days Turnaround',
       price: 'SEK 1,200.00',
       priceRaw: 1200,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: 'Mixing and mastering together, at a better rate than booking separately. One track, fully finished.',
+      desc: 'A complete sonic overhaul for your track. Mixing and mastering together at a better rate, delivered fully finished and streaming-optimized. Includes 2 mix revisions.',
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     },
     {
       id: 'beat-lease',
       category: 'post-production',
-      categoryLabel: '[ 02 ] Post-Production',
+      categoryLabel: '[ 03 ] Post-Production',
       title: 'Beat Lease / Production Session',
-      duration: '1 Hour',
+      duration: 'Per Session / Beat',
       price: 'SEK 650.00',
       priceRaw: 650,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: 'Studio time dedicated to production — building a beat, developing an idea, or working a track from scratch with an engineer/producer in the room.',
+      desc: 'Dedicated production time — building a beat, developing an idea, or working a track from scratch for a flat rate.',
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     },
-
-    // [ 03 ] Studio Plus & Stay (Travel & Stay -> EQ Lounge / Living Room)
+    // [ 04 ] Studio & Stay — single inquiry entry (powers the modal)
     {
-      id: 'studio-stay',
+      id: 'studio-inquiry',
       category: 'studio-plus',
-      categoryLabel: '[ 03 ] Studio Plus & Stay',
-      title: 'Studio + Stay Package Inquiry',
-      duration: '30 Minutes Deposit',
-      price: 'SEK 4,500.00',
-      priceRaw: 4500,
+      categoryLabel: '[ 04 ] Studio & Stay',
+      title: 'Studio & Stay — Package Inquiry',
+      duration: 'Custom · Based on Your Dates',
+      price: 'Pricing via Airbnb',
+      priceRaw: 0,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: 'Studio time and a place to stay, bundled. Book the inquiry here to hold your dates — the stay itself is confirmed and paid through Airbnb once details are set.',
+      desc: 'Tell us your preferred dates, group size, and what you need from the studio. We will coordinate your Airbnb stay and studio sessions and send you a tailored plan.',
       photo: 'assets/EQX%20Website%20Photos/eqlounge.jpeg'
     },
-    {
-      id: 'recording-trip',
-      category: 'studio-plus',
-      categoryLabel: '[ 03 ] Studio Plus & Stay',
-      title: 'Recording Trip Inquiry & Deposit',
-      duration: '30 Minutes Deposit',
-      price: 'SEK 2,000.00',
-      priceRaw: 2000,
-      acuityLink: 'https://eqlandskrona.as.me',
-      desc: 'Interested in bringing your group to Landskrona for a recording trip? Put down a deposit to hold interest and start planning — full itinerary and pricing built around your group size and dates.',
-      photo: 'assets/EQX%20Website%20Photos/eqlounge.jpeg'
-    },
-
-    // [ 04 ] Project Inquiries (App Development -> EQ Office | PM & Brand -> EQ Lounge)
+    // [ 05 ] Project Inquiries
     {
       id: 'inquiry-web',
       category: 'project-inquiries',
-      categoryLabel: '[ 04 ] Project Inquiries',
+      categoryLabel: '[ 05 ] Project Inquiries',
       title: 'Web & App Development — Discovery Call',
       duration: '20 Minutes',
-      price: 'FREE / Included',
+      price: 'FREE',
       priceRaw: 0,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: "A short call to talk through what you're building — scope, timeline, and whether it's a fit. No commitment; you'll get a proper quote after.",
+      desc: "A short call to talk through what you're building — scope, timeline, and whether it's a fit. No commitment.",
       photo: 'assets/EQX%20Website%20Photos/eqoffice.jpeg'
     },
     {
       id: 'inquiry-sports',
       category: 'project-inquiries',
-      categoryLabel: '[ 04 ] Project Inquiries',
+      categoryLabel: '[ 05 ] Project Inquiries',
       title: 'Sports Marketing & Brand Strategy — Discovery Call',
       duration: '20 Minutes',
-      price: 'FREE / Included',
+      price: 'FREE',
       priceRaw: 0,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: 'Talk through your team, club, or athlete brand and where marketing support could help. Quote follows based on what you need.',
+      desc: 'Talk through your team, club, or athlete brand and where marketing support could help.',
       photo: 'assets/EQX%20Website%20Photos/eqlounge.jpeg'
     },
     {
       id: 'inquiry-pm',
       category: 'project-inquiries',
-      categoryLabel: '[ 04 ] Project Inquiries',
-      title: 'Project Management Engagement — Discovery Call',
+      categoryLabel: '[ 05 ] Project Inquiries',
+      title: 'Project Management — Discovery Call',
       duration: '20 Minutes',
-      price: 'FREE / Included',
+      price: 'FREE',
       priceRaw: 0,
       acuityLink: 'https://eqlandskrona.as.me',
       desc: 'A quick call to understand the project that needs managing and whether an ongoing engagement makes sense.',
       photo: 'assets/EQX%20Website%20Photos/eqlounge.jpeg'
     },
-
-    // [ 05 ] Consultations & Strategy (Discussions -> EQ Lounge / Living Room | Music Tech -> EQ Office)
+    // [ 06 ] Consultations & Strategy
     {
       id: 'consult-artist',
       category: 'consultations',
-      categoryLabel: '[ 05 ] Consultations & Strategy',
+      categoryLabel: '[ 06 ] Consultations & Strategy',
       title: 'Artist & Career Development Consult',
       duration: '30 Minutes',
       price: 'SEK 500.00',
       priceRaw: 500,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: "A focused half-hour on where your project stands and what's next — release strategy, positioning, or just an honest read on your material.",
+      desc: "A focused half-hour on where your project stands and what's next — release strategy, positioning, or an honest read on your material.",
       photo: 'assets/EQX%20Website%20Photos/eqlounge.jpeg'
     },
     {
       id: 'consult-tech',
       category: 'consultations',
-      categoryLabel: '[ 05 ] Consultations & Strategy',
+      categoryLabel: '[ 06 ] Consultations & Strategy',
       title: 'Music Tech / Studio Setup Consult',
       duration: '1 Hour',
       price: 'SEK 1,100.00',
       priceRaw: 1100,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: 'Building or upgrading your own setup? An hour working through gear, room treatment, and workflow — practical advice, not a sales pitch.',
+      desc: 'Building or upgrading your own setup? An hour working through gear, room treatment, and workflow.',
       photo: 'assets/EQX%20Website%20Photos/eqoffice.jpeg'
     },
     {
       id: 'consult-biz',
       category: 'consultations',
-      categoryLabel: '[ 05 ] Consultations & Strategy',
+      categoryLabel: '[ 06 ] Consultations & Strategy',
       title: 'Business & Startup Strategy Consult',
       duration: '1 Hour',
       price: 'SEK 1,200.00',
       priceRaw: 1200,
       acuityLink: 'https://eqlandskrona.as.me',
-      desc: "For founders and early-stage projects — an hour of direct strategy input from someone who's built and run creative and tech ventures across the U.S. and Europe.",
+      desc: "For founders and early-stage projects — an hour of direct strategy input from someone who's built creative and tech ventures across the U.S. and Europe.",
       photo: 'assets/EQX%20Website%20Photos/eqlounge.jpeg'
     },
-
-    // Discount Packages (Music -> EQ Control Room)
+    // Discount Packages
     {
       id: 'pkg-8h',
       category: 'packages',
       categoryLabel: 'Discount Packages',
-      title: '8-Hour Studio Package — Bring Your Own Engineer',
-      duration: '8 Hours Total (Valid 60 Days)',
+      title: '8-Hour Studio Package — BYO Engineer',
+      duration: '8 Hours · Valid 60 Days',
       price: 'SEK 2,800.00',
       priceRaw: 2800,
       acuityLink: 'https://app.acuityscheduling.com/catalog.php?owner=14192678&action=add&service:id=2247353',
-      desc: "Eight hours of self-serve studio time, split however you need it — three visits, four, doesn't matter, book in 2, 3, or 4-hour blocks as your schedule allows.",
+      desc: "Eight hours of self-serve studio time, split however you need it — book in 2, 3, or 4-hour blocks as your schedule allows.",
       photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
     }
   ];
 
+  const goalMeta = {
+    'studio-rental':     { icon: '🔑', label: 'Studio Access (Self-Run)' },
+    'engineer-sessions': { icon: '🎙️', label: 'Studio + Engineer' },
+    'post-production':   { icon: '🎚️', label: 'Mixing, Mastering & Beats' },
+    'studio-plus':       { icon: '🏡', label: 'Studio & Stay' },
+    'consultations':     { icon: '💡', label: 'Consultations & Strategy' },
+    'project-inquiries': { icon: '📞', label: 'Free Discovery Calls' },
+    'packages':          { icon: '🎟️', label: 'Discount Studio Packages' },
+  };
+
+  // DOM refs
   const step1 = document.getElementById('wizard-step-1');
   const step2 = document.getElementById('wizard-step-2');
-  const pillars = document.querySelectorAll('.vertical-pillar');
   const backBtn = document.getElementById('backToGoalsBtn');
   const servicesList = document.getElementById('wizardServicesList');
   const step2Title = document.getElementById('step2Title');
+  const step2GoalIcon = document.getElementById('step2GoalIcon');
+  const step2GoalLabel = document.getElementById('step2GoalLabel');
+
+  const progStep1 = document.getElementById('prog-step-1');
+  const progStep2 = document.getElementById('prog-step-2');
+  const progStep3 = document.getElementById('prog-step-3');
+  const progConn1 = document.getElementById('prog-conn-1');
+  const progConn2 = document.getElementById('prog-conn-2');
 
   const modal = document.getElementById('bookingModal');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -253,49 +254,119 @@ export function initBookingPortal() {
   const acuityDirectBtn = document.getElementById('acuityDirectBtn');
   const form = document.getElementById('bookingCheckoutForm');
 
-  const goalTitles = {
-    'studio-rental': 'Dry Hire / Studio Rental',
-    'engineer-sessions': 'Engineer-Led Recording Sessions',
-    'post-production': 'Mixing, Mastering & Production',
-    'studio-plus': 'Studio Plus, Residency & Stay',
-    'consultations': 'Consultations & Strategy',
-    'project-inquiries': 'Free Project Discovery Calls',
-    'packages': 'Discounted Multi-Session Packages'
-  };
+  // Update progress bar state
+  function setProgress(activeStep) {
+    [progStep1, progStep2, progStep3].forEach((el, i) => {
+      if (!el) return;
+      el.classList.remove('active', 'done');
+      if (i + 1 < activeStep) el.classList.add('done');
+      else if (i + 1 === activeStep) el.classList.add('active');
+    });
+    if (progConn1) progConn1.classList.toggle('done', activeStep > 1);
+    if (progConn2) progConn2.classList.toggle('done', activeStep > 2);
+  }
 
+  // Show Step 2 with service cards for selected category
   function showGoalServices(category) {
     if (!servicesList) return;
 
+    const meta = goalMeta[category] || { icon: '📋', label: category };
     const filtered = services.filter(s => s.category === category);
-    if (step2Title) {
-      step2Title.innerHTML = `Select Your <span>${goalTitles[category] || 'Option'}</span>`;
+
+    // Update pill + title
+    if (step2GoalIcon) step2GoalIcon.textContent = meta.icon;
+    if (step2GoalLabel) step2GoalLabel.textContent = meta.label;
+    if (step2Title) step2Title.innerHTML = `Select Your <span>Package</span>`;
+
+    // Studio & Stay: show Airbnb listing card + single inquiry CTA (no package cards)
+    if (category === 'studio-plus') {
+      servicesList.innerHTML = `
+        <div class="airbnb-preview-block">
+          <div class="airbnb-listing-card">
+            <div class="airbnb-listing-photo" style="background-image: url('assets/EQX%20Website%20Photos/eqlounge.jpeg');">
+              <div class="airbnb-listing-photo-overlay"></div>
+              <div class="airbnb-listing-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF5A5F"><path d="M22.1 13.5C21 16.4 16.8 21 12 21s-9-4.6-10.1-7.5C.8 11 1.5 9 3 7.7c1.5-1.2 3.5-1.2 4.8 0L9 8.9V4c0-1.1.9-2 2-2s2 .9 2 2v4.9l1.2-1.2c1.3-1.2 3.3-1.2 4.8 0 1.5 1.3 2.2 3.3 1.1 5.8z"/></svg>
+                Live on Airbnb
+              </div>
+            </div>
+            <div class="airbnb-listing-info">
+              <div class="airbnb-listing-location">📍 Dammhagen, Landskrona, Sweden</div>
+              <div class="airbnb-listing-name">EQ Living Room — Artist Residency</div>
+              <div class="airbnb-listing-meta">
+                <span class="airbnb-meta-item">🛏 3 Bedrooms</span>
+                <span class="airbnb-meta-dot">·</span>
+                <span class="airbnb-meta-item">🚿 1 Bath</span>
+                <span class="airbnb-meta-dot">·</span>
+                <span class="airbnb-meta-item">⭐ 4.67</span>
+              </div>
+              <p class="airbnb-listing-desc">A private creative retreat steps from EQX. Book the Airbnb directly, then send us an inquiry to coordinate your studio sessions around your stay.</p>
+              <a href="https://www.airbnb.com/rooms/804940205785136199?guests=1&adults=1&s=66&source=embed_widget"
+                 target="_blank" rel="noopener" class="airbnb-view-btn">
+                View Full Listing on Airbnb ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="studio-inquiry-cta">
+            <div class="studio-inquiry-cta-text">
+              <div class="studio-inquiry-cta-title">Ready to combine a stay with studio time?</div>
+              <p class="studio-inquiry-cta-desc">Book the Airbnb directly for your preferred dates, then send us a quick note below — we'll coordinate your studio sessions around your stay and confirm everything in one plan.</p>
+            </div>
+            <button class="clay-button studio-inquiry-btn" id="studioInquiryBtn">
+              Request a Studio &amp; Stay Package &#8594;
+            </button>
+          </div>
+        </div>
+      `;
+
+      // Transition
+      step1.classList.add('hidden');
+      step2.classList.remove('hidden');
+      setProgress(2);
+      step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Bind the single inquiry button
+      const inquiryBtn = document.getElementById('studioInquiryBtn');
+      if (inquiryBtn) inquiryBtn.addEventListener('click', () => openModal('studio-inquiry'));
+      return;
     }
 
+    // All other categories: render service cards grid
     servicesList.innerHTML = filtered.map(item => `
-      <div class="wizard-service-row">
-        <div class="service-row-photo" style="background-image: url('${item.photo}');"></div>
-        <div class="service-row-info">
-          <span class="service-row-duration">${item.duration}</span>
-          <h3 class="service-row-title">${item.title}</h3>
-          <p class="service-row-desc">${item.desc}</p>
+      <div class="service-card" data-id="${item.id}">
+        <div class="service-card-photo" style="background-image: url('${item.photo}');">
+          <div class="service-card-photo-overlay"></div>
         </div>
-        <div class="service-row-action">
-          <div class="service-row-price">${item.price}</div>
+        <div class="service-card-body">
+          <span class="service-card-duration">${item.duration}</span>
+          <div class="service-card-title">${item.title}</div>
+          <p class="service-card-desc">${item.desc}</p>
+        </div>
+        <div class="service-card-footer">
+          <div class="service-card-price">${item.price}</div>
           <button class="clay-button select-service-btn" data-id="${item.id}">Book Now</button>
         </div>
       </div>
     `).join('');
 
-    // Transition steps
+    // Transition
     step1.classList.add('hidden');
     step2.classList.remove('hidden');
+    setProgress(2);
+    step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    // Scroll smoothly to step 2 header
-    step2.scrollIntoView({ behavior: 'smooth' });
-
-    // Bind select buttons
+    // Bind book buttons
     servicesList.querySelectorAll('.select-service-btn').forEach(btn => {
-      btn.addEventListener('click', () => openModal(btn.getAttribute('data-id')));
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openModal(btn.getAttribute('data-id'));
+      });
+    });
+
+    // Clicking the card itself also opens modal
+    servicesList.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('click', () => openModal(card.getAttribute('data-id')));
     });
   }
 
@@ -303,42 +374,31 @@ export function initBookingPortal() {
     const item = services.find(s => s.id === id);
     if (!item || !modal) return;
 
-    modalCategory.textContent = item.categoryLabel;
-    modalTitle.textContent = item.title;
-    modalDuration.textContent = item.duration;
-    modalPrice.textContent = item.price;
-    modalDesc.textContent = item.desc;
-    summarySubtotal.textContent = item.price;
-    summaryDeposit.textContent = item.price;
+    if (modalCategory) modalCategory.textContent = item.categoryLabel;
+    if (modalTitle) modalTitle.textContent = item.title;
+    if (modalDuration) modalDuration.textContent = item.duration;
+    if (modalPrice) modalPrice.textContent = item.price;
+    if (modalDesc) modalDesc.textContent = item.desc;
+    if (summarySubtotal) summarySubtotal.textContent = item.price;
+    if (summaryDeposit) summaryDeposit.textContent = item.price;
     if (acuityDirectBtn) acuityDirectBtn.href = item.acuityLink;
 
+    setProgress(3);
     modal.classList.add('active');
   }
 
   function closeModal() {
     if (modal) modal.classList.remove('active');
+    setProgress(2);
   }
 
-  // Bind vertical accordion pillar clicks & hover expansions
-  pillars.forEach(pillar => {
-    pillar.addEventListener('mouseenter', () => {
-      pillars.forEach(p => p.classList.remove('active'));
-      pillar.classList.add('active');
-    });
-
-    // Action button inside pillar triggers step 2
-    const actionBtn = pillar.querySelector('.pillar-action-btn');
-    if (actionBtn) {
-      actionBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const goal = pillar.getAttribute('data-goal');
-        showGoalServices(goal);
-      });
-    }
-
-    pillar.addEventListener('click', () => {
-      const goal = pillar.getAttribute('data-goal');
-      showGoalServices(goal);
+  // Bind goal cards (Step 1)
+  document.querySelectorAll('.goal-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.goal-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      const goal = card.getAttribute('data-goal');
+      setTimeout(() => showGoalServices(goal), 180);
     });
   });
 
@@ -347,6 +407,9 @@ export function initBookingPortal() {
     backBtn.addEventListener('click', () => {
       step2.classList.add('hidden');
       step1.classList.remove('hidden');
+      setProgress(1);
+      document.querySelectorAll('.goal-card').forEach(c => c.classList.remove('selected'));
+      step1.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 
@@ -361,11 +424,11 @@ export function initBookingPortal() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.getElementById('clientName').value;
-      alert(`Thank you, ${name}! Your session request has been submitted. A pending booking has been created in the CRM.`);
-      // In a real app, this would write to Firebase/Firestore to create a pending booking.
-      // We will just close the modal for now to simulate success.
+      alert(`Thank you, ${name}! Your session request has been submitted.`);
       closeModal();
-      document.getElementById('bookingForm').reset();
     });
   }
+
+  // Init progress on load
+  setProgress(1);
 }

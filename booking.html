@@ -26,7 +26,7 @@
     
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="index.html#hex-services" class="nav-link">Capabilities</a></li>
+      <li><a href="index.html#hex-services" class="nav-link">Services</a></li>
       <li><a href="studio.html" class="nav-link">Studio</a></li>
       <li><a href="booking.html" class="nav-link active">Booking</a></li>
       <li><a href="index.html#mission" class="nav-link">Mission</a></li>
@@ -52,139 +52,106 @@
   <section class="booking-portal-section">
     <div class="showcase-container">
 
-      <!-- STEP 1: CHOOSE YOUR GOAL -->
-      <div class="wizard-step" id="wizard-step-1">
-        <div class="wizard-header text-center">
-          <span class="wizard-step-num">Step 1 of 2</span>
-          <h2 class="grid-title">What would you like to <span>book today?</span></h2>
-          <p class="tour-intro" style="color: var(--eqx-text-muted); max-width: 580px; margin: 10px auto 0;">Select your main objective below to view tailored sessions, studio packages, and rates.</p>
+      <!-- PROGRESS INDICATOR (shared across steps) -->
+      <div class="wizard-progress" id="wizardProgress">
+        <div class="wizard-progress-step active" id="prog-step-1">
+          <div class="wizard-progress-dot">1</div>
+          <span class="wizard-progress-label">Your Goal</span>
         </div>
-
-        <!-- Fey-Style Vertical Accordion Pillars Container -->
-        <div class="vertical-accordion-container" id="verticalAccordion">
-          
-          <!-- Pillar 1: Studio Rental (Self-Serve) -->
-          <div class="vertical-pillar active" data-goal="studio-rental" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqcontrol.jpeg');">
-            <div class="pillar-collapsed-label">
-              <span class="pillar-icon">🔑</span>
-              <span class="pillar-title-vertical">Dry Hire / Studio Rental</span>
-            </div>
-            <div class="pillar-expanded-content">
-              <span class="pillar-badge">EQ Control Room</span>
-              <h3 class="pillar-title">Dry Hire / Studio Rental</h3>
-              <p class="pillar-desc">Rent the room and gear. Bring your own engineer or run the session yourself for maximum privacy.</p>
-              <div class="pillar-preview-rates">From <strong>1,050 SEK</strong> / 3 Hours</div>
-              <button class="clay-button compact-btn pillar-action-btn">Explore Rentals &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Pillar 2: Engineer-Led Recording -->
-          <div class="vertical-pillar" data-goal="engineer-sessions" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqcontrol.jpeg');">
-            <div class="pillar-collapsed-label">
-              <span class="pillar-icon">🎙️</span>
-              <span class="pillar-title-vertical">Engineer-Led Recording</span>
-            </div>
-            <div class="pillar-expanded-content">
-              <span class="pillar-badge">EQ Control Room</span>
-              <h3 class="pillar-title">Engineer-Led Recording</h3>
-              <p class="pillar-desc">Full service recording and vocal tracking with a professional EQX engineer behind the desk.</p>
-              <div class="pillar-preview-rates">From <strong>1,950 SEK</strong> / 3 Hours</div>
-              <button class="clay-button compact-btn pillar-action-btn">Explore Sessions &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Pillar 2: Mixing & Mastering -->
-          <div class="vertical-pillar" data-goal="post-production" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqcontrol.jpeg');">
-            <div class="pillar-collapsed-label">
-              <span class="pillar-icon">🎚️</span>
-              <span class="pillar-title-vertical">Mixing, Mastering &amp; Beats</span>
-            </div>
-            <div class="pillar-expanded-content">
-              <span class="pillar-badge">EQ Control Room</span>
-              <h3 class="pillar-title">Mixing, Mastering &amp; Beats</h3>
-              <p class="pillar-desc">Track mixing, stereo mastering polish, mix+master bundles, and beat production sessions.</p>
-              <div class="pillar-preview-rates">From <strong>450 SEK</strong> / Track</div>
-              <button class="clay-button compact-btn pillar-action-btn">Explore Rates &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Pillar 3: Studio Plus & Stay -->
-          <div class="vertical-pillar" data-goal="studio-plus" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqlounge.jpeg');">
-            <div class="pillar-collapsed-label">
-              <span class="pillar-icon">🏡</span>
-              <span class="pillar-title-vertical">Studio Plus &amp; Stay</span>
-            </div>
-            <div class="pillar-expanded-content">
-              <span class="pillar-badge">EQ Living Room &amp; Airbnb</span>
-              <h3 class="pillar-title">Studio Plus &amp; Stay</h3>
-              <p class="pillar-desc">Bundled studio time with Airbnb lodging in EQ Living Room and group recording retreats.</p>
-              <div class="pillar-preview-rates">From <strong>2,000 SEK</strong> Deposit</div>
-              <button class="clay-button compact-btn pillar-action-btn">Explore Stays &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Pillar 4: Consultations & Strategy -->
-          <div class="vertical-pillar" data-goal="consultations" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqlounge.jpeg');">
-            <div class="pillar-collapsed-label">
-              <span class="pillar-icon">💡</span>
-              <span class="pillar-title-vertical">Consultations &amp; Strategy</span>
-            </div>
-            <div class="pillar-expanded-content">
-              <span class="pillar-badge">EQ Living Room</span>
-              <h3 class="pillar-title">Consultations &amp; Strategy</h3>
-              <p class="pillar-desc">1-on-1 artist development, music tech setup advice, and business strategy sessions.</p>
-              <div class="pillar-preview-rates">From <strong>500 SEK</strong> / 30 Min</div>
-              <button class="clay-button compact-btn pillar-action-btn">Explore Consults &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Pillar 5: Free Discovery Calls -->
-          <div class="vertical-pillar" data-goal="project-inquiries" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqoffice.jpeg');">
-            <div class="pillar-collapsed-label">
-              <span class="pillar-icon">📞</span>
-              <span class="pillar-title-vertical">Free Discovery Calls</span>
-            </div>
-            <div class="pillar-expanded-content">
-              <span class="pillar-badge">EQ Office</span>
-              <h3 class="pillar-title">Free Discovery Calls</h3>
-              <p class="pillar-desc">20-minute calls for Web &amp; App development (EQ Office), sports marketing, and project management.</p>
-              <div class="pillar-preview-rates"><strong>FREE</strong> / Included</div>
-              <button class="clay-button compact-btn pillar-action-btn">Book Call &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Pillar 6: Discount Packages -->
-          <div class="vertical-pillar" data-goal="packages" style="--pillar-bg: url('assets/EQX%20Website%20Photos/eqcontrol.jpeg');">
-            <div class="pillar-collapsed-label">
-              <span class="pillar-icon">🎟️</span>
-              <span class="pillar-title-vertical">Discount Studio Packages</span>
-            </div>
-            <div class="pillar-expanded-content">
-              <span class="pillar-badge">EQ Control Room</span>
-              <h3 class="pillar-title">Discount Studio Packages</h3>
-              <p class="pillar-desc">Multi-session hourly packages split across 60 days at discounted bulk rates.</p>
-              <div class="pillar-preview-rates"><strong>2,800 SEK</strong> / 8 Hours</div>
-              <button class="clay-button compact-btn pillar-action-btn">Explore Discounts &rarr;</button>
-            </div>
-          </div>
-
+        <div class="wizard-progress-connector" id="prog-conn-1"></div>
+        <div class="wizard-progress-step" id="prog-step-2">
+          <div class="wizard-progress-dot">2</div>
+          <span class="wizard-progress-label">Pick a Package</span>
+        </div>
+        <div class="wizard-progress-connector" id="prog-conn-2"></div>
+        <div class="wizard-progress-step" id="prog-step-3">
+          <div class="wizard-progress-dot">3</div>
+          <span class="wizard-progress-label">Book It</span>
         </div>
       </div>
 
-      <!-- STEP 2: CHOOSE YOUR SPECIFIC SESSION -->
+      <!-- ===== STEP 1: WHAT BRINGS YOU IN? ===== -->
+      <div class="wizard-step" id="wizard-step-1">
+
+        <div class="wizard-question">
+          <span class="wizard-question-label">Step 1 of 3</span>
+          <h2>What brings you in <span>today?</span></h2>
+          <p>Select your main objective and we'll show you tailored sessions, packages, and pricing.</p>
+        </div>
+
+        <div class="goal-grid" id="goalGrid">
+          <div class="goal-card" data-goal="studio-rental" id="goal-studio-rental">
+            <span class="goal-card-icon">🔑</span>
+            <div class="goal-card-title">Studio Access (Self-Run)</div>
+            <div class="goal-card-desc">Rent the room and run your own session. Bring your own engineer or go solo.</div>
+            <div class="goal-card-price">From 1,050 SEK / 3 hrs</div>
+          </div>
+
+          <div class="goal-card" data-goal="engineer-sessions" id="goal-engineer-sessions">
+            <span class="goal-card-icon">🎙️</span>
+            <div class="goal-card-title">Studio + Engineer</div>
+            <div class="goal-card-desc">Record with a professional EQX engineer behind the desk. Focus on your performance.</div>
+            <div class="goal-card-price">From 1,950 SEK / 3 hrs</div>
+          </div>
+
+          <div class="goal-card" data-goal="post-production" id="goal-post-production">
+            <span class="goal-card-icon">🎚️</span>
+            <div class="goal-card-title">Mixing, Mastering & Beats</div>
+            <div class="goal-card-desc">Track mixing, stereo mastering, mix+master bundles, and beat production sessions.</div>
+            <div class="goal-card-price">From 450 SEK / track</div>
+          </div>
+
+          <div class="goal-card" data-goal="studio-plus" id="goal-studio-plus">
+            <span class="goal-card-icon">🏡</span>
+            <div class="goal-card-title">Studio & Stay</div>
+            <div class="goal-card-desc">Bundle studio sessions with a stay at our Airbnb. Perfect for out-of-town artists and group recording retreats.</div>
+            <div class="goal-card-price">Pricing via Airbnb</div>
+          </div>
+
+          <div class="goal-card" data-goal="consultations" id="goal-consultations">
+            <span class="goal-card-icon">💡</span>
+            <div class="goal-card-title">Consultations & Strategy</div>
+            <div class="goal-card-desc">1-on-1 artist development, music tech advice, and business strategy sessions.</div>
+            <div class="goal-card-price">From 500 SEK / 30 min</div>
+          </div>
+
+          <div class="goal-card" data-goal="project-inquiries" id="goal-project-inquiries">
+            <span class="goal-card-icon">📞</span>
+            <div class="goal-card-title">Free Discovery Calls</div>
+            <div class="goal-card-desc">20-min calls for web development, sports marketing, and project management inquiries.</div>
+            <div class="goal-card-price">FREE — No commitment</div>
+          </div>
+
+          <div class="goal-card" data-goal="packages" id="goal-packages" style="grid-column: span 1;">
+            <span class="goal-card-icon">🎟️</span>
+            <div class="goal-card-title">Discount Studio Packages</div>
+            <div class="goal-card-desc">Multi-session bulk hours split across 60 days. Best value for regular studio work.</div>
+            <div class="goal-card-price">2,800 SEK / 8 hrs</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== STEP 2: PICK A PACKAGE ===== -->
       <div class="wizard-step hidden" id="wizard-step-2">
-        <div class="wizard-header-nav">
-          <button class="back-to-goals-btn" id="backToGoalsBtn">&larr; Back to Main Options</button>
-          <span class="wizard-step-num">Step 2 of 2</span>
+
+        <div class="wizard-step-header">
+          <button class="back-btn" id="backToGoalsBtn">&#8592; Back</button>
+          <div></div>
         </div>
 
-        <div class="wizard-header text-center" style="margin-top: 10px;">
-          <h2 class="grid-title" id="step2Title">Select Your <span>Session</span></h2>
-          <p class="tour-intro" id="step2Subtitle" style="color: var(--eqx-text-muted); max-width: 580px; margin: 8px auto 0;">Choose the option that best matches your time requirement and budget.</p>
+        <div class="step2-title-block">
+          <div class="step2-selected-goal" id="step2GoalPill">
+            <span class="goal-pill-icon" id="step2GoalIcon"></span>
+            <span id="step2GoalLabel"></span>
+          </div>
+          <h2 id="step2Title">Select Your <span>Package</span></h2>
+          <p id="step2Subtitle">Choose the option that best matches your time and budget.</p>
         </div>
 
-        <!-- Service Options List -->
-        <div class="wizard-services-list" id="wizardServicesList"></div>
+        <!-- Service Package Cards Grid -->
+        <div class="service-cards-grid" id="wizardServicesList"></div>
+
       </div>
 
     </div>
@@ -307,7 +274,7 @@
 
   <!-- Booking Portal Script -->
   <script type="module">
-    import { initBookingPortal } from './components/BookingPortal.js?v=36';
+    import { initBookingPortal } from './components/BookingPortal.js?v=60';
 
     document.addEventListener('DOMContentLoaded', () => {
       initBookingPortal();
