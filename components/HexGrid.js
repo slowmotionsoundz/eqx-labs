@@ -14,7 +14,7 @@ export function initHexGrid(container, onLearnMore) {
           
           <!-- Hex 1: Digital Engineering -->
           <div class="hex-card" data-index="0">
-            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/eqoffice.jpeg'); background-position: center;"></div>
+            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_021.jpg'); background-position: center top;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
               <h3 class="hex-title">Digital Engineering</h3>
@@ -24,7 +24,7 @@ export function initHexGrid(container, onLearnMore) {
 
           <!-- Hex 2: Music -->
           <div class="hex-card" data-index="1">
-            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/eqcontrol.jpeg'); background-position: center;"></div>
+            <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_030.jpg'); background-position: center top;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
               <h3 class="hex-title">Music</h3>

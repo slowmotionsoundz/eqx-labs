@@ -69,7 +69,7 @@ export function initRoomSlider(container) {
         'Fast, secure online stores & booking systems',
         'Automations that save you hours of manual work'
       ],
-      photo: 'assets/EQX Website Photos/eqoffice.jpeg',
+      photo: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_021.jpg',
       ctaText: 'Start a Project',
       ctaLink: 'booking.html'
     },
@@ -82,7 +82,7 @@ export function initRoomSlider(container) {
         'Industry-standard mixing & analog mastering',
         'Custom beat production & sound design'
       ],
-      photo: 'assets/EQX Website Photos/eqcontrol.jpeg',
+      photo: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_030.jpg',
       ctaText: 'Explore Studio',
       ctaLink: 'studio.html'
     },
