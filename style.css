@@ -1033,13 +1033,11 @@ button {
   color: var(--eqx-dark-bg);
 }
 
-/* ===== APIDURA MISSION PANEL (Screenshot C Style) ===== */
 .mission-section {
-  padding: 100px 40px;
-  background: var(--eqx-dark-panel);
+  padding: 120px 40px 160px;
+  background: transparent;
   text-align: center;
-  border-top: 1px solid var(--eqx-border-dark);
-  border-bottom: 1px solid var(--eqx-border-dark);
+  border: none;
 }
 
 .mission-container {
@@ -1233,11 +1231,10 @@ button {
   }
 }
 
-/* ===== LOCATIONS SECTION ===== */
 .locations-section {
   padding: 120px 40px;
-  background: var(--eqx-dark-bg);
-  border-top: 1px solid var(--eqx-border-dark);
+  background: transparent;
+  border: none;
 }
 
 .locations-grid {
