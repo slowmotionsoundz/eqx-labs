@@ -58,51 +58,85 @@ export function initRoomSlider(container) {
     </div>
   `;
 
-  // Capabilities Data (Refined Copy and High-Res Images)
+  // Capabilities Data (Plain English, Practical & Human-Friendly Copy)
   const roomsData = [
     {
       num: '01',
       title: 'Digital Engineering',
-      desc: 'We design and build bespoke software systems, mobile apps, custom plugins, and the backend cloud infrastructure that powers them. Our automation workflows streamline operations and eliminate manual tasks, giving you and your team your time back.',
+      desc: 'We build custom websites, mobile apps, and online tools that actually work for your business. Whether you need a simple booking system, an online store, or software to run your daily operations, we handle the tech from start to finish.',
       bullets: [
-        'Bespoke software systems & mobile app builds',
-        'Secure cloud infrastructure & database engineering',
-        'Process automation & customized plugin tools'
+        'Custom websites & mobile apps built to last',
+        'Fast, secure online stores & booking systems',
+        'Automations that save you hours of manual work'
       ],
-      photo: 'assets/EQX Website Photos/eqoffice.jpeg'
+      photo: 'assets/EQX Website Photos/eqoffice.jpeg',
+      ctaText: 'Start a Project',
+      ctaLink: 'booking.html'
     },
     {
       num: '02',
-      title: 'Music Engineering',
-      desc: 'Produced by The Block Beattaz and headed by Leighton Hicks. We handle professional music production, mixing, and mastering, working directly with artists to calibrate their sound and achieve pristine quality.',
+      title: 'Music & Recording',
+      desc: 'Backed by 25 years of industry experience with The Block Beattaz and Leighton Hicks. We offer full recording sessions, mixing, mastering, and custom production in our Landskrona studio. From raw vocals to radio-ready tracks, we help artists polish and release their sound.',
       bullets: [
-        'Professional mixing & analog mastering console',
-        'Multi-channel arrangements & spatial audio design',
-        'Vocal tracking & acoustic room calibration'
+        'Professional vocal recording & live room sessions',
+        'Industry-standard mixing & analog mastering',
+        'Custom beat production & sound design'
       ],
-      photo: 'assets/EQX Website Photos/eqcontrol.jpeg'
+      photo: 'assets/EQX Website Photos/eqcontrol.jpeg',
+      ctaText: 'Explore Studio',
+      ctaLink: 'studio.html'
     },
     {
       num: '03',
       title: 'Content Production',
-      desc: 'Creating high-end digital assets, custom design layouts, and cinematic post-production elements. We craft clean, premium visual identities that resonate with Scandinavian minimalism and modern aesthetics.',
+      desc: 'Great ideas need great visuals. We shoot and edit promotional videos, artist interviews, studio sessions, and social media content right here in Sweden. We deliver clean, sharp visuals that make your brand or music stand out.',
       bullets: [
-        'Custom visual design & brand asset layouts',
-        'Cinematic video editing & post-production templates',
-        'Minimalist Scandinavian-inspired UI/UX interfaces'
+        'Promotional videos, music videos & live streaming',
+        'Studio photography & product shoots',
+        'Social media content & graphic design'
       ],
-      photo: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_049.jpg'
+      photo: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_049.jpg',
+      ctaText: 'Book a Shoot',
+      ctaLink: 'booking.html'
     },
     {
       num: '04',
       title: 'Project Logistics',
-      desc: 'We keep your digital projects organized and on track. From setting up secure servers and databases to managing deadlines and team execution, we make sure your platforms run reliably and launch without headaches.',
+      desc: 'We help you get big projects across the finish line without the stress. We coordinate everything from software launches and sports marketing campaigns to Scandinavian travel arrangements for visiting artists, athletes, and teams.',
       bullets: [
-        'Organized project management & clear timelines',
-        'Secure server setup & database management',
-        'Automated system updates & reliable launches'
+        'Clear timelines and step-by-step project delivery',
+        'Sports marketing & tournament management',
+        'Travel planning for visiting creatives, teams & clients'
       ],
-      photo: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_004.jpg'
+      photo: 'assets/EQX Website Photos/20220808_192335.jpg',
+      ctaText: 'Get In Touch',
+      ctaLink: '#mission'
+    },
+    {
+      num: '05',
+      title: 'About EQX',
+      desc: 'EQX connects two creative hubs: Landskrona, Sweden and Huntsville, Alabama. We bring together veteran music producers, software developers, and media creators under one roof to build real things for real people.',
+      bullets: [
+        '25+ years in creative & entertainment industries',
+        'Physical studios & recording facilities in Sweden',
+        'Global reach connecting Scandinavia and North America'
+      ],
+      photo: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_004.jpg',
+      ctaText: 'Read Our Story',
+      ctaLink: '#mission'
+    },
+    {
+      num: '06',
+      title: 'Work With Us',
+      desc: 'Got a project in mind? Whether you want to book studio time in Landskrona, build a new website or app, or collaborate on creative content, we would love to talk through your ideas.',
+      bullets: [
+        'Direct contact with our production & engineering team',
+        'Fast response for studio bookings & quotes',
+        'Transparent pricing with no hidden jargon'
+      ],
+      photo: 'assets/EQX Website Photos/AlHolbrook-EqLabs-Landskrona-2025_020.jpg',
+      ctaText: 'Book a Session',
+      ctaLink: 'booking.html'
     }
   ];
 
@@ -148,7 +182,10 @@ export function initRoomSlider(container) {
     }
 
     // Update CTA button based on capability
-    if (index === 1) { // Music
+    if (data.ctaText && data.ctaLink) {
+      ctaBtn.textContent = data.ctaText;
+      ctaBtn.setAttribute('href', data.ctaLink);
+    } else if (index === 1) { // Music
       ctaBtn.textContent = 'Explore Studio';
       ctaBtn.setAttribute('href', 'studio.html');
     } else {

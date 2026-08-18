@@ -58,7 +58,7 @@ export function initHexGrid(container, onLearnMore) {
           </div>
 
           <!-- Hex 5: Team -->
-          <div class="hex-card" id="trigger-mission">
+          <div class="hex-card" data-index="4" id="trigger-mission">
             <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_004.jpg'); background-position: center top;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
@@ -73,7 +73,7 @@ export function initHexGrid(container, onLearnMore) {
         <div class="hex-row offset-row reveal reveal-delay-2">
           
           <!-- Hex 6: Contact -->
-          <div class="hex-card" id="trigger-contact">
+          <div class="hex-card" data-index="5" id="trigger-contact">
             <div class="hex-card-bg" style="background-image: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_020.jpg'); background-position: center top;"></div>
             <div class="hex-card-overlay"></div>
             <div class="hex-card-content">
@@ -88,7 +88,7 @@ export function initHexGrid(container, onLearnMore) {
     </section>
   `;
 
-  // Bind clicks for capabilities popover
+  // Bind clicks for capabilities popover across all 6 cards
   container.querySelectorAll('.hex-card[data-index]').forEach(card => {
     card.addEventListener('click', () => {
       const index = parseInt(card.getAttribute('data-index'), 10);
@@ -97,22 +97,6 @@ export function initHexGrid(container, onLearnMore) {
       }
     });
   });
-
-  // Scroll triggers for Company & Contact
-  const missionTrigger = container.querySelector('#trigger-mission');
-  if (missionTrigger) {
-    missionTrigger.addEventListener('click', () => {
-      document.getElementById('mission')?.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
-
-  const contactTrigger = container.querySelector('#trigger-contact');
-  if (contactTrigger) {
-    contactTrigger.addEventListener('click', () => {
-      // Smooth scroll to footer contact links
-      document.querySelector('.eqx-footer')?.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
 
   // Reveal observer
   const observer = new IntersectionObserver((entries) => {
