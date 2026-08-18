@@ -63,7 +63,7 @@ export function initRoomSlider(container) {
     {
       num: '01',
       title: 'Digital Engineering',
-      desc: 'We build custom websites, mobile apps, and online tools that actually work for your business. Whether you need a simple booking system, an online store, or software to run your daily operations, we handle the tech from start to finish.',
+      desc: 'We build custom websites, mobile apps, and online tools that actually work for your business. Whether you need a simple booking system, an online store, or custom business software, we handle the tech from start to finish.',
       bullets: [
         'Custom websites & mobile apps built to last',
         'Fast, secure online stores & booking systems',
@@ -76,7 +76,7 @@ export function initRoomSlider(container) {
     {
       num: '02',
       title: 'Music & Recording',
-      desc: 'Backed by 25 years of industry experience with The Block Beattaz and Leighton Hicks. We offer full recording sessions, mixing, mastering, and custom production in our Landskrona studio. From raw vocals to radio-ready tracks, we help artists polish and release their sound.',
+      desc: 'Produced by The Block Beattaz and Mali Boi. We offer full recording sessions, mixing, mastering, and custom production in our Landskrona studio. From raw vocals to radio-ready tracks, we help artists polish and release their sound.',
       bullets: [
         'Professional vocal recording & live room sessions',
         'Industry-standard mixing & analog mastering',
@@ -115,7 +115,7 @@ export function initRoomSlider(container) {
     {
       num: '05',
       title: 'About EQX',
-      desc: 'EQX connects two creative hubs: Landskrona, Sweden and Huntsville, Alabama. We bring together veteran music producers, software developers, and media creators under one roof to build real things for real people.',
+      desc: 'EQX connects two creative hubs in Landskrona, Sweden and Huntsville, Alabama. We bring together veteran music producers, software developers, and media creators under one roof to build real things for real people.',
       bullets: [
         '25+ years in creative & entertainment industries',
         'Physical studios & recording facilities in Sweden',

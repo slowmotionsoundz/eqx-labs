@@ -17,7 +17,7 @@ export function initLocations(container) {
           <div class="locations-badge">Multinational Hubs</div>
           <h2 class="locations-title"><span>EQX</span></h2>
           <p class="locations-desc">
-            Bringing together the physical and digital hubs of EQ Labs Europe and EQ Labs HSV under the unified banner of EQX. Two hemispheres, one vision.
+            Bringing together our creative and digital hubs in Sweden and the United States under one unified banner. Two locations, one team.
           </p>
 
           <div class="hubs-list">
@@ -25,8 +25,8 @@ export function initLocations(container) {
             <div class="hub-item europe">
               <div class="hub-icon-dot"></div>
               <div>
-                <h3 class="hub-name">EQX Europe — Sweden</h3>
-                <p class="hub-desc">Based in Landskrona. Directing creative direction, digital content production, design, and local European properties.</p>
+                <h3 class="hub-name">EQX Europe, Sweden</h3>
+                <p class="hub-desc">Based in Landskrona. Leading music recording, video content, design, and local European operations.</p>
               </div>
             </div>
 
@@ -34,8 +34,8 @@ export function initLocations(container) {
             <div class="hub-item hsv">
               <div class="hub-icon-dot"></div>
               <div>
-                <h3 class="hub-name">EQX Labs — USA</h3>
-                <p class="hub-desc">Based in Huntsville, Alabama. Focusing on digital logistics infrastructure, automated platforms, and database engineering.</p>
+                <h3 class="hub-name">EQX Labs, USA</h3>
+                <p class="hub-desc">Based in Huntsville, Alabama. Directing web development, app engineering, and digital systems.</p>
               </div>
             </div>
           </div>
