@@ -18,6 +18,19 @@ export const fullCatalog = [
     tags: ['Spatial Audio', 'The Block Beattaz', '2026']
   },
   {
+    id: 'gamla-kyrkogatan',
+    spotifyId: '4smw8ucOoUTE48pHx6GNss',
+    title: 'Gamla Kyrkogatan',
+    artist: 'Stalley & The Block Beattaz',
+    year: '2025',
+    category: 'album',
+    badge: 'Landskrona Album',
+    cover: 'assets/stalley_gamla_kyrkogatan.jpg',
+    spotifyUrl: 'https://open.spotify.com/album/4smw8ucOoUTE48pHx6GNss',
+    desc: 'Recorded and produced at EQ Labs Europe on Gamla Kyrkogatan in Landskrona, Sweden. A 12-track collaborative album blending soulful hip hop with Scandinavian studio engineering.',
+    tags: ['Stalley', 'Landskrona', 'The Block Beattaz', '12 Tracks', '2025']
+  },
+  {
     id: 'trap-gospel',
     spotifyId: '62waSLmGueKOnfHSxUlEcs',
     title: 'Trap Gospel',
