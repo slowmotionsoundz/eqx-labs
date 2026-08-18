@@ -8,6 +8,7 @@ export function initHero(container) {
   container.innerHTML = `
     <section class="eqx-hero">
       <div class="hero-backdrop"></div>
+      <div class="hero-fog-overlay"></div>
       
       <div class="eqx-logo-3d reveal">EQX</div>
       
