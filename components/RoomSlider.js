@@ -16,12 +16,13 @@ export function initRoomSlider(container) {
         </button>
 
         <!-- Dynamic Slide Targets (Full-Bleed Facility Backgrounds) -->
-        <div class="clay-card-visual" id="room-visual-panel" style="position: relative; background-size: cover; background-position: center; overflow: hidden; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-          <div class="clay-card-image-overlay" style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.6)); z-index: 1;"></div>
+        <div class="clay-card-visual" id="room-visual-panel">
+          <img id="room-photo-img" class="clay-card-img" src="" alt="EQX Service" />
+          <div class="clay-card-image-overlay"></div>
           
           <!-- Spotify Embed Container (Music Engineering Only) -->
-          <div class="spotify-embed-wrapper" id="spotify-embed-el" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; box-sizing: border-box; z-index: 2;">
-            <iframe style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/708dfWUVcaIxyOS0rJMSdM?utm_source=generator&theme=0" width="90%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <div class="spotify-embed-wrapper" id="spotify-embed-el" style="display: none; position: relative; width: 100%; height: 100%; align-items: center; justify-content: center; box-sizing: border-box; z-index: 2; padding: 20px; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(8px);">
+            <iframe style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/4smw8ucOoUTE48pHx6GNss?utm_source=generator&theme=0" width="90%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
         </div>
 
@@ -167,9 +168,11 @@ export function initRoomSlider(container) {
     // Render bullets
     elBullets.innerHTML = data.bullets.map(b => `<li class="card-detail-item"><span></span> ${b}</li>`).join('');
 
-    // Set full-bleed background photo
-    if (visualPanel && data.photo) {
-      visualPanel.style.backgroundImage = `url('${data.photo}')`;
+    // Set full-bleed background photo on image element
+    const imgEl = container.querySelector('#room-photo-img');
+    if (imgEl && data.photo) {
+      imgEl.src = data.photo;
+      imgEl.alt = data.title;
     }
 
     // Toggle between Spotify Embed and Room Image
