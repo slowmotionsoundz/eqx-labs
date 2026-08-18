@@ -604,6 +604,12 @@
       // Initial render
       renderCatalog();
     });
-  </script>t>
+  </script>
+  <script type="module">
+    import { initNavigation } from './js/navigation.js?v=1';
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavigation();
+    });
+  </script>
 </body>
 </html>

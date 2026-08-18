@@ -275,8 +275,10 @@
   <!-- Booking Portal Script -->
   <script type="module">
     import { initBookingPortal } from './components/BookingPortal.js?v=60';
+    import { initNavigation } from './js/navigation.js?v=1';
 
     document.addEventListener('DOMContentLoaded', () => {
+      initNavigation();
       initBookingPortal();
     });
   </script>
