@@ -75,11 +75,37 @@ export const fullCatalog = [
     title: 'EQX Vault Archives: Session 02',
     artist: 'The Block Beattaz',
     year: '2024',
-    category: 'ep',
+    category: 'single',
     badge: 'Catalog Archive',
     cover: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_020.jpg',
     spotifyUrl: '#',
     desc: 'Experimental electronic arrangements and rhythm design from the Landskrona tracking suite.',
     tags: ['Archive', 'Sound Design', 'The Block Beattaz']
+  },
+  {
+    id: 'stalley-honest-cowboy',
+    spotifyId: '',
+    title: 'Honest Cowboy',
+    artist: 'Stalley (Prod. by The Block Beattaz)',
+    year: '2013',
+    category: 'album',
+    badge: 'MMG / Atlantic',
+    cover: 'assets/stalley_honest_cowboy.jpg',
+    spotifyUrl: 'https://music.apple.com/us/album/honest-cowboy/710183188',
+    desc: 'Critically acclaimed collaborative project featuring the hit single "Swangin" featuring Scarface, produced by The Block Beattaz.',
+    tags: ['Stalley', 'The Block Beattaz', 'Scarface', 'MMG']
+  },
+  {
+    id: 'stalley-savage-journey',
+    spotifyId: '',
+    title: 'Savage Journey to the American Dream',
+    artist: 'Stalley (Prod. by The Block Beattaz)',
+    year: '2012',
+    category: 'album',
+    badge: 'MMG Classic',
+    cover: 'assets/stalley_savage_journey.jpg',
+    spotifyUrl: 'https://www.discogs.com/release/3673322-Stalley-Savage-Journey-To-The-American-Dream',
+    desc: 'Landmark collaborative project defining the Intelligent Trunk Music sound, produced extensively with The Block Beattaz.',
+    tags: ['Stalley', 'The Block Beattaz', 'Classic', 'Intelligent Trunk Music']
   }
 ];
