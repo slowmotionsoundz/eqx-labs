@@ -53,12 +53,16 @@ export function initNavigation() {
             <span class="mobile-nav-num">03</span>
             <span class="mobile-nav-text">Studio & Sound</span>
           </a>
-          <a href="booking.html" class="mobile-nav-link">
+          <a href="events.html" class="mobile-nav-link">
             <span class="mobile-nav-num">04</span>
+            <span class="mobile-nav-text">Shows & Events</span>
+          </a>
+          <a href="booking.html" class="mobile-nav-link">
+            <span class="mobile-nav-num">05</span>
             <span class="mobile-nav-text">Book a Session</span>
           </a>
           <a href="index.html#mission" class="mobile-nav-link">
-            <span class="mobile-nav-num">05</span>
+            <span class="mobile-nav-num">06</span>
             <span class="mobile-nav-text">The EQX Mission</span>
           </a>
         </nav>

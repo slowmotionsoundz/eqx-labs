@@ -9,10 +9,13 @@ import { initRoomSlider } from './components/RoomSlider.js?v=4';
 import { initLocations } from './components/Locations.js?v=4';
 import { initMission } from './components/Mission.js?v=4';
 import { initNavigation } from './js/navigation.js?v=1';
+import { initEventPopup } from './components/EventPopup.js?v=1';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 0. Initialize Universal Navigation & Mobile Menu
   initNavigation();
+  // 0.1 Initialize Event Popup (active until Sept 22, 2026)
+  initEventPopup();
   // 1. Get container elements
   const heroContainer = document.getElementById('eqx-hero-root');
   const hexGridContainer = document.getElementById('eqx-hex-root');
