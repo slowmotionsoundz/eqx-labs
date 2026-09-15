@@ -1,6 +1,6 @@
 /**
  * EQX StudioTour Component
- * Renders interactive studio facility tour with vibrant Landskrona photography and touch-friendly controls.
+ * Renders centered isometric 3D architectural renders and unified, fixed-alignment info panel.
  */
 export function initStudioTour(canvasContainer, tourContainer) {
   if (tourContainer) {
@@ -16,24 +16,20 @@ export function initStudioTour(canvasContainer, tourContainer) {
           'Floating acoustic isolation & diffusor walls',
           'Stereo mastering & vocal tracking desk'
         ],
-        photo: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_021.jpg',
-        hotspot: { top: '50%', left: '35%', label: 'Audio Console & Displays' },
-        panelPosition: 'pos-bottom-right'
+        photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg'
       },
       {
         id: 'live-stage',
         icon: '🎙️',
         badge: 'Studio B • Live Room',
         title: 'EQ Live Stage',
-        desc: 'Dedicated live performance and acoustic tracking stage built with custom acoustic isolation, studio microphones, and dynamic lighting to capture live sessions and band rehearsals.',
+        desc: 'Dedicated live performance and acoustic tracking stage built with custom acoustic staging, studio microphones, and dynamic lighting to capture live sessions and band rehearsals.',
         bullets: [
           'Live acoustic stage & instrument tracking',
           'Acoustically tuned rehearsal environment',
           'Multi-channel low-latency headphone mixes'
         ],
-        photo: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_030.jpg',
-        hotspot: { top: '48%', left: '60%', label: 'Live Stage & Microphones' },
-        panelPosition: 'pos-bottom-left'
+        photo: 'assets/EQX%20Website%20Photos/eqliveroom.jpeg'
       },
       {
         id: 'artist-lounge',
@@ -46,24 +42,20 @@ export function initStudioTour(canvasContainer, tourContainer) {
           'Direct access to live & control rooms',
           'Client & artist breakout hospitality'
         ],
-        photo: 'assets/EQX%20Website%20Photos/20220808_192335.jpg',
-        hotspot: { top: '65%', left: '48%', label: 'Central Artist Lounge' },
-        panelPosition: 'pos-top-right'
+        photo: 'assets/EQX%20Website%20Photos/eqlounge.jpeg'
       },
       {
         id: 'facility-hub',
         icon: '🏢',
-        badge: 'Europe Hub • Landskrona',
-        title: 'Landskrona Facility',
-        desc: 'Our modern Scandinavian sound & digital engineering hub on Gamla Kyrkogatan. Combining acoustic control rooms, live tracking stages, and upper-floor digital engineering offices.',
+        badge: 'Building Overview',
+        title: 'Full Facility Architecture',
+        desc: 'Our modern Scandinavian sound & engineering hub on Gamla Kyrkogatan in Landskrona. Combining acoustic control rooms, live tracking stages, and upper-floor digital engineering offices.',
         bullets: [
-          'Integrated multi-room creative audio facility',
-          'Full-service music, video, and software operations',
-          'Located on Gamla Kyrkogatan in Landskrona, Sweden'
+          'Unified multi-disciplinary creative facility',
+          'Acoustically isolated control rooms & stage areas',
+          'Full-service music, video, and software operations'
         ],
-        photo: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_004.jpg',
-        hotspot: { top: '50%', left: '50%', label: 'Facility Interior' },
-        panelPosition: 'pos-bottom-left'
+        photo: 'assets/EQX%20Website%20Photos/eqx.jpeg'
       }
     ];
 
@@ -89,19 +81,14 @@ export function initStudioTour(canvasContainer, tourContainer) {
             `).join('')}
           </div>
 
-          <!-- Interactive Facility Viewer -->
+          <!-- Interactive Facility Viewer Container -->
           <div class="stage-viewer-container">
-            <!-- Stacked Render Layers -->
+            
+            <!-- 3D Isometric Viewport (Centered & Razor-Sharp) -->
             <div class="stage-render-stack" id="stage-swipe-area">
               ${tourData.map((item, index) => `
-                <div class="stage-layer ${index === 0 ? 'active' : ''}" id="layer-${item.id}" style="background-image: url('${item.photo}');">
-                  <div class="stage-hotspot" style="top: ${item.hotspot.top}; left: ${item.hotspot.left};">
-                    <div class="hotspot-pulse"></div>
-                    <div class="hotspot-tooltip">${item.hotspot.label}</div>
-                  </div>
-                </div>
+                <div class="stage-layer ${index === 0 ? 'active' : ''}" id="layer-${item.id}" style="background-image: url('${item.photo}');"></div>
               `).join('')}
-              <div class="stage-frame-overlay"></div>
 
               <!-- Mobile Carousel Controls -->
               <div class="stage-mobile-controls">
@@ -121,8 +108,8 @@ export function initStudioTour(canvasContainer, tourContainer) {
               </div>
             </div>
 
-            <!-- High-Contrast Facility Info Panel -->
-            <div class="stage-info-panel pos-bottom-right" id="stage-info-card">
+            <!-- Unified Fixed-Alignment Info Panel (Zero Shifting) -->
+            <div class="stage-info-panel" id="stage-info-card">
               <div class="stage-badge" id="info-badge">${tourData[0].badge}</div>
               <h3 class="stage-title" id="info-title">${tourData[0].title}</h3>
               <p class="stage-desc" id="info-desc">${tourData[0].desc}</p>
@@ -130,6 +117,7 @@ export function initStudioTour(canvasContainer, tourContainer) {
                 ${tourData[0].bullets.map(b => `<li><span class="bullet-dot"></span> ${b}</li>`).join('')}
               </ul>
             </div>
+
           </div>
         </div>
       </section>
@@ -138,7 +126,6 @@ export function initStudioTour(canvasContainer, tourContainer) {
     // Interaction bindings
     const tabBtns = tourContainer.querySelectorAll('.stage-tab-btn');
     const layers = tourContainer.querySelectorAll('.stage-layer');
-    const infoPanel = tourContainer.querySelector('#stage-info-card');
     const infoBadge = tourContainer.querySelector('#info-badge');
     const infoTitle = tourContainer.querySelector('#info-title');
     const infoDesc = tourContainer.querySelector('#info-desc');
@@ -165,10 +152,7 @@ export function initStudioTour(canvasContainer, tourContainer) {
         layer.classList.toggle('active', i === index);
       });
 
-      // Update floating position on desktop
-      infoPanel.className = `stage-info-panel ${data.panelPosition}`;
-
-      // Smoothly update info panel text
+      // Smoothly update info panel text without changing positions
       infoBadge.textContent = data.badge;
       infoTitle.textContent = data.title;
       infoDesc.textContent = data.desc;

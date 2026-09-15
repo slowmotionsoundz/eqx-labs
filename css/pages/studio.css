@@ -250,7 +250,7 @@
   font-size: 0.78rem;
 }
 
-/* ===== VIRTUAL STUDIO TOUR & FACILITY VIEWER ===== */
+/* ===== 3D ISOMETRIC FACILITY STAGE VIEWER ===== */
 .tour-section {
   padding: 60px 20px 100px;
   background: var(--eqx-dark-bg);
@@ -298,30 +298,38 @@
 /* Single Stacked Facility Container */
 .stage-viewer-container {
   position: relative;
-  max-width: 1100px;
+  max-width: 1080px;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(195, 181, 159, 0.25);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
-  background: #111413;
+  background: #0d100f;
+  display: flex;
+  flex-direction: column;
 }
 
+/* 3D Isometric Viewport */
 .stage-render-stack {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  min-height: 460px;
+  height: 420px;
+  background: #090b0a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Stacked Layers with Smooth Opacity Crossfade */
+/* Stacked 3D Isometric Layers (Centered & Contained) */
 .stage-layer {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
   opacity: 0;
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.45s ease;
   pointer-events: none;
 }
 
@@ -330,63 +338,9 @@
   pointer-events: auto;
 }
 
-.stage-frame-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(17,20,19,0.7) 100%);
-  pointer-events: none;
-}
-
-/* Hotspots */
-.stage-hotspot {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  z-index: 10;
-}
-
-.hotspot-pulse {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--eqx-accent);
-  box-shadow: 0 0 0 0 rgba(195, 181, 159, 0.7);
-  animation: pulseDot 2s infinite;
-}
-
-@keyframes pulseDot {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(195, 181, 159, 0.7); }
-  70% { transform: scale(1.1); box-shadow: 0 0 0 16px rgba(195, 181, 159, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(195, 181, 159, 0); }
-}
-
-.hotspot-tooltip {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  font-family: var(--font-head);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  background: rgba(18, 22, 20, 0.95);
-  color: var(--eqx-text-light);
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--eqx-accent);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
-}
-
-.stage-hotspot:hover .hotspot-tooltip {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-4px);
-}
-
-/* Mobile Carousel Controls inside viewer */
+/* Mobile Carousel Controls */
 .stage-mobile-controls {
-  display: none; /* Desktop default */
+  display: none;
   position: absolute;
   bottom: 16px;
   left: 0;
@@ -436,39 +390,15 @@
   border-radius: 10px;
 }
 
-/* High-Contrast Facility Info Panel */
+/* Unified Solid Info Panel (Fixed alignment, zero jumping/shifting) */
 .stage-info-panel {
-  position: absolute;
-  max-width: 400px;
-  background: rgba(18, 22, 20, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(195, 181, 159, 0.35);
-  border-radius: 14px;
-  padding: 24px;
-  z-index: 12;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.stage-info-panel.pos-bottom-left {
-  bottom: 28px;
-  left: 28px;
-}
-
-.stage-info-panel.pos-bottom-right {
-  bottom: 28px;
-  right: 28px;
-}
-
-.stage-info-panel.pos-top-right {
-  top: 28px;
-  right: 28px;
-}
-
-.stage-info-panel.pos-top-left {
-  top: 28px;
-  left: 28px;
+  position: relative;
+  width: 100%;
+  background: #181c1b;
+  border-top: 1px solid rgba(195, 181, 159, 0.2);
+  padding: 32px 36px 36px;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 .stage-badge {
@@ -482,23 +412,27 @@
   text-transform: uppercase;
   padding: 4px 12px;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: 500;
+  text-align: left;
 }
 
 .stage-title {
   font-family: var(--font-head);
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   font-weight: 400;
   color: var(--eqx-text-light);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  text-align: left;
 }
 
 .stage-desc {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--eqx-text-muted);
-  line-height: 1.6;
-  margin-bottom: 14px;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  text-align: left;
 }
 
 .stage-bullets {
@@ -507,15 +441,17 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
+  text-align: left;
 }
 
 .stage-bullets li {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--eqx-text-light);
   display: flex;
   align-items: center;
   gap: 10px;
+  text-align: left;
 }
 
 .bullet-dot {
@@ -576,15 +512,18 @@
 
   .stage-viewer-container {
     border-radius: 16px;
+    width: 100%;
   }
 
   .stage-render-stack {
-    aspect-ratio: 16 / 10;
-    min-height: 260px;
+    height: 250px;
+    min-height: 250px;
+    background: #090b0a;
   }
 
-  .stage-frame-overlay {
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(17,20,19,0.4) 100%);
+  .stage-layer {
+    background-size: contain;
+    background-position: center center;
   }
 
   .stage-mobile-controls {
@@ -592,26 +531,33 @@
   }
 
   .stage-info-panel {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    max-width: 100%;
-    border-radius: 0;
-    border-top: 1px solid rgba(195, 181, 159, 0.25);
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    background: #181c1b;
-    padding: 24px 20px;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    padding: 22px 20px 26px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
   }
 
   .stage-title {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
+    text-align: left;
   }
 
   .stage-desc {
-    font-size: 0.86rem;
+    font-size: 0.88rem;
+    text-align: left;
+  }
+
+  .stage-bullets {
+    text-align: left;
+  }
+
+  .stage-bullets li {
+    font-size: 0.82rem;
+    text-align: left;
   }
 }
