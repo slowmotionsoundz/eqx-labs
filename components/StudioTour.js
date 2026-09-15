@@ -1,220 +1,98 @@
 /**
  * EQX StudioTour Component
- * Renders scroll frame sequence and interactive virtual studio tour with spotlight highlights.
+ * Renders interactive studio facility tour with vibrant Landskrona photography and touch-friendly controls.
  */
 export function initStudioTour(canvasContainer, tourContainer) {
-  // 1. Canvas Scroll Sequence Player
-  if (canvasContainer) {
-    canvasContainer.innerHTML = `
-      <section class="hero-track" id="studioTrack">
-        <div class="hero-sticky">
-          <canvas id="studioCanvas"></canvas>
-
-          <div class="hero-copy-overlay">
-            <div class="hero-phase" data-from="0.00" data-to="0.30">
-              <span class="phase-kicker">EQX Studio</span>
-              <h1>Every space starts as an idea.</h1>
-            </div>
-            <div class="hero-phase dark-text" data-from="0.30" data-to="0.68">
-              <span class="phase-kicker">Acoustics & Architecture</span>
-              <h2>Designed for sound, down to the last wall.</h2>
-            </div>
-            <div class="hero-phase dark-text" data-from="0.68" data-to="1.01">
-              <span class="phase-kicker">The Landskrona Hub</span>
-              <h2>Welcome to the Studio.</h2>
-            </div>
-          </div>
-
-          <div class="hero-scroll-hint" id="studioScrollHint">
-            <span>Scroll Tour</span>
-            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 13l-7 7-7-7m14-6l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-      </section>
-    `;
-
-    const FRAME_COUNT = 96;
-    const FRAME_PATH = (i) => `assets/hero-sequence-hq/frames/f${String(i + 1).padStart(3, '0')}.webp`;
-
-    const canvas = canvasContainer.querySelector('#studioCanvas');
-    if (canvas) {
-      const ctx = canvas.getContext('2d', { alpha: false });
-      const track = canvasContainer.querySelector('#studioTrack');
-      const hint = canvasContainer.querySelector('#studioScrollHint');
-      const phases = Array.from(canvasContainer.querySelectorAll('.hero-phase'));
-
-      const images = new Array(FRAME_COUNT);
-      const loaded = new Array(FRAME_COUNT).fill(false);
-      let currentFrame = 0;
-
-      function resize() {
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = canvas.clientWidth * dpr;
-        canvas.height = canvas.clientHeight * dpr;
-        ctx.imageSmoothingEnabled = true;
-        ctx.imageSmoothingQuality = 'high';
-        draw(currentFrame);
-      }
-
-      function draw(i) {
-        let img = images[i];
-        if (!img || !loaded[i]) {
-          for (let d = 1; d < FRAME_COUNT; d++) {
-            if (loaded[i - d]) { img = images[i - d]; break; }
-            if (loaded[i + d]) { img = images[i + d]; break; }
-          }
-          if (!img) return;
-        }
-        const cw = canvas.width, ch = canvas.height;
-        const iw = img.naturalWidth, ih = img.naturalHeight;
-        const scale = Math.max(cw / iw, ch / ih);
-        const w = iw * scale, h = ih * scale;
-        ctx.imageSmoothingEnabled = true;
-        ctx.imageSmoothingQuality = 'high';
-        ctx.clearRect(0, 0, cw, ch);
-        ctx.drawImage(img, (cw - w) / 2, (ch - h) / 2, w, h);
-      }
-
-      function loadFrame(i, cb) {
-        if (images[i]) return;
-        const img = new Image();
-        img.decoding = 'async';
-        img.onload = () => { loaded[i] = true; if (cb) cb(i); };
-        img.src = FRAME_PATH(i);
-        images[i] = img;
-      }
-
-      loadFrame(0, () => resize());
-      [24, 48, 72, 95].forEach((i) => loadFrame(i));
-      const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 120));
-      idle(() => {
-        for (let i = 0; i < FRAME_COUNT; i++) {
-          loadFrame(i, (j) => {
-            if (j === currentFrame) draw(j);
-          });
-        }
-      });
-
-      function progress() {
-        const rect = track.getBoundingClientRect();
-        const total = rect.height - window.innerHeight;
-        if (total <= 0) return 1;
-        return Math.min(1, Math.max(0, -rect.top / total));
-      }
-
-      let ticking = false;
-      function onScroll() {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(() => {
-          ticking = false;
-          const p = progress();
-          const frame = Math.min(FRAME_COUNT - 1, Math.round(p * (FRAME_COUNT - 1)));
-          if (frame !== currentFrame) {
-            currentFrame = frame;
-            draw(frame);
-          }
-          phases.forEach((el) => {
-            const from = parseFloat(el.dataset.from);
-            const to = parseFloat(el.dataset.to);
-            el.classList.toggle('on', p >= from && p < to);
-          });
-          if (hint) hint.classList.toggle('off', p > 0.04);
-        });
-      }
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', resize);
-      onScroll();
-      resize();
-    }
-  }
-
-  // 2. Option 1: Interactive "Lighting Rig" 3D Stage Viewer
   if (tourContainer) {
     const tourData = [
       {
-        id: 'overview',
-        badge: 'Building Overview',
-        title: 'Full Facility Architecture',
-        desc: 'Our modern Scandinavian sound & engineering hub in Landskrona. Combining acoustic control rooms, live tracking stages, artist lounge suites, and upper-floor digital engineering offices.',
-        bullets: [
-          'Unified multi-disciplinary creative facility',
-          'Acoustically isolated control rooms & stage areas',
-          'Full-service music, video, and software operations'
-        ],
-        photo: 'assets/EQX%20Website%20Photos/eqx.jpeg',
-        hotspot: { top: '50%', left: '50%', label: 'Facility Entrance' },
-        panelPosition: 'pos-bottom-left'
-      },
-      {
         id: 'control-room',
-        badge: 'Studio A / Control Desk',
+        icon: '🎛️',
+        badge: 'Studio A • Control Desk',
         title: 'EQ Control Room',
-        desc: 'Our primary sound engineering, mixing, and mastering workstation. Equipped with full-scale audio consoles, custom acoustic diffusors, and precision monitors for pristine audio production.',
+        desc: 'Our primary sound engineering, mixing, and mastering workstation in Landskrona. Equipped with analog consoles, acoustic diffusors, and precision monitors for pristine audio production.',
         bullets: [
-          'Analog & digital multi-channel audio console',
-          'Sound-isolated acoustic control room',
+          'Analog & digital multi-channel mixing console',
+          'Floating acoustic isolation & diffusor walls',
           'Stereo mastering & vocal tracking desk'
         ],
-        photo: 'assets/EQX%20Website%20Photos/eqcontrol.jpeg',
-        hotspot: { top: '42%', left: '22%', label: 'Audio Console & Monitors' },
+        photo: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_021.jpg',
+        hotspot: { top: '50%', left: '35%', label: 'Audio Console & Displays' },
         panelPosition: 'pos-bottom-right'
       },
       {
         id: 'live-stage',
-        badge: 'Studio B / Live Stage',
+        icon: '🎙️',
+        badge: 'Studio B • Live Room',
         title: 'EQ Live Stage',
-        desc: 'Dedicated live performance and rehearsal stage built with custom acoustic staging, microphone setups, and dynamic lighting to capture live sessions and band rehearsals.',
+        desc: 'Dedicated live performance and acoustic tracking stage built with custom acoustic isolation, studio microphones, and dynamic lighting to capture live sessions and band rehearsals.',
         bullets: [
-          'Custom drum stage & live performance tracking',
+          'Live acoustic stage & instrument tracking',
           'Acoustically tuned rehearsal environment',
-          'Multi-channel stage headphone mixes'
+          'Multi-channel low-latency headphone mixes'
         ],
-        photo: 'assets/EQX%20Website%20Photos/eqliveroom.jpeg',
-        hotspot: { top: '48%', left: '72%', label: 'Acoustic Stage & Microphones' },
+        photo: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_030.jpg',
+        hotspot: { top: '48%', left: '60%', label: 'Live Stage & Microphones' },
         panelPosition: 'pos-bottom-left'
       },
       {
         id: 'artist-lounge',
-        badge: 'Creative Lounge',
+        icon: '🛋️',
+        badge: 'Artist Breakout & Listening',
         title: 'EQ Lounge Suite',
-        desc: 'Comfortable central artist lounge designed for writing sessions, listening parties, client meetings, and relaxed creative collaboration between recording takes.',
+        desc: 'Comfortable central artist lounge designed for writing sessions, listening parties, client playback, and relaxed creative collaboration between recording takes.',
         bullets: [
-          'Spacious seating & listening room atmosphere',
-          'Direct access to live tracking & control suites',
-          'Client & artist breakout space'
+          'Comfortable seating & playback listening lounge',
+          'Direct access to live & control rooms',
+          'Client & artist breakout hospitality'
         ],
-        photo: 'assets/EQX%20Website%20Photos/eqlounge.jpeg',
-        hotspot: { top: '68%', left: '46%', label: 'Central Artist Lounge' },
+        photo: 'assets/EQX%20Website%20Photos/20220808_192335.jpg',
+        hotspot: { top: '65%', left: '48%', label: 'Central Artist Lounge' },
         panelPosition: 'pos-top-right'
+      },
+      {
+        id: 'facility-hub',
+        icon: '🏢',
+        badge: 'Europe Hub • Landskrona',
+        title: 'Landskrona Facility',
+        desc: 'Our modern Scandinavian sound & digital engineering hub on Gamla Kyrkogatan. Combining acoustic control rooms, live tracking stages, and upper-floor digital engineering offices.',
+        bullets: [
+          'Integrated multi-room creative audio facility',
+          'Full-service music, video, and software operations',
+          'Located on Gamla Kyrkogatan in Landskrona, Sweden'
+        ],
+        photo: 'assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_004.jpg',
+        hotspot: { top: '50%', left: '50%', label: 'Facility Interior' },
+        panelPosition: 'pos-bottom-left'
       }
     ];
+
+    let currentRoomIndex = 0;
 
     tourContainer.innerHTML = `
       <section class="tour-section" id="virtual-tour">
         <div class="showcase-container">
-          <div class="tour-header text-center" style="text-align: center; margin-bottom: 30px;">
-            <div class="studio-badge" style="display: inline-block; margin-bottom: 12px;">3D Interactive Stage</div>
-            <h2 class="grid-title">Virtual <span>Studio Tour</span></h2>
-            <p class="tour-intro" style="color: var(--eqx-text-muted); max-width: 600px; margin: 12px auto 0;">Select or hover over a facility below to light up that room in 3D space.</p>
+          <div class="tour-header text-center" style="text-align: center; margin-bottom: 28px;">
+            <div class="studio-badge" style="display: inline-block; margin-bottom: 12px;">Studio Facilities</div>
+            <h2 class="grid-title">Explore <span>Our Space</span></h2>
+            <p class="tour-intro" style="color: var(--eqx-text-muted); max-width: 620px; margin: 10px auto 0; font-size: 0.95rem;">
+              Step inside our Landskrona studio rooms designed for pristine acoustics, live session tracking, and creative comfort.
+            </p>
           </div>
 
-          <!-- Tabs Navigation -->
+          <!-- Room Tabs Navigation -->
           <div class="stage-tabs">
             ${tourData.map((item, index) => `
-              <button class="stage-tab-btn ${index === 0 ? 'active' : ''}" data-target="${item.id}">
-                ${item.title}
+              <button class="stage-tab-btn ${index === 0 ? 'active' : ''}" data-target="${item.id}" data-index="${index}">
+                <span class="tab-icon">${item.icon}</span> ${item.title}
               </button>
             `).join('')}
           </div>
 
-          <!-- 3D Interactive Stage Showcase Container -->
+          <!-- Interactive Facility Viewer -->
           <div class="stage-viewer-container">
             <!-- Stacked Render Layers -->
-            <div class="stage-render-stack">
+            <div class="stage-render-stack" id="stage-swipe-area">
               ${tourData.map((item, index) => `
                 <div class="stage-layer ${index === 0 ? 'active' : ''}" id="layer-${item.id}" style="background-image: url('${item.photo}');">
                   <div class="stage-hotspot" style="top: ${item.hotspot.top}; left: ${item.hotspot.left};">
@@ -224,10 +102,27 @@ export function initStudioTour(canvasContainer, tourContainer) {
                 </div>
               `).join('')}
               <div class="stage-frame-overlay"></div>
+
+              <!-- Mobile Carousel Controls -->
+              <div class="stage-mobile-controls">
+                <button class="stage-arrow-btn prev-room-btn" aria-label="Previous room">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <div class="stage-mobile-dots">
+                  ${tourData.map((_, i) => `<span class="stage-dot ${i === 0 ? 'active' : ''}"></span>`).join('')}
+                </div>
+                <button class="stage-arrow-btn next-room-btn" aria-label="Next room">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
-            <!-- Dynamic Floating Glassmorphism Info Panel -->
-            <div class="stage-info-panel pos-bottom-left" id="stage-info-card">
+            <!-- High-Contrast Facility Info Panel -->
+            <div class="stage-info-panel pos-bottom-right" id="stage-info-card">
               <div class="stage-badge" id="info-badge">${tourData[0].badge}</div>
               <h3 class="stage-title" id="info-title">${tourData[0].title}</h3>
               <p class="stage-desc" id="info-desc">${tourData[0].desc}</p>
@@ -248,20 +143,29 @@ export function initStudioTour(canvasContainer, tourContainer) {
     const infoTitle = tourContainer.querySelector('#info-title');
     const infoDesc = tourContainer.querySelector('#info-desc');
     const infoBullets = tourContainer.querySelector('#info-bullets');
+    const dots = tourContainer.querySelectorAll('.stage-dot');
+    const prevBtn = tourContainer.querySelector('.prev-room-btn');
+    const nextBtn = tourContainer.querySelector('.next-room-btn');
 
-    function activateRoom(targetId) {
-      const data = tourData.find(item => item.id === targetId);
+    function activateRoomIndex(index) {
+      if (index < 0) index = tourData.length - 1;
+      if (index >= tourData.length) index = 0;
+      currentRoomIndex = index;
+      const data = tourData[index];
       if (!data) return;
 
       // Update tabs active state
-      tabBtns.forEach(btn => btn.classList.toggle('active', btn.getAttribute('data-target') === targetId));
+      tabBtns.forEach((btn, i) => btn.classList.toggle('active', i === index));
+
+      // Update dots
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
 
       // Cross-fade stacked render layers
-      layers.forEach(layer => {
-        layer.classList.toggle('active', layer.id === `layer-${targetId}`);
+      layers.forEach((layer, i) => {
+        layer.classList.toggle('active', i === index);
       });
 
-      // Update floating position to unblock active room spotlight
+      // Update floating position on desktop
       infoPanel.className = `stage-info-panel ${data.panelPosition}`;
 
       // Smoothly update info panel text
@@ -272,8 +176,40 @@ export function initStudioTour(canvasContainer, tourContainer) {
     }
 
     tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => activateRoom(btn.getAttribute('data-target')));
-      btn.addEventListener('mouseenter', () => activateRoom(btn.getAttribute('data-target')));
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.getAttribute('data-index'), 10);
+        activateRoomIndex(idx);
+      });
     });
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => activateRoomIndex(currentRoomIndex - 1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => activateRoomIndex(currentRoomIndex + 1));
+    }
+
+    // Touch swipe gesture support for mobile
+    const swipeArea = tourContainer.querySelector('#stage-swipe-area');
+    if (swipeArea) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      swipeArea.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      swipeArea.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 45) {
+          if (diff > 0) {
+            activateRoomIndex(currentRoomIndex + 1); // Swipe left -> next
+          } else {
+            activateRoomIndex(currentRoomIndex - 1); // Swipe right -> prev
+          }
+        }
+      }, { passive: true });
+    }
   }
 }

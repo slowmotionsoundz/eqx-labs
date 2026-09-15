@@ -357,10 +357,10 @@
   </section>
 
   <!-- ===== LATEST RELEASE SHOWCASE ===== -->
-  <section class="showcase-section">
+  <section class="showcase-section" id="featured-music">
     <div class="showcase-container">
       
-      <div class="text-center" style="text-align: center; margin-bottom: 40px;">
+      <div class="text-center" style="text-align: center; margin-bottom: 30px;">
         <div class="studio-badge" style="display: inline-block; margin-bottom: 12px;">Music Engineering Showcase</div>
         <h2 class="grid-title" style="margin-bottom: 12px;">Featured <span>Releases</span></h2>
         <p style="color: var(--eqx-text-muted); max-width: 650px; margin: 0 auto; font-size: 0.95rem;">
@@ -368,29 +368,49 @@
         </p>
       </div>
 
-      <div class="showcase-grid" style="grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+      <!-- Mobile Segmented Release Switcher -->
+      <div class="featured-mobile-switcher">
+        <button class="featured-switch-btn active" data-target="0">
+          <span class="switch-dot"></span> 01 Flight Risk &amp; Tuss-AID
+        </button>
+        <button class="featured-switch-btn" data-target="1">
+          <span class="switch-dot"></span> 02 Gamla Kyrkogatan
+        </button>
+      </div>
+
+      <div class="showcase-grid">
         
         <!-- Featured Album 1: Flight Risk & Tuss-AID -->
-        <div class="player-card" style="display: flex; flex-direction: column; gap: 20px;">
-          <div class="release-label">New 2026 Release</div>
-          <h2 class="release-title" style="font-size: 1.8rem;">Flight Risk & Tuss-AID</h2>
-          <iframe id="hero-spotify-iframe-1" style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/708dfWUVcaIxyOS0rJMSdM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-            <span style="font-size: 0.8rem; color: var(--eqx-accent); text-transform: uppercase; letter-spacing: 0.1em;">Produced by The Block Beattaz</span>
-            <a href="https://open.spotify.com/album/708dfWUVcaIxyOS0rJMSdM" target="_blank" rel="noopener noreferrer" class="clay-button" style="padding: 10px 20px; font-size: 0.8rem;">
+        <div class="player-card featured-release-item active" data-index="0">
+          <div class="release-card-header">
+            <span class="release-label">New 2026 Release</span>
+            <span class="release-format-tag">Full Album</span>
+          </div>
+          <h2 class="release-title">Flight Risk &amp; Tuss-AID</h2>
+          <div class="spotify-iframe-touch-wrapper">
+            <iframe id="hero-spotify-iframe-1" class="spotify-hero-iframe" src="https://open.spotify.com/embed/album/708dfWUVcaIxyOS0rJMSdM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="player-card-footer">
+            <span class="producer-credit">Produced by The Block Beattaz</span>
+            <a href="https://open.spotify.com/album/708dfWUVcaIxyOS0rJMSdM" target="_blank" rel="noopener noreferrer" class="clay-button release-spotify-btn">
               Listen On Spotify
             </a>
           </div>
         </div>
 
         <!-- Featured Album 2: Gamla Kyrkogatan -->
-        <div class="player-card" style="display: flex; flex-direction: column; gap: 20px;">
-          <div class="release-label">Landskrona Album (2025)</div>
-          <h2 class="release-title" style="font-size: 1.8rem;">Gamla Kyrkogatan</h2>
-          <iframe id="hero-spotify-iframe-2" style="border-radius:12px; background: transparent;" src="https://open.spotify.com/embed/album/4smw8ucOoUTE48pHx6GNss?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-            <span style="font-size: 0.8rem; color: var(--eqx-accent); text-transform: uppercase; letter-spacing: 0.1em;">Stalley & The Block Beattaz</span>
-            <a href="https://open.spotify.com/album/4smw8ucOoUTE48pHx6GNss" target="_blank" rel="noopener noreferrer" class="clay-button" style="padding: 10px 20px; font-size: 0.8rem;">
+        <div class="player-card featured-release-item" data-index="1">
+          <div class="release-card-header">
+            <span class="release-label">Landskrona Album (2025)</span>
+            <span class="release-format-tag">12 Tracks</span>
+          </div>
+          <h2 class="release-title">Gamla Kyrkogatan</h2>
+          <div class="spotify-iframe-touch-wrapper">
+            <iframe id="hero-spotify-iframe-2" class="spotify-hero-iframe" src="https://open.spotify.com/embed/album/4smw8ucOoUTE48pHx6GNss?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="player-card-footer">
+            <span class="producer-credit">Stalley &amp; The Block Beattaz</span>
+            <a href="https://open.spotify.com/album/4smw8ucOoUTE48pHx6GNss" target="_blank" rel="noopener noreferrer" class="clay-button release-spotify-btn">
               Listen On Spotify
             </a>
           </div>
@@ -400,9 +420,6 @@
 
     </div>
   </section>
-
-  <!-- ===== 3D ISOMETRIC BUILDING RENDER & ROOM DESCRIPTIONS ===== -->
-  <div id="eqx-slider-root"></div>
 
   <!-- ===== VIRTUAL STUDIO TOUR & SPOTLIGHT ===== -->
   <div id="studio-tour-root"></div>
@@ -490,19 +507,28 @@
     </div>
   </footer>  <!-- Studio Entry Script -->
   <script type="module">
-    import { initStudioTour } from './components/StudioTour.js?v=70';
-    import { initRoomSlider } from './components/RoomSlider.js?v=70';
-    import { fullCatalog } from './js/catalogData.js?v=70';
+    import { initStudioTour } from './components/StudioTour.js?v=72';
+    import { fullCatalog } from './js/catalogData.js?v=72';
 
     document.addEventListener('DOMContentLoaded', () => {
       const tourRoot = document.getElementById('studio-tour-root');
       if (tourRoot) {
         initStudioTour(null, tourRoot);
       }
-      const roomSliderRoot = document.getElementById('eqx-slider-root');
-      if (roomSliderRoot) {
-        initRoomSlider(roomSliderRoot);
-      }
+
+      // Mobile Featured Release Switcher
+      const switchBtns = document.querySelectorAll('.featured-switch-btn');
+      const releaseCards = document.querySelectorAll('.featured-release-item');
+
+      switchBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetIndex = btn.getAttribute('data-target');
+          switchBtns.forEach(b => b.classList.toggle('active', b === btn));
+          releaseCards.forEach(card => {
+            card.classList.toggle('active', card.getAttribute('data-index') === targetIndex);
+          });
+        });
+      });
 
       // Dynamic Discography Catalog Renderer
       const gridContainer = document.getElementById('dynamic-catalog-grid');
