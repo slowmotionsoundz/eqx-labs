@@ -552,15 +552,16 @@ button {
   align-items: center;
   text-align: center;
   overflow: hidden;
-  background: linear-gradient(to bottom, rgba(27, 29, 28, 0.4) 0%, rgba(27, 29, 28, 0.9) 100%);
+  background: radial-gradient(circle at 50% 50%, rgba(14, 16, 15, 0.12) 0%, rgba(14, 16, 15, 0.42) 70%, rgba(14, 16, 15, 0.78) 100%),
+              linear-gradient(to bottom, rgba(14, 16, 15, 0.2) 0%, rgba(14, 16, 15, 0.45) 60%, rgba(14, 16, 15, 0.85) 100%);
 }
 
 .hero-backdrop {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
-  opacity: 0.45;
-  filter: contrast(1.05) brightness(0.65) saturate(0.85);
+  background: url('assets/EQX%20Website%20Photos/AlHolbrook-EqLabs-Landskrona-2025_021.jpg') no-repeat center center/cover;
+  opacity: 0.85;
+  filter: contrast(1.05) brightness(0.9) saturate(0.98);
   pointer-events: none;
   z-index: -1;
   transition: transform 0.2s ease-out;
